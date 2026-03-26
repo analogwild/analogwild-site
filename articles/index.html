@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Articles — Analog Wild</title>
+  <meta name="description" content="Every article from Analog Wild — gear reviews, off-grid escapes, analog practices, activities for kids, and challenges to help you touch grass again.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--green:#4a5e3a;--terra:#b87d52;--cream:#f7f3ec;--warm-white:#fdfaf6;--dark:#2a2620;--mid:#6b6459;--border:#e4ddd3}
+    body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--dark);line-height:1.6}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark);text-decoration:none}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
+
+    .page-header{margin-top:64px;background:var(--dark);padding:4rem 2rem;text-align:center}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);color:white;margin-bottom:.8rem;font-style:italic}
+    .page-header p{font-size:1rem;color:rgba(255,255,255,.6);font-weight:300;max-width:500px;margin:0 auto}
+
+    /* FILTER TABS */
+    .filter-bar{border-bottom:1px solid var(--border);background:var(--warm-white);position:sticky;top:64px;z-index:50}
+    .filter-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;gap:0;overflow-x:auto}
+    .filter-tab{padding:1rem 1.5rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;cursor:pointer;background:none;border-left:none;border-right:none;border-top:none;font-family:'Inter',sans-serif}
+    .filter-tab:hover{color:var(--green)}
+    .filter-tab.active{color:var(--terra);border-bottom-color:var(--terra)}
+
+    /* ARTICLES */
+    .articles-section{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+    .category-section{margin-bottom:4rem}
+    .category-header{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--border)}
+    .category-icon{width:36px;height:36px;stroke:var(--terra);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+    .category-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark)}
+    .category-count{font-size:.75rem;color:var(--mid);font-weight:400;margin-left:.5rem}
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .article-card{text-decoration:none;color:inherit;display:block;transition:opacity .2s}
+    .article-card:hover{opacity:.85}
+    .card-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:.8rem}
+    .card-cat{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .card-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:.4rem}
+    .article-card:hover .card-title{color:var(--green)}
+    .card-excerpt{font-size:.82rem;color:var(--mid);line-height:1.6;font-weight:300}
+
+    /* NEWSLETTER */
+    .newsletter-strip{background:var(--dark);padding:4rem 2rem;text-align:center;margin-top:2rem}
+    .newsletter-strip h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:white;margin-bottom:.8rem}
+    .newsletter-strip p{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2rem;font-weight:300}
+    .nl-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem}
+
+    footer{background:var(--warm-white);border-top:1px solid var(--border);padding:3rem 2rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .footer-links{display:flex;gap:2rem;list-style:none}
+    .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
+    .footer-copy{font-size:.75rem;color:#bbb}
+
+    @media(max-width:768px){.articles-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.articles-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>All Articles</h1>
+    <p>Everything we've written — gear, escapes, practices, and challenges for the analog life.</p>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-tab active" onclick="filterCat('all', this)">All (20)</button>
+      <button class="filter-tab" onclick="filterCat('gear', this)">Gear (7)</button>
+      <button class="filter-tab" onclick="filterCat('practices', this)">Practices (5)</button>
+      <button class="filter-tab" onclick="filterCat('escapes', this)">Escapes (3)</button>
+      <button class="filter-tab" onclick="filterCat('challenges', this)">Challenges (2)</button>
+      <button class="filter-tab" onclick="filterCat('for-kids', this)">For Kids (2)</button>
+      <button class="filter-tab" onclick="filterCat('free-spaces', this)">Free Spaces (1)</button>
+    </div>
+  </div>
+
+  <div class="articles-section">
+
+    <!-- GEAR -->
+    <div class="category-section" data-cat="gear">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><path d="M11 6 C11 4 13 3 16 3 C19 3 21 4 21 6"/><path d="M8 6 C5 6 4 8 4 10 L4 26 C4 28 6 29 8 29 L24 29 C26 29 28 28 28 26 L28 10 C28 8 27 6 24 6 Z"/><line x1="4" y1="14" x2="28" y2="14"/></svg>
+        <span class="category-name">Gear <span class="category-count">— 7 articles</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/gear/best-notebooks-for-morning-pages/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80&auto=format&fit=crop" alt="Notebooks">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">The Best Notebooks for Morning Pages in 2026</h3>
+          <p class="card-excerpt">We tested four beloved notebooks. Here's the honest verdict.</p>
+        </a>
+        <a href="/gear/best-film-cameras-for-beginners/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80&auto=format&fit=crop" alt="Film camera">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">The Best Film Cameras for Beginners in 2026</h3>
+          <p class="card-excerpt">Film is back. Here's where to start without spending a fortune.</p>
+        </a>
+        <a href="/gear/best-fountain-pens-under-50/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=600&q=80&auto=format&fit=crop" alt="Fountain pen">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">Best Fountain Pens Under $50 for Everyday Writing</h3>
+          <p class="card-excerpt">Including one that costs $5 and writes better than it has any right to.</p>
+        </a>
+        <a href="/gear/best-board-games-for-adults/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1553481187-be93c21490a9?w=600&q=80&auto=format&fit=crop" alt="Board games">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">Best Board Games for Adults Who Think They Hate Board Games</h3>
+          <p class="card-excerpt">You had a bad experience with Monopoly. These are nothing like Monopoly.</p>
+        </a>
+        <a href="/gear/best-paper-planners/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80&auto=format&fit=crop" alt="Planner">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">Best Paper Planners for People Who Hate Planning</h3>
+          <p class="card-excerpt">Most planners fail because they're designed for someone else. These aren't.</p>
+        </a>
+        <a href="/gear/best-journals-for-nature-writing/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80&auto=format&fit=crop" alt="Nature journal">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">The Best Journals for Nature Writing and Field Notes</h3>
+          <p class="card-excerpt">For hikers, birders, naturalists, and anyone who wants to write things down outside.</p>
+        </a>
+        <a href="/gear/analog-wild-gift-guide/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80&auto=format&fit=crop" alt="Gifts">
+          <p class="card-cat">Gear</p>
+          <h3 class="card-title">The Analog Wild Gift Guide: 25 Gifts for People Who Have Everything</h3>
+          <p class="card-excerpt">Tactile, beautiful, and analog. Organized by recipient.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- PRACTICES -->
+    <div class="category-section" data-cat="practices">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><line x1="8" y1="26" x2="24" y2="26"/><path d="M9 20 L20 9 C21.5 7.5 24 7.5 25.5 9 C27 10.5 27 13 25.5 14.5 L14.5 25.5 Z"/><line x1="9" y1="20" x2="6" y2="26"/><line x1="18" y1="11" x2="23" y2="16"/></svg>
+        <span class="category-name">Practices <span class="category-count">— 5 articles</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/practices/how-to-start-morning-pages/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80&auto=format&fit=crop" alt="Morning pages">
+          <p class="card-cat">Practices</p>
+          <h3 class="card-title">How to Start Morning Pages (and Why It Might Change Everything)</h3>
+          <p class="card-excerpt">Three longhand pages every morning. Simple. Profound.</p>
+        </a>
+        <a href="/practices/analog-evening-routine/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80&auto=format&fit=crop" alt="Evening routine">
+          <p class="card-cat">Practices</p>
+          <h3 class="card-title">The Analog Evening Routine That Actually Helps You Sleep</h3>
+          <p class="card-excerpt">What to do in the hour before bed instead of scrolling.</p>
+        </a>
+        <a href="/practices/how-to-start-shooting-film/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1542038374892-75e00f08c51e?w=600&q=80&auto=format&fit=crop" alt="Film photography">
+          <p class="card-cat">Practices</p>
+          <h3 class="card-title">How to Start Shooting Film in 2026: A Complete Beginner's Guide</h3>
+          <p class="card-excerpt">Everything you need without the gear rabbit hole.</p>
+        </a>
+        <a href="/practices/why-everyone-is-buying-film-cameras/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80&auto=format&fit=crop" alt="Film cameras">
+          <p class="card-cat">Practices</p>
+          <h3 class="card-title">Why Everyone Is Buying Film Cameras Again</h3>
+          <p class="card-excerpt">Film sales have risen every year since 2015. Here's why.</p>
+        </a>
+        <a href="/practices/how-to-write-a-letter/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?w=600&q=80&auto=format&fit=crop" alt="Letter writing">
+          <p class="card-cat">Practices</p>
+          <h3 class="card-title">How to Write a Letter Worth Receiving</h3>
+          <p class="card-excerpt">The lost art — how to start, what to include, how to make someone's day.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- ESCAPES -->
+    <div class="category-section" data-cat="escapes">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><polygon points="16,5 29,25 3,25"/><polyline points="10,25 16,13 22,25"/><line x1="3" y1="25" x2="29" y2="25"/></svg>
+        <span class="category-name">Escapes <span class="category-count">— 3 articles</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/escapes/off-grid-retreats-pacific-northwest/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80&auto=format&fit=crop" alt="PNW retreat">
+          <p class="card-cat">Escapes</p>
+          <h3 class="card-title">10 Off-Grid Retreats in the Pacific Northwest Worth Every Penny</h3>
+          <p class="card-excerpt">No wifi. No problem. Oregon, Washington, Idaho.</p>
+        </a>
+        <a href="/escapes/off-grid-glamping-american-west/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=600&q=80&auto=format&fit=crop" alt="Glamping">
+          <p class="card-cat">Escapes</p>
+          <h3 class="card-title">Off-Grid Glamping Resorts Worth the Splurge in the American West</h3>
+          <p class="card-excerpt">Off-grid doesn't have to mean uncomfortable.</p>
+        </a>
+        <a href="/escapes/best-stargazing-spots-oregon/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80&auto=format&fit=crop" alt="Stargazing">
+          <p class="card-cat">Escapes</p>
+          <h3 class="card-title">Best Stargazing Spots in Oregon and What to Bring</h3>
+          <p class="card-excerpt">Some of the darkest skies in the continental US.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- CHALLENGES -->
+    <div class="category-section" data-cat="challenges">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><rect x="10" y="3" width="12" height="22" rx="2"/><line x1="10" y1="7" x2="22" y2="7"/><line x1="10" y1="21" x2="22" y2="21"/><line x1="13" y1="13" x2="19" y2="17"/><line x1="19" y1="13" x2="13" y2="17"/></svg>
+        <span class="category-name">Challenges <span class="category-count">— 2 articles</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/challenges/30-day-no-scroll-challenge/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop" alt="No scroll challenge">
+          <p class="card-cat">Challenges</p>
+          <h3 class="card-title">The 30-Day No-Scroll Challenge: Rules, Tips, and What to Do Instead</h3>
+          <p class="card-excerpt">Stop scrolling for 30 days. Here's how.</p>
+        </a>
+        <a href="/challenges/12-things-to-do-offline/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80&auto=format&fit=crop" alt="Offline weekend">
+          <p class="card-cat">Challenges</p>
+          <h3 class="card-title">12 Things to Do This Weekend With Your Phone in a Drawer</h3>
+          <p class="card-excerpt">Because "put your phone down" is only half the advice.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- FOR KIDS -->
+    <div class="category-section" data-cat="for-kids">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="16" y1="25" x2="16" y2="29"/><line x1="3" y1="16" x2="7" y2="16"/><line x1="25" y1="16" x2="29" y2="16"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="22" y1="22" x2="25" y2="25"/><line x1="25" y1="7" x2="22" y2="10"/><line x1="10" y1="22" x2="7" y2="25"/></svg>
+        <span class="category-name">For Kids <span class="category-count">— 2 articles</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/for-kids/analog-activities-for-kids/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80&auto=format&fit=crop" alt="Kids analog activities">
+          <p class="card-cat">For Kids</p>
+          <h3 class="card-title">Best Analog Activities for Kids That They'll Actually Want to Do</h3>
+          <p class="card-excerpt">The challenge isn't discipline. It's offering something better than the screen.</p>
+        </a>
+        <a href="/for-kids/sun-prints-cyanotype/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Sun prints">
+          <p class="card-cat">For Kids</p>
+          <h3 class="card-title">Sun Prints and Cyanotype for Beginners: The Most Magical Analog Craft</h3>
+          <p class="card-excerpt">10 minutes, some sunlight, and results that look like art.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- FREE SPACES -->
+    <div class="category-section" data-cat="free-spaces">
+      <div class="category-header">
+        <svg class="category-icon" viewBox="0 0 32 32"><line x1="16" y1="29" x2="16" y2="16"/><ellipse cx="16" cy="12" rx="9" ry="8"/><line x1="16" y1="20" x2="11" y2="25"/><line x1="16" y1="22" x2="21" y2="27"/></svg>
+        <span class="category-name">Free Spaces <span class="category-count">— 1 article</span></span>
+      </div>
+      <div class="articles-grid">
+        <a href="/free-spaces/free-third-spaces/" class="article-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=80&auto=format&fit=crop" alt="Library">
+          <p class="card-cat">Free Spaces</p>
+          <h3 class="card-title">Free Third Spaces: How to Find Your People Offline</h3>
+          <p class="card-excerpt">Parks, libraries, bookstores — where real life happens for free.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-strip" id="newsletter">
+    <div style="max-width:600px;margin:0 auto;">
+      <p class="nl-label">✦ The Analog Wild Letter</p>
+      <h2>For people who are screen-weary<br>and ready to #touchgrass again.</h2>
+      <p>Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div style="max-width:460px;margin:0 auto;text-align:center;">
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+      </div>
+      <p style="font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.5rem;">Free. Fun. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/start-here/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.category-section').forEach(s => {
+        if (cat === 'all' || s.dataset.cat === cat) {
+          s.style.display = '';
+        } else {
+          s.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
