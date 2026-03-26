@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Start Morning Pages (and Why It Might Change Everything) — Analog Wild</title>
+  <meta name="description" content="Julia Cameron's morning pages practice is simple: three longhand pages every morning. Here's how to start — and why it works.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #4a5e3a; --green-light: #6b7f58; --terra: #b87d52;
+      --cream: #f7f3ec; --warm-white: #fdfaf6; --dark: #2a2620;
+      --mid: #6b6459; --border: #e4ddd3;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--dark); line-height: 1.6; }
+
+    /* PROGRESS BAR */
+    #progress-bar {
+      position: fixed; top: 64px; left: 0; width: 0%; height: 3px;
+      background: var(--terra); z-index: 200; transition: width 0.1s linear;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(253,250,246,0.96); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--dark); text-decoration: none; }
+    .nav-logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: var(--terra) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      margin-top: 64px; position: relative; height: 55vh; min-height: 380px;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+    .article-hero-image {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .article-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(42,38,32,0.1) 0%, rgba(42,38,32,0.75) 100%);
+    }
+    .article-hero-content { position: relative; z-index: 2; padding: 2.5rem 4rem; max-width: 860px; }
+    .article-category { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; display: block; }
+    .article-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: white; line-height: 1.15; letter-spacing: -0.02em; }
+
+    /* ARTICLE LAYOUT */
+    .article-layout {
+      max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;
+      display: grid; grid-template-columns: 220px 1fr; gap: 4rem;
+    }
+
+    /* TOC SIDEBAR */
+    .toc {
+      position: sticky; top: 90px; height: fit-content;
+      font-size: 0.82rem;
+    }
+    .toc-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 1rem; }
+    .toc ul { list-style: none; border-left: 2px solid var(--border); padding-left: 1rem; }
+    .toc li { margin-bottom: 0.6rem; }
+    .toc a { color: var(--mid); text-decoration: none; line-height: 1.4; font-weight: 400; }
+    .toc a:hover { color: var(--green); }
+    .toc-meta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--mid); line-height: 1.8; }
+
+    /* ARTICLE BODY */
+    .article-body h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600;
+      color: var(--dark); margin: 2.5rem 0 1rem; line-height: 1.2; letter-spacing: -0.01em;
+    }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--dark); margin-bottom: 1.4rem; font-weight: 300; }
+    .article-body strong { font-weight: 600; color: var(--dark); }
+    .article-body a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--green-light); }
+
+    /* BOTTOM LINE BOX */
+    .bottom-line {
+      background: var(--cream); border-left: 4px solid var(--terra);
+      padding: 1.5rem 1.8rem; margin-bottom: 2.5rem; border-radius: 0 4px 4px 0;
+    }
+    .bottom-line-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.5rem; }
+    .bottom-line p { font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 400; }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      border-top: 2px solid var(--dark); border-bottom: 2px solid var(--dark);
+      padding: 1.5rem 0; margin: 2.5rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif; font-size: 1.35rem; font-style: italic;
+      color: var(--dark); line-height: 1.5; margin: 0 !important; font-weight: 400;
+    }
+
+    /* AFFILIATE LINK STYLING */
+    .affiliate-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--cream); border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem; border-radius: 2px; font-size: 0.82rem;
+      font-weight: 600; color: var(--green) !important; text-decoration: none !important;
+      transition: background 0.2s; margin: 0.2rem 0; white-space: nowrap;
+    }
+    .affiliate-link:hover { background: var(--border); }
+    .affiliate-link::before { content: '→'; }
+
+    /* INLINE NEWSLETTER */
+    .newsletter-inline {
+      background: var(--dark); color: white; padding: 3rem; margin: 3rem 0; border-radius: 4px;
+    }
+    .newsletter-inline-inner { max-width: 520px; }
+    .nl-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem; }
+    .nl-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; margin-bottom: 0.8rem; line-height: 1.3; }
+    .nl-sub { font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; font-weight: 300; }
+    .email-form { display: flex; max-width: 400px; border: 1.5px solid rgba(255,255,255,0.3); }
+    .email-form input { flex: 1; border: none; padding: 0.8rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: rgba(255,255,255,0.08); color: white; outline: none; }
+    .email-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .email-form button { background: var(--terra); color: white; border: none; padding: 0.8rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+    .email-form button:hover { background: #a06c42; }
+    .form-note { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
+
+    /* RELATED ARTICLES */
+    .related-section { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 3rem; }
+    .related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .related-card { text-decoration: none; color: inherit; }
+    .related-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: 0.8rem; }
+    .related-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.3rem; }
+    .related-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--dark); line-height: 1.3; }
+    .related-card:hover .related-title { color: var(--green); }
+
+    /* FOOTER */
+    footer { background: var(--warm-white); border-top: 1px solid var(--border); padding: 3rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    .footer-copy { font-size: 0.75rem; color: #bbb; }
+</style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-image" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <a href="/practices/" class="article-category">Practices</a>
+      <h1 class="article-title">How to Start Morning Pages (and Why It Might Change Everything)</h1>
+    </div>
+  </div>
+
+  <div class="article-layout">
+    <aside class="toc">
+      <p class="toc-label">In this article</p>
+      <ul><li><a href="#what">What morning pages actually are</a></li>
+<li><a href="#why">Why they work</a></li>
+<li><a href="#how">How to start</a></li>
+<li><a href="#rules">The only real rules</a></li>
+<li><a href="#faq">Common questions</a></li></ul>
+      <div class="toc-meta">
+        <strong>Analog Wild</strong><br>
+        Come back to your senses.<br><br>
+        <a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a>
+      </div>
+    </aside>
+
+    <article class="article-body">
+      <div class="bottom-line" id="bottom-line">
+      <p class="bottom-line-label">The bottom line</p>
+      <p>Morning pages are three longhand pages written first thing in the morning — no agenda, no editing, no rereading. The point is not what you write. The point is the act of writing, every day, before the noise starts. Most people who do them for a month notice something shifting. Many do them for years.</p>
+    </div>
+
+    <h2 id="what">What Morning Pages Actually Are</h2>
+    <p>Julia Cameron introduced morning pages in her 1992 book <em>The Artist's Way</em>, and they've quietly been changing people's creative lives ever since. The practice is almost aggressively simple: every morning, before you do anything else, write three pages by hand. Stream of consciousness. No editing. No rereading (at least for the first eight weeks). Don't stop to think. Just write.</p>
+    <p>That's it. There are no other requirements.</p>
+    <p>The pages can be about anything: what you dreamed, what's worrying you, what you're having for breakfast, a complaint about your neighbor, a half-formed idea, the color of the light coming through the window. The content is almost beside the point.</p>
+
+    <div class="pull-quote"><p>"Morning pages are not about writing. They're about clearing. Think of them as draining the swamp of your subconscious."</p></div>
+
+    <h2 id="why">Why They Work</h2>
+    <p>The theory is that most of us walk around with a constant internal censor — the voice that says your ideas aren't good enough, that you're not a real artist, that you shouldn't try. Morning pages don't silence that voice (nothing does, really) but they do tire it out. Three pages of unfiltered writing burns through the critic's fuel before the day begins.</p>
+    <p>What you're left with, often, is a quieter mind. Some days a clearer sense of what you actually want. Sometimes an idea you didn't know you had until it appeared on the page.</p>
+    <p>The research on expressive writing (James Pennebaker's work is the most cited) supports the basic mechanism: writing about your thoughts and feelings, without editing or performing, tends to reduce stress, improve mood, and free up cognitive resources for other things.</p>
+
+    <h2 id="how">How to Start</h2>
+    <p><strong>Step 1: Get a notebook and a pen you like.</strong> Not expensive — just ones you don't hate. The ritual matters. A notebook on your nightstand signals that this is the first thing, before the phone, before the coffee, before the news.</p>
+    <p><a href="https://www.amazon.com/s?k=leuchtturm1917+a5+dotted&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Leuchtturm1917 Notebook on Amazon</a></p>
+    <p><strong>Step 2: Set an alarm 30 minutes earlier than usual.</strong> Three pages takes most people 20-30 minutes by hand. Give yourself the time. Don't squeeze it.</p>
+    <p><strong>Step 3: Write before you look at your phone.</strong> This is the hardest part and the most important part. The phone primes your brain with other people's agendas. Pages prime it with your own.</p>
+    <p><strong>Step 4: Don't stop when it's hard.</strong> There will be mornings when you write "I have nothing to say I have nothing to say I have nothing to say" for half a page. Write it anyway. Something usually breaks through.</p>
+
+    <h2 id="rules">The Only Real Rules</h2>
+    <p>Three pages. Longhand. Every morning. Don't reread for the first eight weeks. That's genuinely all.</p>
+    <p>Cameron is emphatic about the "no rereading" rule early on because the point is not to create something — it's to express something. Reading back introduces the critic. Let the pages be private, even from yourself, for a while.</p>
+
+    <h2 id="faq">Common Questions</h2>
+    <p><strong>What if I miss a day?</strong> Start again the next day. This is a practice, not a streak. Missing a day is information (what happened?) not failure.</p>
+    <p><strong>Do they have to be in the morning?</strong> Cameron is firm about this. The morning quality — before you've been shaped by the day — is specific and important. Evening pages are something else (also valuable, different effect).</p>
+    <p><strong>What do I do with them?</strong> Nothing, ideally. Some people shred them. Some fill boxes with them. Some read back occasionally after a few months. The writing is the point, not the artifact.</p>
+    <p><strong>How long until I notice something?</strong> Most people report something shifting within two to four weeks. The changes are often subtle at first — slightly less inner noise, a few better ideas, a little more patience with themselves.</p>
+
+      <div class="newsletter-inline" id="newsletter">
+    <div class="newsletter-inline-inner">
+      <p class="nl-label">✦ The Analog Wild Letter</p>
+      <h3 class="nl-title">For people who are done living through a screen.</h3>
+      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="submit">I'm in</button>
+      </div>
+      <p class="form-note">Free. No ads. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+      <div class="related-section">
+        <p class="related-label">Keep reading</p>
+        <div class="related-grid"><a href="/gear/best-notebooks-for-morning-pages/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages">
+        <p class="related-cat">Gear</p>
+        <h3 class="related-title">Best Notebooks for Morning Pages</h3>
+      </a><a href="/practices/analog-evening-routine/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine That Actually Helps You Sleep">
+        <p class="related-cat">Practices</p>
+        <h3 class="related-title">The Analog Evening Routine That Actually Helps You Sleep</h3>
+      </a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+        <p class="related-cat">Challenges</p>
+        <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+      </a></div>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const pct = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }, {passive: true});
+  </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Off-Grid Retreats in the Pacific Northwest Worth Every Penny — Analog Wild</title>
+  <meta name="description" content="No wifi. No problem. The best places to disappear in Oregon, Washington, and Idaho — from rustic to genuinely luxurious.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #4a5e3a; --green-light: #6b7f58; --terra: #b87d52;
+      --cream: #f7f3ec; --warm-white: #fdfaf6; --dark: #2a2620;
+      --mid: #6b6459; --border: #e4ddd3;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--dark); line-height: 1.6; }
+
+    /* PROGRESS BAR */
+    #progress-bar {
+      position: fixed; top: 64px; left: 0; width: 0%; height: 3px;
+      background: var(--terra); z-index: 200; transition: width 0.1s linear;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(253,250,246,0.96); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--dark); text-decoration: none; }
+    .nav-logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: var(--terra) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      margin-top: 64px; position: relative; height: 55vh; min-height: 380px;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+    .article-hero-image {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .article-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(42,38,32,0.1) 0%, rgba(42,38,32,0.75) 100%);
+    }
+    .article-hero-content { position: relative; z-index: 2; padding: 2.5rem 4rem; max-width: 860px; }
+    .article-category { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; display: block; }
+    .article-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: white; line-height: 1.15; letter-spacing: -0.02em; }
+
+    /* ARTICLE LAYOUT */
+    .article-layout {
+      max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;
+      display: grid; grid-template-columns: 220px 1fr; gap: 4rem;
+    }
+
+    /* TOC SIDEBAR */
+    .toc {
+      position: sticky; top: 90px; height: fit-content;
+      font-size: 0.82rem;
+    }
+    .toc-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 1rem; }
+    .toc ul { list-style: none; border-left: 2px solid var(--border); padding-left: 1rem; }
+    .toc li { margin-bottom: 0.6rem; }
+    .toc a { color: var(--mid); text-decoration: none; line-height: 1.4; font-weight: 400; }
+    .toc a:hover { color: var(--green); }
+    .toc-meta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--mid); line-height: 1.8; }
+
+    /* ARTICLE BODY */
+    .article-body h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600;
+      color: var(--dark); margin: 2.5rem 0 1rem; line-height: 1.2; letter-spacing: -0.01em;
+    }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--dark); margin-bottom: 1.4rem; font-weight: 300; }
+    .article-body strong { font-weight: 600; color: var(--dark); }
+    .article-body a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--green-light); }
+
+    /* BOTTOM LINE BOX */
+    .bottom-line {
+      background: var(--cream); border-left: 4px solid var(--terra);
+      padding: 1.5rem 1.8rem; margin-bottom: 2.5rem; border-radius: 0 4px 4px 0;
+    }
+    .bottom-line-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.5rem; }
+    .bottom-line p { font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 400; }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      border-top: 2px solid var(--dark); border-bottom: 2px solid var(--dark);
+      padding: 1.5rem 0; margin: 2.5rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif; font-size: 1.35rem; font-style: italic;
+      color: var(--dark); line-height: 1.5; margin: 0 !important; font-weight: 400;
+    }
+
+    /* AFFILIATE LINK STYLING */
+    .affiliate-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--cream); border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem; border-radius: 2px; font-size: 0.82rem;
+      font-weight: 600; color: var(--green) !important; text-decoration: none !important;
+      transition: background 0.2s; margin: 0.2rem 0; white-space: nowrap;
+    }
+    .affiliate-link:hover { background: var(--border); }
+    .affiliate-link::before { content: '→'; }
+
+    /* INLINE NEWSLETTER */
+    .newsletter-inline {
+      background: var(--dark); color: white; padding: 3rem; margin: 3rem 0; border-radius: 4px;
+    }
+    .newsletter-inline-inner { max-width: 520px; }
+    .nl-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem; }
+    .nl-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; margin-bottom: 0.8rem; line-height: 1.3; }
+    .nl-sub { font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; font-weight: 300; }
+    .email-form { display: flex; max-width: 400px; border: 1.5px solid rgba(255,255,255,0.3); }
+    .email-form input { flex: 1; border: none; padding: 0.8rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: rgba(255,255,255,0.08); color: white; outline: none; }
+    .email-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .email-form button { background: var(--terra); color: white; border: none; padding: 0.8rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+    .email-form button:hover { background: #a06c42; }
+    .form-note { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
+
+    /* RELATED ARTICLES */
+    .related-section { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 3rem; }
+    .related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .related-card { text-decoration: none; color: inherit; }
+    .related-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: 0.8rem; }
+    .related-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.3rem; }
+    .related-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--dark); line-height: 1.3; }
+    .related-card:hover .related-title { color: var(--green); }
+
+    /* FOOTER */
+    footer { background: var(--warm-white); border-top: 1px solid var(--border); padding: 3rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    .footer-copy { font-size: 0.75rem; color: #bbb; }
+</style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-hero-image" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <a href="/escapes/" class="article-category">Escapes</a>
+      <h1 class="article-title">10 Off-Grid Retreats in the Pacific Northwest Worth Every Penny</h1>
+    </div>
+  </div>
+
+  <div class="article-layout">
+    <aside class="toc">
+      <p class="toc-label">In this article</p>
+      <ul><li><a href="#oregon">Oregon</a></li>
+<li><a href="#washington">Washington</a></li>
+<li><a href="#idaho">Idaho</a></li>
+<li><a href="#wgw">Writers Gone Wild retreats</a></li>
+<li><a href="#tips">What to pack</a></li></ul>
+      <div class="toc-meta">
+        <strong>Analog Wild</strong><br>
+        Come back to your senses.<br><br>
+        <a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a>
+      </div>
+    </aside>
+
+    <article class="article-body">
+      <div class="bottom-line" id="bottom-line">
+      <p class="bottom-line-label">The bottom line</p>
+      <p>The Pacific Northwest has more off-grid accommodation options than anywhere else in the continental US — from $40/night primitive camping to $400/night luxury glamping. Every option on this list has one thing in common: genuine disconnection. No wifi. Often no cell signal. Just the landscape and whoever you brought with you.</p>
+    </div>
+
+    <p>There's a particular quality to the silence you find when you're truly offline in the outdoors. Not just the absence of sound — the absence of the low hum of connectivity that most of us carry everywhere without noticing. Getting to that silence is what every retreat on this list offers.</p>
+
+    <h2 id="oregon">Oregon</h2>
+
+    <p><strong>Lake of the Woods Resort, Southern Oregon</strong> — Rustic cabins on a mountain lake south of Crater Lake. No cell service, paddleboards on the water, stars that will rearrange your priorities. Cabins from $130/night. The kind of place where you play cards after dinner instead of watching anything.</p>
+
+    <p><strong>Suttle Lodge, Sisters OR</strong> — Lakeside cabins in the shadow of the Three Sisters. No TVs in rooms by design. Good coffee, a real bar with a fireplace, and mountains everywhere you look. From $200/night. Close enough to Bend to extend a weekend trip.</p>
+
+    <p><strong>Elk Lake Resort, Central Oregon</strong> — Accessible by boat or floatplane in summer, by snowcat in winter. The kind of place that requires actual effort to reach, which means the people who get there really wanted to be there. Basic cabins, remarkable setting.</p>
+
+    <div class="pull-quote"><p>"The Pacific Northwest has more places to genuinely disappear than anywhere else in the lower 48. Use them."</p></div>
+
+    <h2 id="washington">Washington</h2>
+
+    <p><strong>North Cascades Institute, Sedro-Woolley WA</strong> — A learning center deep in the North Cascades. Programs combine outdoor education with genuine wilderness. Dormitory and private room options. The meals are better than you'd expect. The conversation around the dinner table is reliably interesting — you're surrounded by people who came here on purpose.</p>
+
+    <p><strong>Lake Quinault Lodge, Olympic Peninsula WA</strong> — A historic lodge on the edge of the Hoh Rain Forest, one of the few temperate rainforests in North America. The kind of green that resets something. No cell service in the forest. Rooms from $180/night.</p>
+
+    <p><strong>Doe Bay Resort, Orcas Island WA</strong> — Cabins, yurts, and a clothing-optional soaking tub overlooking Puget Sound. One of those places that attracts people who want to think differently about things. Artist residencies happen here. So do very good dinner conversations.</p>
+
+    <h2 id="idaho">Idaho</h2>
+
+    <p><strong>McCall, Idaho — Various cabin rentals</strong> — The town of McCall sits on Payette Lake with the Payette National Forest surrounding it. Multiple cabin rental operations offer genuine off-grid or near-off-grid experiences at prices that feel like going back in time. One of the best-kept secrets in the PNW for analog retreats.</p>
+
+    <p><strong>Selway-Bitterroot Wilderness, Central Idaho</strong> — If you want serious wilderness — the kind where you plan your food and emergency procedures and go in with genuine respect — the Selway-Bitterroot is it. One of the largest wilderness areas in the lower 48. Backpack in, set up camp, stay as long as your permits allow.</p>
+
+    <h2 id="wgw">Writers Gone Wild Retreats — Central Oregon</h2>
+
+    <p>For a retreat that combines genuine wilderness with creative practice, <strong>Writers Gone Wild</strong> runs backpacking and writing retreats in Central Oregon — the McKenzie River, Breitenbush Hot Springs, and other stunning locations. Small groups (8 people max), daily trail miles with built-in writing stops, and evening workshops around camp. No wifi. No agenda beyond moving and writing. Genuinely one of the most aligned experiences you'll find in the analog living space.</p>
+
+    <p>Their next retreat is on the McKenzie River, May 28-31. Details at writersgonevild.com.</p>
+
+    <h2 id="tips">What to Pack</h2>
+    <p>The obvious: layers (even in summer at elevation), good boots, rain gear in the PNW. The less obvious: a physical book you've been meaning to read, a notebook and a pen that writes in the cold, a deck of cards, and the specific knowledge that you don't need to document the whole thing. Some of the best moments will happen when your phone is in your bag with the airplane mode on.</p>
+    <p><a href="https://www.amazon.com/s?k=rite+in+the+rain+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Rite in the Rain Notebook (writes in any weather) on Amazon</a></p>
+
+      <div class="newsletter-inline" id="newsletter">
+    <div class="newsletter-inline-inner">
+      <p class="nl-label">✦ The Analog Wild Letter</p>
+      <h3 class="nl-title">For people who are done living through a screen.</h3>
+      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="submit">I'm in</button>
+      </div>
+      <p class="form-note">Free. No ads. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+      <div class="related-section">
+        <p class="related-label">Keep reading</p>
+        <div class="related-grid"><a href="/escapes/off-grid-glamping-american-west/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=400&q=80&auto=format&fit=crop" alt="Off-Grid Glamping Worth the Splurge in the American West">
+        <p class="related-cat">Escapes</p>
+        <h3 class="related-title">Off-Grid Glamping Worth the Splurge in the American West</h3>
+      </a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+        <p class="related-cat">Challenges</p>
+        <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+      </a><a href="/escapes/best-stargazing-spots-oregon/" class="related-card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80&auto=format&fit=crop" alt="Best Stargazing Spots in Oregon">
+        <p class="related-cat">Escapes</p>
+        <h3 class="related-title">Best Stargazing Spots in Oregon</h3>
+      </a></div>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const pct = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }, {passive: true});
+  </script>
+</body>
+</html>
