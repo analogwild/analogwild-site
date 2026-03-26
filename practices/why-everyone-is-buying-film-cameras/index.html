@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Everyone Is Buying Film Cameras Again — Analog Wild</title>
+  <meta name="description" content="Film camera sales have risen every year since 2015. Most buyers are in their 20s. Here's why.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--green:#4a5e3a;--green-light:#6b7f58;--terra:#b87d52;--cream:#f7f3ec;--warm-white:#fdfaf6;--dark:#2a2620;--mid:#6b6459;--border:#e4ddd3}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--dark);line-height:1.6}
+    #progress-bar{position:fixed;top:64px;left:0;width:0%;height:3px;background:var(--terra);z-index:200;transition:width .1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark);text-decoration:none}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
+    .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
+    .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
+    .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
+    .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
+    .article-layout{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:220px 1fr;gap:4rem}
+    .toc{position:sticky;top:90px;height:fit-content;font-size:.82rem}
+    .toc-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
+    .toc ul{list-style:none;border-left:2px solid var(--border);padding-left:1rem}
+    .toc li{margin-bottom:.6rem}
+    .toc a{color:var(--mid);text-decoration:none;line-height:1.4}
+    .toc a:hover{color:var(--green)}
+    .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
+    .article-body strong{font-weight:600;color:var(--dark)}
+    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
+    .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
+    .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
+    .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
+    .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
+    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
+    .affiliate-link:hover{background:var(--border)}
+    .affiliate-link::before{content:'→'}
+    .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline-inner{max-width:520px}
+    .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
+    .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
+    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
+    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
+    .email-form input::placeholder{color:rgba(255,255,255,.35)}
+    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
+    .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .related-card{text-decoration:none;color:inherit}
+    .related-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:.8rem}
+    .related-cat{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .related-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--dark);line-height:1.3}
+    .related-card:hover .related-title{color:var(--green)}
+    footer{background:var(--warm-white);border-top:1px solid var(--border);padding:3rem 2rem;margin-top:4rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .footer-links{display:flex;gap:2rem;list-style:none}
+    .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
+    .footer-copy{font-size:.75rem;color:#bbb}
+</style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav>
+    <a href="/" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+  <div class="article-hero">
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1542038374892-75e00f08c51e?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <a href="/practices/" class="article-category">Practices</a>
+      <h1 class="article-title">Why Everyone Is Buying Film Cameras Again</h1>
+    </div>
+  </div>
+  <div class="article-layout">
+    <aside class="toc">
+      <p class="toc-label">In this article</p>
+      <ul><li><a href="#numbers">The numbers</a></li>
+<li><a href="#imperfection">The imperfection problem</a></li>
+<li><a href="#slowness">Slowing down</a></li>
+<li><a href="#community">The community</a></li>
+<li><a href="#cost">Is it expensive?</a></li></ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+    </aside>
+    <article class="article-body">
+      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Film is back because digital solved the wrong problem. It made photography perfect, and in doing so removed something important. The people buying film cameras in 2026 aren't nostalgic — they're reaching for friction, slowness, and photographs that feel made rather than computed.</p></div>
+    <p>Walk into any thrift store and the film cameras that sat untouched for a decade are gone. Check eBay prices for a Canon AE-1 from five years ago — then check them today. Something is clearly happening.</p>
+    <h2 id="numbers">The Numbers</h2>
+    <p>Film camera sales have increased every year since 2015. Kodak restarted production of Ektachrome. Fujifilm keeps discontinuing film stocks and then un-discontinuing them due to demand. New film cameras — actual new ones, not vintage — are being manufactured again for the first time in decades. Most buyers are in their 20s, shooting film for the first time.</p>
+    <div class="pull-quote"><p>"This isn't nostalgia. The people buying film cameras in 2026 are reaching for something digital doesn't give them."</p></div>
+    <h2 id="imperfection">The Imperfection Problem</h2>
+    <p>Digital photography solved the wrong problem. It made photography perfect — perfectly sharp, perfectly exposed, instantly reviewable, instantly deletable. And in solving that problem, it removed something important. The slight softness of older lenses, the grain in shadow areas, the color shifts when you push film beyond its rated speed — these aren't bugs. They're textures of a photograph made in the physical world.</p>
+    <h2 id="slowness">Slowing Down</h2>
+    <p>Film forces patience. You have 36 exposures. Each one costs about a dollar. You wait days to see results. Those constraints impose mindfulness that's genuinely valuable and impossible to fake with digital. People who shoot film describe looking at the world differently — noticing light, waiting for the right moment, caring about composition in a way that the delete-and-reshoot safety net makes harder to develop.</p>
+    <p><a href="https://www.amazon.com/s?k=kodak+ultramax+400+film&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Kodak Ultramax 400 Film on Amazon</a></p>
+    <h2 id="community">The Community</h2>
+    <p>The film photography community on Reddit (r/analog, r/filmphotography) is enormous, helpful, and genuinely enthusiastic. One of the least gatekeepy corners of the photography world. Beginners are welcomed, questions are answered. People share both their successes and their overexposed disasters with equal enthusiasm.</p>
+    <h2 id="cost">Is It Expensive?</h2>
+    <p>Yes, more than it was. A roll of Kodak Portra 400 plus development and scanning runs $25-35. Most film shooters compensate by shooting less and more deliberately — which circles back to the whole point. Start with Kodak Gold 200 or Ultramax 400. Both are affordable, widely available, and produce beautiful results in good light.</p>
+      <div class="newsletter-inline" id="newsletter">
+    <div class="newsletter-inline-inner">
+      <p class="nl-label">✦ The Analog Wild Letter</p>
+      <h3 class="nl-title">For people who are done living through a screen.</h3>
+      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="submit">I'm in</button>
+      </div>
+      <p class="form-note">Free. No ads. Unsubscribe anytime.</p>
+    </div>
+  </div>
+      <div class="related-section">
+        <p class="related-label">Keep reading</p>
+        <div class="related-grid"><a href="/gear/best-film-cameras-for-beginners/" class="related-card"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80&auto=format&fit=crop" alt="Best Film Cameras for Beginners"><p class="related-cat">Gear</p><h3 class="related-title">Best Film Cameras for Beginners</h3></a><a href="/practices/how-to-start-shooting-film/" class="related-card"><img src="https://images.unsplash.com/photo-1542038374892-75e00f08c51e?w=400&q=80&auto=format&fit=crop" alt="How to Start Shooting Film"><p class="related-cat">Practices</p><h3 class="related-title">How to Start Shooting Film</h3></a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a></div>
+      </div>
+    </article>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+  </script>
+</body>
+</html>

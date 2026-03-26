@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Board Games for Adults Who Think They Hate Board Games — Analog Wild</title>
+  <meta name="description" content="You had a bad experience with Monopoly. These games are nothing like Monopoly.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--green:#4a5e3a;--green-light:#6b7f58;--terra:#b87d52;--cream:#f7f3ec;--warm-white:#fdfaf6;--dark:#2a2620;--mid:#6b6459;--border:#e4ddd3}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--dark);line-height:1.6}
+    #progress-bar{position:fixed;top:64px;left:0;width:0%;height:3px;background:var(--terra);z-index:200;transition:width .1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark);text-decoration:none}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
+    .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
+    .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
+    .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
+    .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
+    .article-layout{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:220px 1fr;gap:4rem}
+    .toc{position:sticky;top:90px;height:fit-content;font-size:.82rem}
+    .toc-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
+    .toc ul{list-style:none;border-left:2px solid var(--border);padding-left:1rem}
+    .toc li{margin-bottom:.6rem}
+    .toc a{color:var(--mid);text-decoration:none;line-height:1.4}
+    .toc a:hover{color:var(--green)}
+    .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
+    .article-body strong{font-weight:600;color:var(--dark)}
+    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
+    .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
+    .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
+    .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
+    .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
+    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
+    .affiliate-link:hover{background:var(--border)}
+    .affiliate-link::before{content:'→'}
+    .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline-inner{max-width:520px}
+    .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
+    .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
+    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
+    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
+    .email-form input::placeholder{color:rgba(255,255,255,.35)}
+    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
+    .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .related-card{text-decoration:none;color:inherit}
+    .related-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:.8rem}
+    .related-cat{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .related-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--dark);line-height:1.3}
+    .related-card:hover .related-title{color:var(--green)}
+    footer{background:var(--warm-white);border-top:1px solid var(--border);padding:3rem 2rem;margin-top:4rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .footer-links{display:flex;gap:2rem;list-style:none}
+    .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
+    .footer-copy{font-size:.75rem;color:#bbb}
+</style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav>
+    <a href="/" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+  <div class="article-hero">
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1553481187-be93c21490a9?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <a href="/gear/" class="article-category">Gear</a>
+      <h1 class="article-title">Best Board Games for Adults Who Think They Hate Board Games</h1>
+    </div>
+  </div>
+  <div class="article-layout">
+    <aside class="toc">
+      <p class="toc-label">In this article</p>
+      <ul><li><a href="#wingspan">Wingspan</a></li>
+<li><a href="#ticket">Ticket to Ride</a></li>
+<li><a href="#codenames">Codenames</a></li>
+<li><a href="#azul">Azul</a></li>
+<li><a href="#pandemic">Pandemic</a></li>
+<li><a href="#hosting">How to host a game night</a></li></ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+    </aside>
+    <article class="article-body">
+      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Start with <strong>Ticket to Ride</strong> for the easiest entry point, <strong>Codenames</strong> for the most laughs, or <strong>Wingspan</strong> if you want something beautiful and slightly more strategic. All three reliably convert people who think they hate board games.</p></div>
+    <p>You had a bad experience with Monopoly. Maybe it was three hours long, somebody flipped the board, and a relationship was damaged. Understandable. Monopoly is not a good game. Modern board games are almost nothing like it.</p>
+    <h2 id="wingspan">Wingspan — For People Who Like Beautiful Things</h2>
+    <p>A game about building an ecosystem of birds. The components are gorgeous — pastel wooden egg tokens, illustrated bird cards, a birdfeeder dice tower. Nobody attacks you. You mostly do your own thing. It converts non-gamers reliably, partly because it's visually beautiful and partly because it's genuinely interesting without being confrontational.</p>
+    <p><a href="https://www.amazon.com/s?k=wingspan+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Wingspan on Amazon</a></p>
+    <div class="pull-quote"><p>"Nobody attacks you. You mostly do your own thing. It's the anti-Monopoly."</p></div>
+    <h2 id="ticket">Ticket to Ride — The Perfect Gateway</h2>
+    <p>The rules fit on one page. Collect colored train cards, claim routes on a map, complete destination tickets for points. You can explain it in ten minutes. Games run 45-75 minutes. The strategy underneath is surprisingly deep but it never feels overwhelming.</p>
+    <p><a href="https://www.amazon.com/s?k=ticket+to+ride+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Ticket to Ride on Amazon</a></p>
+    <h2 id="codenames">Codenames — Best for Larger Groups</h2>
+    <p>Two teams compete to identify their agents (words on a grid) based on one-word clues from their spymasters. Funny, tense, generates moments people talk about for years. Plays in 20-30 minutes. Works for 4-8 players. This is the one that gets phones off the table.</p>
+    <p><a href="https://www.amazon.com/s?k=codenames+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Codenames on Amazon</a></p>
+    <h2 id="azul">Azul — For Pretty Puzzle People</h2>
+    <p>Tile-drafting game where you decorate a Portuguese palace. Heavy, satisfying plastic tiles. Simple to learn in five minutes, deep enough to hold your interest. Works perfectly for two players, which many games don't.</p>
+    <h2 id="pandemic">Pandemic — If You Want to Work Together</h2>
+    <p>Fully cooperative — everyone plays against the game, not each other. You're fighting four viruses before they overwhelm the world. No inter-player conflict. Creates genuine team moments and real tension. Perfect for groups who don't want competition.</p>
+    <p><a href="https://www.amazon.com/s?k=pandemic+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Pandemic on Amazon</a></p>
+    <h2 id="hosting">How to Host a Game Night People Actually Want to Attend</h2>
+    <p>Learn one game before people arrive — nothing kills a game night faster than reading rules aloud at the table. Start with something short (Codenames). Keep snacks simple. Don't force a second round if the conversation is flowing. The goal is connection, not completion.</p>
+      <div class="newsletter-inline" id="newsletter">
+    <div class="newsletter-inline-inner">
+      <p class="nl-label">✦ The Analog Wild Letter</p>
+      <h3 class="nl-title">For people who are done living through a screen.</h3>
+      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="submit">I'm in</button>
+      </div>
+      <p class="form-note">Free. No ads. Unsubscribe anytime.</p>
+    </div>
+  </div>
+      <div class="related-section">
+        <p class="related-label">Keep reading</p>
+        <div class="related-grid"><a href="/free-spaces/free-third-spaces/" class="related-card"><img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&q=80&auto=format&fit=crop" alt="Free Third Spaces: How to Find Your People Offline"><p class="related-cat">Free Spaces</p><h3 class="related-title">Free Third Spaces: How to Find Your People Offline</h3></a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a><a href="/for-kids/analog-activities-for-kids/" class="related-card"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80&auto=format&fit=crop" alt="Analog Activities Kids Actually Want to Do"><p class="related-cat">For Kids</p><h3 class="related-title">Analog Activities Kids Actually Want to Do</h3></a></div>
+      </div>
+    </article>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+  </script>
+</body>
+</html>
