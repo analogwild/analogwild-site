@@ -27,7 +27,8 @@
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--green); }
-    .nav-cta { background: var(--green) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
+    .nav-cta { background: var(--terra) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; transition: background 0.2s !important; }
+    .nav-cta:hover { background: #a06c42 !important; color: white !important; }
 
     /* HERO with crossfading images */
     .hero {
@@ -212,7 +213,7 @@
       <li><a href="#">Escapes</a></li>
       <li><a href="#">Practices</a></li>
       <li><a href="#">For Kids</a></li>
-      <li><a href="#" class="nav-cta">Newsletter</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ Sidequest</a></li>
     </ul>
   </nav>
 
@@ -358,7 +359,7 @@
   </div>
 
   <!-- NEWSLETTER — identity + baked-in benefit -->
-  <div class="newsletter-section">
+  <div class="newsletter-section" id="newsletter">
     <div class="newsletter-inner">
       <p class="section-label">The Analog Wild Letter</p>
       <h2 class="section-title">For people who are done<br>living through a screen.</h2>
