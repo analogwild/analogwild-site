@@ -363,11 +363,12 @@
       <p class="section-label">The Analog Wild Letter</p>
       <h2 class="section-title">For people who are screen-weary<br>and ready to #touchgrass again.</h2>
       <p class="section-subtitle">Every week: one analog find worth trying, one place worth escaping to, and one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div class="email-form">
-        <input type="email" placeholder="your@email.com">
-        <button type="button" onclick="subscribeBeehiiv(this)">I'm in</button>
-      </div>
-      <p class="form-note">Free. No ads. No noise. Unsubscribe anytime.</p>
+      <form action="https://www.beehiiv.com/subscribe" method="GET" target="_blank" class="email-form" onsubmit="return handleSubscribe(this)">
+        <input type="hidden" name="pub_id" value="pub_59acb8c5-21c8-415f-b429-2443395bd872">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">I'm in</button>
+      </form>
+      <p class="form-note">Free. Free. Unsubscribe anytime.</p>
     </div>
   </div>
 

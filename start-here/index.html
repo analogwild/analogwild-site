@@ -72,11 +72,12 @@
     .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-1.2rem;margin-bottom:2rem;font-style:italic}
 
     /* MANIFESTO */
-    .manifesto{background:var(--green);color:white;padding:4rem;margin:4rem 0;border-radius:4px;text-align:center}
-    .manifesto h2{font-family:'Playfair Display',serif;font-size:2rem;color:white;margin-bottom:1.2rem;line-height:1.3}
-    .manifesto p{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.8;max-width:540px;margin:0 auto 2rem;font-weight:300}
-    .manifesto ul{list-style:none;text-align:left;max-width:480px;margin:0 auto 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-    .manifesto ul li{font-size:.9rem;color:rgba(255,255,255,.85);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+    .manifesto{background:var(--cream);border:3px solid var(--dark);padding:4rem 3rem;margin:4rem 0;border-radius:2px;text-align:center;position:relative;transform:rotate(-0.4deg)}
+    .manifesto::before{content:'';position:absolute;inset:6px;border:1px solid rgba(42,38,32,.2);border-radius:1px;pointer-events:none}
+    .manifesto h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--dark);margin-bottom:1.2rem;line-height:1.2;font-style:italic}
+    .manifesto p{font-size:1rem;color:var(--mid);line-height:1.8;max-width:540px;margin:0 auto 2rem;font-weight:300}
+    .manifesto ul{list-style:none;text-align:left;max-width:480px;margin:0 auto 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+    .manifesto ul li{font-size:.9rem;color:var(--dark);padding:.4rem 0;border-bottom:1px solid var(--border);font-weight:400}
     .manifesto ul li::before{content:'✦ ';color:var(--terra)}
 
     /* NEWSLETTER CTA */
@@ -207,7 +208,7 @@
 
     <p>Before the smartphone, there were things we did without thinking. We read physical books. We wrote letters by hand. We were bored — genuinely, productively bored — and our minds wandered into creative territory that arrives only in unscheduled time. We learned things slowly, through repetition and texture, not through frictionless information delivery. We were present in conversations because there was nothing competing for our attention.</p>
 
-    <p>We are not arguing that the old ways were perfect. They weren't. We're arguing that some of what we traded away when we accepted the always-on life was worth more than we knew.</p>
+    
 
     <div class="person">
       <img class="person-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=120&q=80&auto=format&fit=crop" alt="Sarah">
@@ -233,8 +234,8 @@
     <p>Analog Wild exists to tip the balance back. Not to zero — to something saner. We cover the gear, places, and practices that make real life feel like the main event rather than the background noise between phone checks.</p>
 
     <div class="manifesto">
-      <h2>We believe in the analog life.</h2>
-      <p>Not as rejection. As return. Here's what we're reaching for:</p>
+      <h2>Wonders of an Analog Life</h2>
+      <p>Here's what we're reaching for:</p>
       <ul>
         <li>Writing letters by hand</li>
         <li>Reading physical books</li>
@@ -274,11 +275,12 @@
       <p class="nl-eyebrow">✦ The Analog Wild Letter</p>
       <h2 class="nl-title">For people who are screen-weary and ready to #touchgrass again.</h2>
       <p class="nl-sub">Every week: one analog find worth trying, one place worth escaping to, and one practice to feel alive again. Join 4,000+ people remembering how to human. Free, always.</p>
-      <div class="email-form">
-        <input type="email" placeholder="your@email.com">
-        <button type="button" onclick="subscribeBeehiiv(this)">I'm in — let's go</button>
-      </div>
-      <p class="form-note">No ads. No noise. Unsubscribe anytime. We actually mean that.</p>
+      <form action="https://www.beehiiv.com/subscribe" method="GET" target="_blank" class="email-form" onsubmit="return handleSubscribe(this)">
+        <input type="hidden" name="pub_id" value="pub_59acb8c5-21c8-415f-b429-2443395bd872">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">I'm in — let's go</button>
+      </form>
+      <p class="form-note">Free. Unsubscribe anytime.</p>
     </div>
   </div>
 
@@ -286,7 +288,7 @@
   <div class="get-started">
     <p class="gs-label">Begin here</p>
     <h2 class="gs-title">Three places to start</h2>
-    <p class="gs-sub">Pick the one that calls to you. There's no wrong answer.</p>
+    
     <div class="gs-grid">
       <a href="/practices/how-to-start-morning-pages/" class="gs-card">
         <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80&auto=format&fit=crop" alt="Morning pages">
@@ -326,35 +328,6 @@
     </div>
   </footer>
 
-  <script>
-    function subscribeBeehiiv(btn) {
-      const form = btn.closest('.email-form');
-      const emailInput = form.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : '';
-      const statusEl = form.nextElementSibling;
-      if (!email || !email.includes('@')) {
-        if(statusEl){statusEl.textContent='Please enter a valid email address.';statusEl.style.color='#b87d52';}
-        return;
-      }
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      fetch('https://api.beehiiv.com/v2/publications/pub_59acb8c5-21c8-415f-b429-2443395bd872/subscriptions', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json','Authorization':'Bearer hL6gRF0vJWhQtpVYTbL4UFMYRFK3nkvZ2OdGx5VtRY6zdCqeUSunBsyjrsMXW7QI'},
-        body: JSON.stringify({email, reactivate_existing:true, send_welcome_email:true, utm_source:'analogwild-start-here', utm_medium:'organic', utm_campaign:'start-here-page'})
-      })
-      .then(r=>r.json())
-      .then(data=>{
-        if(data.data&&data.data.id){
-          form.innerHTML='<p style="color:#d4b896;font-weight:600;font-size:1.1rem;text-align:center;padding:1rem 0;">✓ You\'re in. Welcome to the analog side. Check your inbox.</p>';
-          if(statusEl)statusEl.style.display='none';
-        } else { throw new Error(); }
-      })
-      .catch(()=>{
-        btn.textContent="I'm in — let's go";btn.disabled=false;
-        if(statusEl){statusEl.textContent='Something went wrong. Try again?';statusEl.style.color='#b87d52';}
-      });
-    }
-  </script>
+  
 </body>
 </html>

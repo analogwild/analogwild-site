@@ -82,11 +82,11 @@
     .book-link{font-size:.68rem;color:var(--terra);text-decoration:underline}
 
     /* INLINE NEWSLETTER */
-    .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}.newsletter-inline p{color:rgba(255,255,255,.75)}.newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
     .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
     .email-form input::placeholder{color:rgba(255,255,255,.35)}
@@ -313,11 +313,12 @@
           <p class="nl-label">✦ The Analog Wild Letter</p>
           <h3 class="nl-title">For people who are done living through a screen.</h3>
           <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-          <div class="email-form">
-            <input type="email" placeholder="your@email.com">
-            <button type="button" onclick="subscribeBeehiiv(this)">I'm in</button>
-          </div>
-          <p class="form-note">Free. No ads. Unsubscribe anytime.</p>
+          <form action="https://www.beehiiv.com/subscribe" method="GET" target="_blank" class="email-form" onsubmit="return handleSubscribe(this)">
+        <input type="hidden" name="pub_id" value="pub_59acb8c5-21c8-415f-b429-2443395bd872">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">I'm in</button>
+      </form>
+          <p class="form-note">Free. Unsubscribe anytime.</p>
         </div>
       </div>
 
@@ -361,37 +362,7 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
-
-    function subscribeBeehiiv(btn) {
-      const form = btn.closest('.email-form');
-      const emailInput = form.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : '';
-      const statusEl = form.nextElementSibling;
-      if (!email || !email.includes('@')) {
-        statusEl.textContent = 'Please enter a valid email address.';
-        statusEl.style.color = '#b87d52';
-        return;
-      }
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      fetch('https://api.beehiiv.com/v2/publications/pub_59acb8c5-21c8-415f-b429-2443395bd872/subscriptions', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json','Authorization':'Bearer hL6gRF0vJWhQtpVYTbL4UFMYRFK3nkvZ2OdGx5VtRY6zdCqeUSunBsyjrsMXW7QI'},
-        body: JSON.stringify({email,reactivate_existing:true,send_welcome_email:true,utm_source:'analogwild-website',utm_medium:'organic',utm_campaign:'article-inline'})
-      })
-      .then(r=>r.json())
-      .then(data=>{
-        if(data.data&&data.data.id){
-          form.innerHTML='<p style="color:#4a5e3a;font-weight:600;font-size:1rem;">✓ You\'re in! Check your inbox.</p>';
-          if(statusEl)statusEl.style.display='none';
-        } else { throw new Error(); }
-      })
-      .catch(()=>{
-        btn.textContent="I'm in";btn.disabled=false;
-        if(statusEl){statusEl.textContent='Something went wrong. Try again?';statusEl.style.color='#b87d52';}
-      });
-    }
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
