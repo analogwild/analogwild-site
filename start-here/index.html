@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here — Why Analog Wild Exists — Analog Wild</title>
+  <meta name="description" content="Something is wrong. Not with you — with all of us. Here's what the research says, what we're doing about it, and why analog living might be the most radical act of self-care available to you right now.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;400italic;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--green:#4a5e3a;--green-light:#6b7f58;--terra:#b87d52;--cream:#f7f3ec;--warm-white:#fdfaf6;--dark:#2a2620;--mid:#6b6459;--border:#e4ddd3}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--dark);line-height:1.6}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark);text-decoration:none}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
+
+    /* HERO */
+    .page-hero{margin-top:64px;position:relative;min-height:85vh;display:flex;align-items:center;overflow:hidden}
+    .hero-slides{position:absolute;inset:0}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:cf 20s infinite}
+    .hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600&q=80&auto=format&fit=crop');animation-delay:0s}
+    .hero-slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80&auto=format&fit=crop');animation-delay:10s}
+    @keyframes cf{0%{opacity:0;transform:scale(1.03)}5%{opacity:1}50%{opacity:1;transform:scale(1)}55%{opacity:0}100%{opacity:0}}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,38,32,.82) 0%,rgba(42,38,32,.4) 100%)}
+    .hero-content{position:relative;z-index:2;padding:6rem 4rem;max-width:820px}
+    .hero-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:1.2rem}
+    .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:white;line-height:1.08;letter-spacing:-.02em;margin-bottom:1.5rem}
+    .hero-title em{font-style:italic;color:#d4b896}
+    .hero-subtitle{font-size:1.15rem;color:rgba(255,255,255,.82);line-height:1.7;font-weight:300;max-width:580px;margin-bottom:2.5rem}
+    .hero-cta{background:var(--terra);color:white;padding:1rem 2.2rem;font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;display:inline-block}
+    .hero-cta:hover{background:#a06c42}
+
+    /* STAT STRIP */
+    .stat-strip{background:var(--dark);padding:3rem 2rem}
+    .stat-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+    .stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--terra);display:block;margin-bottom:.3rem}
+    .stat-label{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.5;font-weight:300}
+
+    /* BODY */
+    .page-body{max-width:760px;margin:0 auto;padding:5rem 2rem}
+    .page-body h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:600;color:var(--dark);margin:3.5rem 0 1.2rem;line-height:1.2;letter-spacing:-.01em}
+    .page-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:var(--dark);margin:2rem 0 .8rem}
+    .page-body p{font-size:1.08rem;line-height:1.85;color:var(--dark);margin-bottom:1.5rem;font-weight:300}
+    .page-body strong{font-weight:600}
+    .page-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+
+    /* PULL QUOTE */
+    .pull{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:2rem 0;margin:3rem 0}
+    .pull p{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0;font-weight:400}
+
+    /* RESEARCH BOX */
+    .research{background:var(--cream);border-left:4px solid var(--green);padding:1.4rem 1.8rem;margin:2rem 0;border-radius:0 4px 4px 0}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem}
+    .research p{font-size:.92rem;color:var(--dark);line-height:1.65;margin:0;font-weight:400}
+    .research a{color:var(--green)}
+
+    /* PERSON CALLOUT */
+    .person{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.65;margin:0}
+
+    /* INLINE IMAGE */
+    .inline-img{width:100%;border-radius:4px;margin:2rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-1.2rem;margin-bottom:2rem;font-style:italic}
+
+    /* MANIFESTO */
+    .manifesto{background:var(--green);color:white;padding:4rem;margin:4rem 0;border-radius:4px;text-align:center}
+    .manifesto h2{font-family:'Playfair Display',serif;font-size:2rem;color:white;margin-bottom:1.2rem;line-height:1.3}
+    .manifesto p{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.8;max-width:540px;margin:0 auto 2rem;font-weight:300}
+    .manifesto ul{list-style:none;text-align:left;max-width:480px;margin:0 auto 2rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+    .manifesto ul li{font-size:.9rem;color:rgba(255,255,255,.85);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+    .manifesto ul li::before{content:'✦ ';color:var(--terra)}
+
+    /* NEWSLETTER CTA */
+    .newsletter-cta{background:var(--dark);padding:5rem 2rem;text-align:center}
+    .newsletter-cta-inner{max-width:640px;margin:0 auto}
+    .nl-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
+    .nl-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:white;margin-bottom:1rem;line-height:1.2}
+    .nl-sub{font-size:1rem;color:rgba(255,255,255,.6);line-height:1.7;font-weight:300;margin-bottom:2.5rem}
+    .email-form{display:flex;max-width:460px;margin:0 auto 1rem;border:1.5px solid rgba(255,255,255,.25)}
+    .email-form input{flex:1;border:none;padding:.95rem 1.2rem;font-family:'Inter',sans-serif;font-size:.95rem;background:rgba(255,255,255,.07);color:white;outline:none}
+    .email-form input::placeholder{color:rgba(255,255,255,.3)}
+    .email-form button{background:var(--terra);color:white;border:none;padding:.95rem 1.5rem;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+    .email-form button:hover{background:#a06c42}
+    .form-note{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.5rem}
+
+    /* GET STARTED GRID */
+    .get-started{max-width:1100px;margin:0 auto;padding:5rem 2rem}
+    .gs-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;text-align:center}
+    .gs-title{font-family:'Playfair Display',serif;font-size:2rem;text-align:center;margin-bottom:.8rem}
+    .gs-sub{font-size:.95rem;color:var(--mid);text-align:center;max-width:520px;margin:0 auto 3rem;font-weight:300}
+    .gs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .gs-card{text-decoration:none;color:inherit;display:block;border:1px solid var(--border);background:white;border-radius:4px;overflow:hidden;transition:box-shadow .2s}
+    .gs-card:hover{box-shadow:0 8px 32px rgba(42,38,32,.1)}
+    .gs-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+    .gs-card-body{padding:1.3rem}
+    .gs-cat{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.4rem}
+    .gs-card-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--dark);line-height:1.3}
+    .gs-card:hover .gs-card-title{color:var(--green)}
+
+    footer{background:var(--warm-white);border-top:1px solid var(--border);padding:3rem 2rem;margin-top:0}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .footer-links{display:flex;gap:2rem;list-style:none}
+    .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
+    .footer-copy{font-size:.75rem;color:#bbb}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/gear/">Gear</a></li>
+      <li><a href="/escapes/">Escapes</a></li>
+      <li><a href="/practices/">Practices</a></li>
+      <li><a href="/for-kids/">For Kids</a></li>
+      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="hero-slides">
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Why Analog Wild exists</p>
+      <h1 class="hero-title">Something is wrong.<br>Not with <em>you.</em></h1>
+      <p class="hero-subtitle">You're not lazy. You're not weak. You're not addicted to your phone because you lack discipline. You're a human being living inside systems that were specifically engineered to capture your attention and never give it back. This is a story about what happens when you take it back.</p>
+      <a href="#the-problem" class="hero-cta">Read our story</a>
+    </div>
+  </div>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="stat-inner">
+      <div>
+        <span class="stat-num">58%</span>
+        <p class="stat-label">of Americans report feeling lonely — up from 20% a decade ago</p>
+      </div>
+      <div>
+        <span class="stat-num">4.7hrs</span>
+        <p class="stat-label">average daily phone use. That's 70 days a year staring at a glass rectangle.</p>
+      </div>
+      <div>
+        <span class="stat-num">47%</span>
+        <p class="stat-label">of the time, our minds are wandering — not present in our own lives</p>
+      </div>
+      <div>
+        <span class="stat-num">6 min</span>
+        <p class="stat-label">of reading a physical book reduces stress by 68%. Six minutes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="page-body">
+
+    <h2 id="the-problem">We Are Living Through the Loneliness Epidemic. The Screens Are Not Helping.</h2>
+
+    <p>In 2023, the U.S. Surgeon General issued an advisory declaring loneliness a public health crisis. Not a mood. Not a personal failing. A crisis — with measurable impacts on mortality comparable to smoking 15 cigarettes a day.</p>
+
+    <p>At the same time, we are more "connected" than at any point in human history. More followers, more messages, more ways to reach people at any hour of the day or night. More content than any person could consume in a thousand lifetimes. More notifications telling us we matter.</p>
+
+    <p>And somehow: more alone.</p>
+
+    <div class="research">
+      <p class="research-label">📊 The Research</p>
+      <p>A landmark Harvard study following 724 adults over 80 years found that the single strongest predictor of health and happiness in old age wasn't wealth, fame, or professional success. It was the <strong>quality of their relationships</strong> — specifically, whether they had people they could be fully present with. Researcher Robert Waldinger summarized it simply: <em>"Good relationships keep us happier and healthier. Period."</em> Not good content. Not good follower counts. Relationships. Present. Real.</p>
+    </div>
+
+    <p>Here is what's actually happening: our phones are selling us a simulation of connection while quietly dismantling the conditions for real connection. Every minute we spend in the scroll is a minute we're not on a walk with someone, not writing a letter, not sitting around a table being bored together in the delightful way that actual friendship requires.</p>
+
+    <img class="inline-img" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=80&auto=format&fit=crop" alt="Friends together outdoors, laughing, fully present">
+    <p class="img-caption">This is what we're reaching for. Not rejection of technology — return to this.</p>
+
+    <h2>Your Attention Is the Most Valuable Thing You Own. Someone Is Stealing It.</h2>
+
+    <p>The average person unlocks their phone 96 times a day. That's once every ten minutes during waking hours. Each unlock is not a choice — it's a reflex, triggered by the same neurological mechanisms that make slot machines so effective: variable rewards, unpredictable stimulation, the possibility that <em>this time</em> something interesting will happen.</p>
+
+    <p>The engineers who built these systems know exactly what they're doing. Former Google design ethicist Tristan Harris spent years studying how apps are designed to be addictive — and left to dedicate his career to warning us. Former Facebook VP Chamath Palihapitiya said in 2017: <em>"The short-term, dopamine-driven feedback loops we've created are destroying how society works."</em> He was talking about his own product.</p>
+
+    <div class="pull">
+      <p>"The short-term, dopamine-driven feedback loops we've created are destroying how society works." — Chamath Palihapitiya, Former VP at Facebook</p>
+    </div>
+
+    <p>Meanwhile, research on attention and cognitive performance consistently shows that even the <em>presence</em> of a smartphone — face-down, silent, in the same room — measurably reduces available cognitive capacity. Just knowing it's there takes up mental bandwidth. You are literally less intelligent, less creative, and less present when your phone is nearby.</p>
+
+    <div class="research">
+      <p class="research-label">📊 The Research</p>
+      <p>A 2017 University of Texas study published in the <em>Journal of the Association for Consumer Research</em> found that participants performed significantly worse on cognitive tasks when their smartphones were in the room — even when the phones were face-down and silent — compared to when phones were in another room entirely. The researchers called it a "brain drain." The mere presence of your phone is costing you IQ points.</p>
+    </div>
+
+    <h2>What We Lost. What We Can Get Back.</h2>
+
+    <p>Before the smartphone, there were things we did without thinking. We read physical books. We wrote letters by hand. We were bored — genuinely, productively bored — and our minds wandered into creative territory that arrives only in unscheduled time. We learned things slowly, through repetition and texture, not through frictionless information delivery. We were present in conversations because there was nothing competing for our attention.</p>
+
+    <p>We are not arguing that the old ways were perfect. They weren't. We're arguing that some of what we traded away when we accepted the always-on life was worth more than we knew.</p>
+
+    <div class="person">
+      <img class="person-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=120&q=80&auto=format&fit=crop" alt="Sarah">
+      <div>
+        <p class="person-name">Sarah — Washington</p>
+        <p class="person-quote">"I deleted Instagram in January. By March I had read eleven books, started writing poetry again for the first time in fifteen years, and felt — I don't know how to explain this exactly — like I was back inside my own life instead of watching it. I didn't expect it to feel like coming home."</p>
+      </div>
+    </div>
+
+    <p>The research on what actually makes humans flourish is remarkably consistent across disciplines. Flow states — the deep absorption that makes time disappear and produces our best work — require uninterrupted focus. Creativity requires boredom. Meaningful relationships require presence. Rest requires actual rest, not passive consumption. Joy requires participation, not observation.</p>
+
+    <p>All of these things are analog. All of them are available to you. Most of us have just forgotten how to access them.</p>
+
+    <img class="inline-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80&auto=format&fit=crop" alt="Hands writing in a journal, morning light">
+    <p class="img-caption">The act of writing by hand activates different neural pathways than typing. Slower, yes. Also richer.</p>
+
+    <h2>What Analog Wild Is (and Isn't)</h2>
+
+    <p>We are not Luddites. We use phones. We use computers. We are, ironically, a website. The internet has given us extraordinary things — access to knowledge, connection across distances, tools that genuinely improve lives.</p>
+
+    <p>But we believe something has gone wrong with the ratio. That most of us are consuming far more than we're creating, observing far more than we're participating, and spending far more time in the digital world than our nervous systems were designed to handle.</p>
+
+    <p>Analog Wild exists to tip the balance back. Not to zero — to something saner. We cover the gear, places, and practices that make real life feel like the main event rather than the background noise between phone checks.</p>
+
+    <div class="manifesto">
+      <h2>We believe in the analog life.</h2>
+      <p>Not as rejection. As return. Here's what we're reaching for:</p>
+      <ul>
+        <li>Writing letters by hand</li>
+        <li>Reading physical books</li>
+        <li>Film photography</li>
+        <li>Off-grid escapes</li>
+        <li>Morning pages</li>
+        <li>Board games around a table</li>
+        <li>Nature journals</li>
+        <li>Making things with your hands</li>
+        <li>Stargazing</li>
+        <li>Being bored on purpose</li>
+        <li>Sun prints with children</li>
+        <li>Dinners without phones</li>
+      </ul>
+      <p>We're not anti-technology. We're just pro real-life.</p>
+    </div>
+
+    <h2>Where to Start</h2>
+
+    <p>If you're new here, the best thing to do is pick one small thing and try it this week. Not a 30-day challenge, not a total overhaul — just one thing. Here's what we recommend:</p>
+
+    <p><strong>If you want to feel calmer:</strong> Try the <a href="/practices/analog-evening-routine/">analog evening routine</a>. Put your phone in another room one hour before bed. Read a physical book. Three things in a notebook. That's it.</p>
+
+    <p><strong>If you want to be more creative:</strong> Start <a href="/practices/how-to-start-morning-pages/">morning pages</a>. Three longhand pages every morning before you look at your phone. Give it two weeks.</p>
+
+    <p><strong>If you want to actually see the world:</strong> Load a roll of film. Get a <a href="/gear/best-film-cameras-for-beginners/">cheap film camera</a> or a disposable. Shoot 24 frames. Wait for the results. Notice how differently you look at things when each frame costs something.</p>
+
+    <p><strong>If you want to go somewhere:</strong> There are <a href="/escapes/off-grid-retreats-pacific-northwest/">off-grid retreats</a> within driving distance of wherever you are that will reset something in you. Go to one.</p>
+
+    <p>And sign up for the newsletter. Every week we send one analog find, one escape, one practice. Nothing more. It arrives in your inbox, not your feed — and it's trying to give you your life back, not take more of it.</p>
+
+  </div>
+
+  <!-- NEWSLETTER CTA -->
+  <div class="newsletter-cta" id="newsletter">
+    <div class="newsletter-cta-inner">
+      <p class="nl-eyebrow">✦ The Analog Wild Letter</p>
+      <h2 class="nl-title">For people who are screen-weary and ready to #touchgrass again.</h2>
+      <p class="nl-sub">Every week: one analog find worth trying, one place worth escaping to, and one practice to feel alive again. Join 4,000+ people remembering how to human. Free, always.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="button" onclick="subscribeBeehiiv(this)">I'm in — let's go</button>
+      </div>
+      <p class="form-note">No ads. No noise. Unsubscribe anytime. We actually mean that.</p>
+    </div>
+  </div>
+
+  <!-- GET STARTED GRID -->
+  <div class="get-started">
+    <p class="gs-label">Begin here</p>
+    <h2 class="gs-title">Three places to start</h2>
+    <p class="gs-sub">Pick the one that calls to you. There's no wrong answer.</p>
+    <div class="gs-grid">
+      <a href="/practices/how-to-start-morning-pages/" class="gs-card">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80&auto=format&fit=crop" alt="Morning pages">
+        <div class="gs-card-body">
+          <p class="gs-cat">Practices</p>
+          <h3 class="gs-card-title">How to Start Morning Pages</h3>
+        </div>
+      </a>
+      <a href="/challenges/30-day-no-scroll-challenge/" class="gs-card">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop" alt="No scroll challenge">
+        <div class="gs-card-body">
+          <p class="gs-cat">Challenges</p>
+          <h3 class="gs-card-title">The 30-Day No-Scroll Challenge</h3>
+        </div>
+      </a>
+      <a href="/escapes/off-grid-retreats-pacific-northwest/" class="gs-card">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80&auto=format&fit=crop" alt="Off-grid retreat">
+        <div class="gs-card-body">
+          <p class="gs-cat">Escapes</p>
+          <h3 class="gs-card-title">10 Off-Grid Retreats in the Pacific Northwest</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="/start-here/">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/escapes/">Escapes</a></li>
+        <li><a href="mailto:hello@analogwild.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+
+  <script>
+    function subscribeBeehiiv(btn) {
+      const form = btn.closest('.email-form');
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value.trim() : '';
+      const statusEl = form.nextElementSibling;
+      if (!email || !email.includes('@')) {
+        if(statusEl){statusEl.textContent='Please enter a valid email address.';statusEl.style.color='#b87d52';}
+        return;
+      }
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch('https://api.beehiiv.com/v2/publications/pub_59acb8c5-21c8-415f-b429-2443395bd872/subscriptions', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Authorization':'Bearer hL6gRF0vJWhQtpVYTbL4UFMYRFK3nkvZ2OdGx5VtRY6zdCqeUSunBsyjrsMXW7QI'},
+        body: JSON.stringify({email, reactivate_existing:true, send_welcome_email:true, utm_source:'analogwild-start-here', utm_medium:'organic', utm_campaign:'start-here-page'})
+      })
+      .then(r=>r.json())
+      .then(data=>{
+        if(data.data&&data.data.id){
+          form.innerHTML='<p style="color:#d4b896;font-weight:600;font-size:1.1rem;text-align:center;padding:1rem 0;">✓ You\'re in. Welcome to the analog side. Check your inbox.</p>';
+          if(statusEl)statusEl.style.display='none';
+        } else { throw new Error(); }
+      })
+      .catch(()=>{
+        btn.textContent="I'm in — let's go";btn.disabled=false;
+        if(statusEl){statusEl.textContent='Something went wrong. Try again?';statusEl.style.color='#b87d52';}
+      });
+    }
+  </script>
+</body>
+</html>
