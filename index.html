@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analog Wild — Version A (Crossfade Reel)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #4a5e3a; --green-light: #6b7f58; --terra: #b87d52;
+      --cream: #f7f3ec; --warm-white: #fdfaf6; --dark: #2a2620;
+      --mid: #6b6459; --border: #e4ddd3;
+    }
+    html { font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--dark); line-height: 1.6; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(253,250,246,0.96); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--dark); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: var(--green) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
+
+    /* HERO with crossfading images */
+    .hero {
+      margin-top: 64px; position: relative; height: 92vh;
+      min-height: 600px; display: flex; align-items: flex-end; overflow: hidden;
+    }
+
+    .hero-slides { position: absolute; inset: 0; }
+
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0;
+      animation: crossfade 24s infinite;
+    }
+
+    /* 4 joyful human/nature images, each shows for ~6s */
+    /* All human, analog, outdoors — zero screens */
+    .hero-slide:nth-child(1) {
+      /* Woman laughing in a field of wildflowers */
+      background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600&q=80&auto=format&fit=crop');
+      animation-delay: 0s;
+    }
+    .hero-slide:nth-child(2) {
+      /* Friends having a picnic outdoors */
+      background-image: url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1600&q=80&auto=format&fit=crop');
+      animation-delay: 6s;
+    }
+    .hero-slide:nth-child(3) {
+      /* Person writing in a journal in nature */
+      background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&q=80&auto=format&fit=crop');
+      animation-delay: 12s;
+    }
+    .hero-slide:nth-child(4) {
+      /* Couple hiking in mountains, joyful */
+      background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80&auto=format&fit=crop');
+      animation-delay: 18s;
+    }
+
+    @keyframes crossfade {
+      0%   { opacity: 0; transform: scale(1.03); }
+      5%   { opacity: 1; transform: scale(1.03); }
+      25%  { opacity: 1; transform: scale(1); }
+      33%  { opacity: 0; transform: scale(1); }
+      100% { opacity: 0; }
+    }
+
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, rgba(42,38,32,0.05) 0%, rgba(42,38,32,0.2) 40%, rgba(42,38,32,0.78) 100%);
+    }
+
+    .hero-content { position: relative; z-index: 2; padding: 4rem 4rem 5rem; max-width: 760px; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 1rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; line-height: 1.08; color: white; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    .hero h1 em { font-style: italic; color: #d4b896; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.65; font-weight: 300; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--terra); color: white; padding: 0.85rem 2rem; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+    .btn-ghost { color: rgba(255,255,255,0.85); font-size: 0.82rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
+
+    .tagline-bar { background: var(--green); color: rgba(255,255,255,0.9); text-align: center; padding: 0.9rem 2rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .categories-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .categories-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; }
+    .category-tab {
+      flex: 1; padding: 2rem 1rem; text-align: center; text-decoration: none;
+      color: var(--mid); border-right: 1px solid var(--border);
+      transition: all 0.25s ease; position: relative; overflow: hidden;
+    }
+    .category-tab:last-child { border-right: none; }
+    .category-tab:hover {
+      background: #f0ebe0;
+      color: var(--green);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(74,94,58,0.12);
+      z-index: 2;
+    }
+    .cat-icon {
+      display: block; margin: 0 auto 0.6rem; width: 32px; height: 32px;
+      stroke: var(--mid); fill: none; stroke-width: 1.5;
+      stroke-linecap: round; stroke-linejoin: round;
+      transition: stroke 0.25s, transform 0.25s;
+    }
+    .category-tab:hover .cat-icon {
+      stroke: var(--green);
+      transform: scale(1.15);
+    }
+
+    /* Starburst burst lines that appear on hover */
+    .cat-burst {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 80px; height: 80px;
+      margin: -40px 0 0 -40px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .category-tab:hover .cat-burst { opacity: 1; }
+    .cat-burst line {
+      stroke: var(--terra);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      transform-origin: 40px 40px;
+      opacity: 0;
+    }
+    .category-tab:hover .cat-burst line {
+      animation: burstLine 0.4s ease-out forwards;
+    }
+    .cat-burst line:nth-child(1) { transform: rotate(0deg);   animation-delay: 0s; }
+    .cat-burst line:nth-child(2) { transform: rotate(45deg);  animation-delay: 0.03s; }
+    .cat-burst line:nth-child(3) { transform: rotate(90deg);  animation-delay: 0.06s; }
+    .cat-burst line:nth-child(4) { transform: rotate(135deg); animation-delay: 0.09s; }
+    .cat-burst line:nth-child(5) { transform: rotate(180deg); animation-delay: 0.12s; }
+    .cat-burst line:nth-child(6) { transform: rotate(225deg); animation-delay: 0.15s; }
+    .cat-burst line:nth-child(7) { transform: rotate(270deg); animation-delay: 0.18s; }
+    .cat-burst line:nth-child(8) { transform: rotate(315deg); animation-delay: 0.21s; }
+
+    @keyframes burstLine {
+      0%   { opacity: 0; stroke-dasharray: 0 8; stroke-dashoffset: 0; }
+      40%  { opacity: 1; stroke-dasharray: 5 3; }
+      100% { opacity: 0; stroke-dasharray: 5 3; stroke-dashoffset: -8; }
+    }
+    .cat-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; display: block; }
+
+    .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600; color: var(--dark); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1rem; color: var(--mid); max-width: 540px; line-height: 1.7; font-weight: 300; margin-bottom: 3rem; }
+
+    .articles-grid { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 1.5px; background: var(--border); }
+    .article-card { background: var(--warm-white); overflow: hidden; text-decoration: none; color: inherit; display: block; transition: opacity 0.2s; }
+    .article-card:hover { opacity: 0.88; }
+    .article-card.featured { grid-row: span 2; }
+    .card-image { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .article-card.featured .card-image { aspect-ratio: 3/4; }
+    .card-body { padding: 1.5rem; }
+    .card-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.5rem; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; line-height: 1.3; color: var(--dark); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .article-card.featured .card-title { font-size: 1.6rem; }
+    .card-excerpt { font-size: 0.88rem; color: var(--mid); line-height: 1.65; font-weight: 300; }
+    .card-read-more { display: inline-block; margin-top: 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); border-bottom: 1px solid var(--green); padding-bottom: 1px; }
+
+    .articles-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; }
+    .mini-card { text-decoration: none; color: inherit; }
+    .mini-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: 1rem; }
+    .mini-card .card-title { font-size: 1rem; }
+
+    /* NEWSLETTER — identity-driven */
+    .newsletter-section { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .newsletter-inner { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+    .newsletter-inner .section-label { text-align: center; }
+    .newsletter-inner .section-title { font-size: 2.2rem; }
+    .newsletter-inner .section-subtitle { margin: 0 auto 2.5rem; }
+    .email-form { display: flex; gap: 0; max-width: 460px; margin: 0 auto 1rem; border: 1.5px solid var(--dark); }
+    .email-form input { flex: 1; border: none; padding: 0.9rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: white; color: var(--dark); outline: none; }
+    .email-form input::placeholder { color: #bbb; }
+    .email-form button { background: var(--dark); color: white; border: none; padding: 0.9rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .email-form button:hover { background: var(--green); }
+    .form-note { font-size: 0.75rem; color: var(--mid); }
+
+    .manifesto { background: var(--dark); color: white; }
+    .manifesto-inner { max-width: 760px; margin: 0 auto; padding: 6rem 2rem; text-align: center; }
+    .manifesto blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400; font-style: italic; line-height: 1.5; color: rgba(255,255,255,0.92); margin-bottom: 2rem; }
+    .manifesto p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.8; font-weight: 300; margin-bottom: 2rem; }
+
+    footer { background: var(--warm-white); border-top: 1px solid var(--border); padding: 3rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    .footer-copy { font-size: 0.75rem; color: #bbb; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">Analog <span>Wild</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Gear</a></li>
+      <li><a href="#">Escapes</a></li>
+      <li><a href="#">Practices</a></li>
+      <li><a href="#">For Kids</a></li>
+      <li><a href="#" class="nav-cta">Newsletter</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Analog Wild</p>
+      <h1>Remember how<br>to <em>human.</em></h1>
+      <p>We're not anti-technology, we're just pro real-life. Gear, escapes, and practices for people who want to feel alive again.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Start Here</a>
+        <a href="#" class="btn-ghost">Browse all articles →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="tagline-bar">
+    Come back to your senses &nbsp;·&nbsp; Notebooks &nbsp;·&nbsp; Film cameras &nbsp;·&nbsp; Off-grid escapes &nbsp;·&nbsp; Analog for kids &nbsp;·&nbsp; No-scroll challenges
+  </div>
+
+  <div class="categories-strip">
+    <div class="categories-inner">
+
+      <!-- Gear -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><path d="M11 6 C11 4 13 3 16 3 C19 3 21 4 21 6"/><path d="M8 6 C5 6 4 8 4 10 L4 26 C4 28 6 29 8 29 L24 29 C26 29 28 28 28 26 L28 10 C28 8 27 6 24 6 Z"/><line x1="4" y1="14" x2="28" y2="14"/><path d="M13 6 L19 6"/></svg>
+        <span class="cat-name">Gear</span>
+      </a>
+
+      <!-- Escapes -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><polygon points="16,5 29,25 3,25"/><polyline points="10,25 16,13 22,25"/><line x1="3" y1="25" x2="29" y2="25"/></svg>
+        <span class="cat-name">Escapes</span>
+      </a>
+
+      <!-- Practices -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><line x1="8" y1="26" x2="24" y2="26"/><path d="M9 20 L20 9 C21.5 7.5 24 7.5 25.5 9 C27 10.5 27 13 25.5 14.5 L14.5 25.5 Z"/><line x1="9" y1="20" x2="6" y2="26"/><line x1="18" y1="11" x2="23" y2="16"/></svg>
+        <span class="cat-name">Practices</span>
+      </a>
+
+      <!-- For Kids -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="16" y1="25" x2="16" y2="29"/><line x1="3" y1="16" x2="7" y2="16"/><line x1="25" y1="16" x2="29" y2="16"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="22" y1="22" x2="25" y2="25"/><line x1="25" y1="7" x2="22" y2="10"/><line x1="10" y1="22" x2="7" y2="25"/></svg>
+        <span class="cat-name">For Kids</span>
+      </a>
+
+      <!-- Challenges -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><rect x="10" y="3" width="12" height="22" rx="2"/><line x1="10" y1="7" x2="22" y2="7"/><line x1="10" y1="21" x2="22" y2="21"/><line x1="13" y1="13" x2="19" y2="17"/><line x1="19" y1="13" x2="13" y2="17"/></svg>
+        <span class="cat-name">Challenges</span>
+      </a>
+
+      <!-- Free Spaces -->
+      <a href="#" class="category-tab">
+        <svg class="cat-burst" viewBox="0 0 80 80"><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/><line x1="40" y1="4" x2="40" y2="14"/></svg>
+        <svg class="cat-icon" viewBox="0 0 32 32"><line x1="16" y1="29" x2="16" y2="16"/><ellipse cx="16" cy="12" rx="9" ry="8"/><line x1="16" y1="20" x2="11" y2="25"/><line x1="16" y1="22" x2="21" y2="27"/></svg>
+        <span class="cat-name">Free Spaces</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Latest from Analog Wild</p>
+    <h2 class="section-title">What we're reading, using, and loving</h2>
+    <p class="section-subtitle">Honest reviews, real stories, and the occasional founder worth knowing — from a corner of the internet that believes slow is better.</p>
+
+    <div class="articles-grid">
+      <a href="#" class="article-card featured">
+        <img class="card-image" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80&auto=format&fit=crop" alt="Morning pages">
+        <div class="card-body">
+          <p class="card-category">Practices</p>
+          <h3 class="card-title">How to Start Morning Pages — and Why It Might Change Everything</h3>
+          <p class="card-excerpt">Julia Cameron has been telling us to write three longhand pages every morning since 1992. A strange number of writers, painters, and people who feel creatively stuck are taking her seriously.</p>
+          <span class="card-read-more">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="article-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80&auto=format&fit=crop" alt="Film camera">
+        <div class="card-body">
+          <p class="card-category">Gear</p>
+          <h3 class="card-title">The Best Film Cameras for Beginners in 2026</h3>
+          <p class="card-excerpt">Film is back. Here's where to start without spending a fortune.</p>
+          <span class="card-read-more">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="article-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80&auto=format&fit=crop" alt="Off-grid camping">
+        <div class="card-body">
+          <p class="card-category">Escapes</p>
+          <h3 class="card-title">10 Off-Grid Retreats in the Pacific Northwest Worth Every Penny</h3>
+          <p class="card-excerpt">No wifi. No problem. The best places to disappear in Oregon, Washington, and Idaho.</p>
+          <span class="card-read-more">Read more</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="articles-row">
+      <a href="#" class="mini-card">
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80&auto=format&fit=crop" alt="Notebooks">
+        <p class="card-category">Gear</p>
+        <h3 class="card-title">Best Notebooks for Morning Pages</h3>
+      </a>
+      <a href="#" class="mini-card">
+        <!-- Child doing a craft/nature activity outdoors -->
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80&auto=format&fit=crop" alt="Kid doing analog activity outdoors">
+        <p class="card-category">For Kids</p>
+        <h3 class="card-title">Analog Activities Kids Actually Want to Do</h3>
+      </a>
+      <a href="#" class="mini-card">
+        <!-- Adults laughing playing a board game at a table -->
+        <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?w=400&q=80&auto=format&fit=crop" alt="Adults playing board games together">
+        <p class="card-category">Gear</p>
+        <h3 class="card-title">Board Games for Adults Who Think They Hate Board Games</h3>
+      </a>
+      <a href="#" class="mini-card">
+        <!-- Person under a glowing tent with stars/milky way above -->
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80&auto=format&fit=crop" alt="Glowing tent under a sky full of stars">
+        <p class="card-category">Escapes</p>
+        <h3 class="card-title">Best Stargazing Spots in Oregon</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="manifesto">
+    <div class="manifesto-inner">
+      <blockquote>"We're not anti-technology. We're just pro real-life."</blockquote>
+      <p>We cover the gear, places, and practices that make being alive feel worth showing up for. No charger required.</p>
+      <a href="#" class="btn-primary" style="background:var(--terra);">Read our story</a>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER — identity + baked-in benefit -->
+  <div class="newsletter-section">
+    <div class="newsletter-inner">
+      <p class="section-label">The Analog Wild Letter</p>
+      <h2 class="section-title">For people who are done<br>living through a screen.</h2>
+      <p class="section-subtitle">Every week: one analog find worth trying, one place worth escaping to, and one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+      <div class="email-form">
+        <input type="email" placeholder="your@email.com">
+        <button type="submit">I'm in</button>
+      </div>
+      <p class="form-note">Free. No ads. No noise. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Analog Wild</div>
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Gear</a></li>
+        <li><a href="#">Escapes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
