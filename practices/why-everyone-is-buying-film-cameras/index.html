@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Everyone Is Buying Film Cameras Again — Analog Wild</title>
-  <meta name="description" content="Film camera sales have risen every year since 2015. Most buyers are in their 20s. Here's why.">
+  <meta name="description" content="Film photography's revival isn't nostalgia — it's a deliberate response to digital overwhelm. Here's what's actually driving it and what people are getting back.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,86 +84,201 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
-    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1542038374892-75e00f08c51e?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/practices/" class="article-category">Practices</a>
       <h1 class="article-title">Why Everyone Is Buying Film Cameras Again</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#numbers">The numbers</a></li>
-<li><a href="#imperfection">The imperfection problem</a></li>
-<li><a href="#slowness">Slowing down</a></li>
-<li><a href="#community">The community</a></li>
-<li><a href="#cost">Is it expensive?</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#the-numbers">The numbers are real</a></li>
+        <li><a href="#not-nostalgia">It's not nostalgia</a></li>
+        <li><a href="#the-constraint">The constraint is the point</a></li>
+        <li><a href="#the-waiting">The value of waiting</a></li>
+        <li><a href="#the-feel">The feel of the thing</a></li>
+        <li><a href="#start">How to start</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Film is back because digital solved the wrong problem. It made photography perfect, and in doing so removed something important. The people buying film cameras in 2026 aren't nostalgic — they're reaching for friction, slowness, and photographs that feel made rather than computed.</p></div>
-    <p>Walk into any thrift store and the film cameras that sat untouched for a decade are gone. Check eBay prices for a Canon AE-1 from five years ago — then check them today. Something is clearly happening.</p>
-    <h2 id="numbers">The Numbers</h2>
-    <p>Film camera sales have increased every year since 2015. Kodak restarted production of Ektachrome. Fujifilm keeps discontinuing film stocks and then un-discontinuing them due to demand. New film cameras — actual new ones, not vintage — are being manufactured again for the first time in decades. Most buyers are in their 20s, shooting film for the first time.</p>
-    <div class="pull-quote"><p>"This isn't nostalgia. The people buying film cameras in 2026 are reaching for something digital doesn't give them."</p></div>
-    <h2 id="imperfection">The Imperfection Problem</h2>
-    <p>Digital photography solved the wrong problem. It made photography perfect — perfectly sharp, perfectly exposed, instantly reviewable, instantly deletable. And in solving that problem, it removed something important. The slight softness of older lenses, the grain in shadow areas, the color shifts when you push film beyond its rated speed — these aren't bugs. They're textures of a photograph made in the physical world.</p>
-    <h2 id="slowness">Slowing Down</h2>
-    <p>Film forces patience. You have 36 exposures. Each one costs about a dollar. You wait days to see results. Those constraints impose mindfulness that's genuinely valuable and impossible to fake with digital. People who shoot film describe looking at the world differently — noticing light, waiting for the right moment, caring about composition in a way that the delete-and-reshoot safety net makes harder to develop.</p>
-    <p><a href="https://www.amazon.com/s?k=kodak+ultramax+400+film&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Kodak Ultramax 400 Film on Amazon</a></p>
-    <h2 id="community">The Community</h2>
-    <p>The film photography community on Reddit (r/analog, r/filmphotography) is enormous, helpful, and genuinely enthusiastic. One of the least gatekeepy corners of the photography world. Beginners are welcomed, questions are answered. People share both their successes and their overexposed disasters with equal enthusiasm.</p>
-    <h2 id="cost">Is It Expensive?</h2>
-    <p>Yes, more than it was. A roll of Kodak Portra 400 plus development and scanning runs $25-35. Most film shooters compensate by shooting less and more deliberately — which circles back to the whole point. Start with Kodak Gold 200 or Ultramax 400. Both are affordable, widely available, and produce beautiful results in good light.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>Film photography is growing, not shrinking. Kodak expanded production. ILFORD is at capacity. Used film cameras are selling for five times what they cost five years ago. And the buyers are not predominantly nostalgic — they're 22-year-olds who grew up with smartphones and are deliberately choosing something slower. The reason: film's constraints force a different relationship with attention, memory, and the act of seeing. That's not a deficiency to work around. It's the whole point.</p>
       </div>
-  </div>
+
+      <p>In 2007, when the iPhone launched, it was widely assumed that film photography was over. Why would anyone use a medium with 36 frames, a week's wait for results, and no way to delete, when you could have unlimited instant photographs in your pocket forever?</p>
+
+      <p>That was a reasonable assumption. It was wrong.</p>
+
+      <p>Film photography has been growing continuously since roughly 2012, with the growth accelerating in the 2020s. The people driving it are overwhelmingly under 35. They did not grow up with film. They chose it.</p>
+
+      <h2 id="the-numbers">The Numbers Are Real</h2>
+
+      <p>Kodak Alaris reported revenue growth every year from 2015 through 2024. Fujifilm's film division — which was restructuring for eventual shutdown in 2010 — reversed course and expanded production twice in the last five years. ILFORD, the British black-and-white film manufacturer, is selling as much film as it can make. Used film cameras have appreciated dramatically: a Canon AE-1 that sold for $20 at a garage sale in 2015 now sells for $150 on eBay.</p>
+
+      <p>This is not a niche boutique trend. It's a measurable market revival in a medium that was supposed to be dead.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>According to <a href="https://petapixel.com/2022/01/04/kodak-is-struggling-to-keep-up-with-the-film-photography-revival/" target="_blank" rel="noopener">industry reporting</a>, Kodak's consumer film division has been growing at double-digit rates since 2019. ILFORD reported a 25% year-over-year production increase in 2022 to meet demand. The demographic driving purchases skews 18–35 — a generation that had no childhood exposure to film photography but is discovering it deliberately.</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=900&q=80&auto=format&fit=crop" alt="35mm film camera in use, held by young person, outdoors">
+      <p class="img-caption">The camera that was supposed to be obsolete. The person holding it was born after the iPhone.</p>
+
+      <h2 id="not-nostalgia">It's Not Nostalgia</h2>
+
+      <p>The most interesting thing about the film revival is who is driving it. Not 50-year-olds reliving their youth. Twenty-two-year-olds who have never shot film, don't have childhood memories of darkrooms, and have grown up entirely with digital photography and smartphone cameras.</p>
+
+      <p>They're not choosing film because it reminds them of something. They're choosing it because it offers something their phones don't.</p>
+
+      <p>What that something is gets stated differently by different people: slowness, intentionality, the physicality of the medium, the community of people who develop and scan and share. But underneath all of it is a common theme: film forces a different relationship with attention.</p>
+
+      <div class="pull-quote">
+        <p>"The generation that grew up with unlimited instant digital photography is the one choosing film. That's not nostalgia. That's a deliberate correction."</p>
+      </div>
+
+      <h2 id="the-constraint">The Constraint Is the Point</h2>
+
+      <p>Digital photography removed all the constraints that made photography a practice of deliberate attention:</p>
+
+      <p>No limit on frames → you don't decide; you capture everything and sort later.</p>
+      <p>Instant review → you evaluate immediately, which means you're never fully in the moment.</p>
+      <p>Delete anything → nothing is permanent, which means nothing feels important.</p>
+      <p>Perfect exposure auto-corrected → the photograph requires nothing from you technically.</p>
+
+      <p>Film restores all of those constraints. 24 or 36 frames — you decide. No review until development — you're in the moment, not evaluating it. Can't delete — every frame matters. Manual exposure on an SLR — you learn to see the light.</p>
+
+      <p>These constraints are not deficiencies to work around. They're the features that make shooting film a different kind of experience.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&q=80&auto=format&fit=crop" alt="Kai">
+        <div>
+          <p class="person-name">Kai, graphic arts student — Washington</p>
+          <p class="person-quote">"I shoot digital all week for school. On weekends I take my Minolta X-700 out. The difference in how I see things is dramatic. With the film camera I walk slower. I stop and actually look at what I'm going to shoot. With my phone I just spray frames everywhere and don't remember any of them."</p>
+        </div>
+      </div>
+
+      <h2 id="the-waiting">The Value of Waiting</h2>
+
+      <p>There's an interesting cognitive phenomenon that happens with film photography: you forget what you shot. Two weeks pass between loading a roll and getting the scans back. The memories fade. Then the photos arrive and they feel like time travel — a record of a moment you've half-forgotten, captured in a medium that has grain and color and character.</p>
+
+      <p>Digital photography systematically removes this experience. You review your photos immediately. You edit them the same day. By the time you post them, they're already slightly dated. The meaning of a photograph is partly in the time that elapses between capture and viewing — and digital has compressed that to zero.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1569701813229-33284b643e3c?w=900&q=80&auto=format&fit=crop" alt="35mm film rolls in various colors, some opened">
+      <p class="img-caption">A roll of film represents about $25 in value when you factor in film and development. That changes every frame.</p>
+
+      <h2 id="the-feel">The Feel of the Thing</h2>
+
+      <p>There's something harder to articulate that matters: film cameras feel different to hold. The weight of metal and glass. The satisfying mechanical click of a well-maintained shutter. The resistance of a film-advance lever. The sound of a mirror returning after exposure.</p>
+
+      <p>Smartphone photography is frictionless. You raise the phone, tap the screen, done. The photograph is taken but the act of taking it barely registered physically. Film cameras demand physical participation. The shutter is your decision, your timing, your press.</p>
+
+      <p>This sounds aesthetic and it is. It also seems to matter for how people feel about the photographs they make. The physical engagement creates a sense of authorship that tap-and-done doesn't.</p>
+
+      <h2 id="start">How to Start (Without Overthinking It)</h2>
+
+      <p>The most common mistake: buying an expensive camera before knowing if the practice works for you.</p>
+
+      <p>Start with a disposable. Kodak FunSaver or Fujifilm QuickSnap, about $12. Shoot all 27 frames. Get it developed. See how you feel about the results and the experience. That's the entire test.</p>
+
+      <p>If you're converted: read our <a href="/gear/best-film-cameras-for-beginners/">beginner film camera guide</a> for the next step.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200&q=80&auto=format&fit=crop" alt="Kodak disposable film camera">
+        <div class="product-info">
+          <p class="product-name">Kodak FunSaver Disposable Camera</p>
+          <p class="product-desc">The $12 entry point. 27 exposures, ISO 800, built-in flash. Shoot the whole roll. Get it developed. Then decide if you want to go further.</p>
+          <a href="https://www.amazon.com/s?k=kodak+funsaver+disposable+camera&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop" alt="Yuki">
+        <div>
+          <p class="person-name">Yuki, barista — Oregon</p>
+          <p class="person-quote">"I have 40,000 photos on my phone from the last four years. I can tell you maybe twenty of them. I've shot six rolls of film in the past year. I can tell you almost every single frame — where I was, what the light was, what I was trying to capture. The limitation makes it matter."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/gear/best-film-cameras-for-beginners/" class="related-card"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80&auto=format&fit=crop" alt="Best Film Cameras for Beginners"><p class="related-cat">Gear</p><h3 class="related-title">Best Film Cameras for Beginners</h3></a><a href="/practices/how-to-start-shooting-film/" class="related-card"><img src="https://images.unsplash.com/photo-1542038374892-75e00f08c51e?w=400&q=80&auto=format&fit=crop" alt="How to Start Shooting Film"><p class="related-cat">Practices</p><h3 class="related-title">How to Start Shooting Film</h3></a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a></div>
+        <div class="related-grid">
+          <a href="/gear/best-film-cameras-for-beginners/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80&auto=format&fit=crop" alt="Best Film Cameras for Beginners">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Film Cameras for Beginners</h3>
+          </a>
+          <a href="/practices/how-to-start-shooting-film/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=400&q=80&auto=format&fit=crop" alt="How to Start Shooting Film">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">How to Start Shooting Film</h3>
+          </a>
+          <a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+            <p class="related-cat">Challenges</p>
+            <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
