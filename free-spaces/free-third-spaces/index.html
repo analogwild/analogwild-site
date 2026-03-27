@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Third Spaces: How to Find Your People Offline — Analog Wild</title>
-  <meta name="description" content="A third space is anywhere that's not your home and not your job. Here's how to find the ones worth returning to.">
+  <meta name="description" content="The 'third place' — not home, not work, but the third spot where community actually happens. They still exist. Here's how to find yours.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,21 +84,22 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
     <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
@@ -93,66 +108,170 @@
       <h1 class="article-title">Free Third Spaces: How to Find Your People Offline</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#libraries">Libraries</a></li>
-<li><a href="#parks">Parks and nature</a></li>
-<li><a href="#bookstores">Local bookstores</a></li>
-<li><a href="#gardens">Community gardens</a></li>
-<li><a href="#writing-groups">Writing groups</a></li>
-<li><a href="#how">How to find them</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#what-is">What a third place is</a></li>
+        <li><a href="#why-we-lost">Why we lost them</a></li>
+        <li><a href="#where-to-find">Where to find them</a></li>
+        <li><a href="#libraries">Libraries</a></li>
+        <li><a href="#parks">Parks and outdoor spaces</a></li>
+        <li><a href="#clubs">Clubs and interest groups</a></li>
+        <li><a href="#create-your-own">Creating your own</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Third spaces are everywhere, but most people aren't using them. Your library alone probably hosts more free events than you know about. The answer to where to find your people offline is usually closer than you think — it requires showing up rather than searching.</p></div>
-    <p>A third space is anywhere that's not your home and not your job — the places where community happens, where you can be around people without an agenda, where a conversation can start with a stranger and end as a friendship. We used to have more of them. We still have more than we think.</p>
-    <h2 id="libraries">Libraries</h2>
-    <p>Libraries are the most underused resource in most cities. Beyond books: free events (author readings, workshops, language exchanges), community meeting rooms, databases, and simply a quiet place to be among other people who value quiet things. A library is a third space that costs nothing and asks nothing of you.</p>
-    <div class="pull-quote"><p>"A library is the last truly public space — free, warm, no purchase required, no algorithm deciding what you see next."</p></div>
-    <h2 id="parks">Parks and Natural Spaces</h2>
-    <p>A park with a regular presence develops its own community. The people who walk the same trail at the same time develop a nodding familiarity that can deepen into real connection. Dog parks are unusually good for this — dogs are social lubricant humans don't have to work for.</p>
-    <h2 id="bookstores">Local Bookstores</h2>
-    <p>Independent bookstores increasingly function as community hubs. Events, author readings, book clubs, staff who know what you like. Buying a book from an independent store is a transaction that keeps a community space alive.</p>
-    <h2 id="gardens">Community Gardens</h2>
-    <p>Growing things alongside other people is quietly powerful. Community gardens attract a specific kind of person — patient, curious, comfortable with imperfection, interested in the relationship between effort and result. The conversations that happen between garden beds tend to be real ones.</p>
-    <h2 id="writing-groups">Writing Groups</h2>
-    <p>If you write — anything, in any genre — finding a writing group transforms the practice from solitary to communal. Bend, Oregon has COWG (Central Oregon Writers Guild) and several informal groups. Most cities have more writing groups than people know about. Search Meetup.com or ask at your local library.</p>
-    <p><a href="https://www.amazon.com/s?k=field+notes+notebooks&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Field Notes (bring one to every meeting) on Amazon</a></p>
-    <h2 id="how">How to Find These Places</h2>
-    <p>Meetup.com is genuinely useful. Your local library website. The free events listings in local papers. Asking the people you already know what they do on weekends. The answer to where to find your people offline is usually closer than you think — it requires showing up rather than searching.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>The "third place" — the sociologist Ray Oldenburg's term for the space that's not home and not work but the third place where community actually forms — has been disappearing from American life for forty years. The replacement offered by social media is measurably inadequate. The good news: third places still exist, they're usually free, and the process of finding yours is mostly about showing up somewhere regularly until it becomes yours. The library, the community garden, the board game café, the running club, the knitting circle — these are still out there, waiting.</p>
       </div>
-  </div>
+
+      <p>Sociologist Ray Oldenburg coined the concept of the "third place" in 1989: the space that's not your first place (home) or your second place (work), but the third one where informal community life happens. The local pub. The barbershop. The park bench where the same people show up every morning. The corner diner where the waitress knows your order.</p>
+
+      <p>These places have been slowly disappearing for forty years, replaced first by suburban sprawl (too far to walk anywhere), then by the internet, then by the smartphone, then by delivery services that removed even the need to leave home. The U.S. Surgeon General declared a loneliness epidemic in 2023. This is not unrelated.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>The U.S. Surgeon General's <a href="https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf" target="_blank" rel="noopener">2023 Advisory on Loneliness</a> found that Americans have been losing social connection at a measurable rate for decades — the average number of close friends has dropped by one-third since 1990, time spent with friends has dropped by 24 hours per month, and over half of Americans report loneliness regularly. The advisory cited the decline of third places as one of the structural causes — not a personality or willpower problem but an architectural and social one.</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900&q=80&auto=format&fit=crop" alt="People gathered inside a cozy public library, reading and talking in a warm common space">
+      <p class="img-caption">The library. Free, open, and full of people who chose to be somewhere together. One of the last reliable third places.</p>
+
+      <h2 id="what-is">What a Third Place Actually Is</h2>
+
+      <p>Oldenburg's definition has specific characteristics that distinguish a real third place from just a place you go:</p>
+
+      <p><strong>Free or inexpensive.</strong> The third place has a low barrier — it doesn't require purchasing something to be there.</p>
+
+      <p><strong>Regulars.</strong> The same people show up repeatedly. This is what makes community possible — repeated contact with the same humans over time, which is how all meaningful relationships actually form.</p>
+
+      <p><strong>Accessible on foot or by transit.</strong> The third place is in the neighborhood, not across town. Proximity creates the regular, informal contact that builds community.</p>
+
+      <p><strong>Leveling.</strong> A good third place doesn't care about your status. The dock worker and the architect are both just regulars.</p>
+
+      <p>Notice what's not on the list: curated, optimized, interesting, or stimulating. The third place is not entertainment. It's a place to simply be with other people, regularly, over time.</p>
+
+      <div class="pull-quote">
+        <p>"The third place is not entertainment. It's the place where you simply be with other people, regularly, over time. That's the thing that builds community."</p>
+      </div>
+
+      <h2 id="why-we-lost">Why We Lost Them (The Short Version)</h2>
+
+      <p>Zoning laws that separated residential from commercial areas made most American neighborhoods pedestrian-unfriendly by design. The car made distance less consequential, which meant that local spaces lost their captive audience. The rise of home entertainment (TV, then internet, then streaming) made it comfortable to stay home. The smartphone made every waiting moment an opportunity to be somewhere else without physically going anywhere.</p>
+
+      <p>The result: most Americans live in places where informal community contact — the incidental, repeated encounter with the same neighbors — rarely happens. You might wave to someone you see every day for ten years without ever learning their name.</p>
+
+      <h2 id="where-to-find">Where to Find Third Places Now</h2>
+
+      <h2 id="libraries">Libraries</h2>
+
+      <p>The public library is the best third place that still exists in most American communities. It's free. It's open to everyone. It doesn't require purchasing anything to occupy. It has regulars — usually a mix of older people who use it as social infrastructure, younger people doing work, and parents with children. The library has also evolved: most now have maker spaces, community rooms, free programs, and meeting spaces that can be reserved.</p>
+
+      <p>If you've never been a regular at your local library, try this: go on the same day and time two weeks in a row. Notice who else is there. Introduce yourself to the librarians. Library people are almost universally excellent humans.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&auto=format&fit=crop" alt="Maria">
+        <div>
+          <p class="person-name">Maria, early childhood educator — Texas</p>
+          <p class="person-quote">"After I moved, I felt completely isolated for months. I started going to the library on Thursday mornings — not for anything specific, just to be somewhere with people. After a few weeks I recognized faces. After a month, the librarians remembered my name. Now I know six people by name there and I consider it 'my' library. It took about sixty days of showing up."</p>
+        </div>
+      </div>
+
+      <h2 id="parks">Parks and Outdoor Spaces</h2>
+
+      <p>The dog park is, demographically, one of the best third places in America. Everyone there has something in common (they own a dog), the social norms require no effort to initiate conversation (talk about each other's dogs), and regulars accumulate quickly because people walk their dogs at the same times every day.</p>
+
+      <p>Community gardens work similarly. You're working on something adjacent to other people, with a built-in shared interest, and the activity gives you something to talk about without forcing conversation.</p>
+
+      <p>Parks with regular programming — yoga classes, summer concerts, weekly farmer's markets — create the repeated-contact dynamic that the third place requires. Find the weekly events in your local park and go to the same one repeatedly.</p>
+
+      <h2 id="clubs">Clubs and Interest Groups</h2>
+
+      <p>The modern third place is increasingly organized rather than spontaneous: running clubs, book clubs, board game groups, knitting circles, amateur astronomy groups, hiking clubs. Meetup.com and local Facebook groups are useful for finding these. The key is finding something with a genuine recurring commitment — the one-time event doesn't build community; the weekly gathering does.</p>
+
+      <p>The board game café has become one of the better third places for adults under 40 — a place where you can come alone, sit at a table, and within twenty minutes be playing something with strangers. The game creates instant shared context and removes the awkwardness of "talking to people I don't know."</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1609234656388-0ff363383899?w=900&q=80&auto=format&fit=crop" alt="People gathered around a community table playing board games, warm light, no phones visible">
+      <p class="img-caption">The board game café: a place where you can arrive alone and leave with new people you actually want to see again.</p>
+
+      <h2 id="create-your-own">Creating Your Own Third Place</h2>
+
+      <p>The most reliable way to have a third place is to create one. The elements are simple:</p>
+
+      <p><strong>Pick a regular time and place.</strong> Saturday morning at a specific coffee shop. Every other Tuesday for game night at someone's house. The regularity is what makes it a place rather than just an event.</p>
+
+      <p><strong>Invite loosely.</strong> An open invitation ("I'll be at X every Saturday morning — come if you want") works better than a closed group. Open invitations create the social mix that makes third places dynamic.</p>
+
+      <p><strong>Show up whether people come or not.</strong> The commitment to the time and place is what makes it reliable. Once people know you'll be there, they start coming.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80&auto=format&fit=crop" alt="Patrick">
+        <div>
+          <p class="person-name">Patrick, freelance writer — Minnesota</p>
+          <p class="person-quote">"I work from home. By year two I was genuinely isolated. I started going to the same coffee shop every Tuesday and Thursday morning — not the hip new place, the old one where the same people come every day. I know four people there by name now. I look forward to those mornings in a way I didn't expect. The conversations are light, mostly. It doesn't matter. Being there matters."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a><a href="/practices/how-to-write-a-letter/" class="related-card"><img src="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?w=400&q=80&auto=format&fit=crop" alt="How to Write a Letter Worth Receiving"><p class="related-cat">Practices</p><h3 class="related-title">How to Write a Letter Worth Receiving</h3></a><a href="/for-kids/analog-activities-for-kids/" class="related-card"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80&auto=format&fit=crop" alt="Analog Activities Kids Actually Want to Do"><p class="related-cat">For Kids</p><h3 class="related-title">Analog Activities Kids Actually Want to Do</h3></a></div>
+        <div class="related-grid">
+          <a href="/gear/best-board-games-for-adults/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1511882150382-421056c89033?w=400&q=80&auto=format&fit=crop" alt="Best Board Games for Adults">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Board Games for Adults</h3>
+          </a>
+          <a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+            <p class="related-cat">Challenges</p>
+            <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+          </a>
+          <a href="/challenges/12-things-to-do-offline/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80&auto=format&fit=crop" alt="12 Things to Do Offline">
+            <p class="related-cat">Challenges</p>
+            <h3 class="related-title">12 Things to Do Offline This Weekend</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>

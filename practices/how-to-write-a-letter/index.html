@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Write a Letter Worth Receiving — Analog Wild</title>
-  <meta name="description" content="The lost art of letter writing — how to start, what to include, and how to make someone's day from a distance.">
+  <meta name="description" content="Not a tutorial on formatting. A genuine guide to writing letters that people keep — because someone took the time to actually say something.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,21 +84,22 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
     <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
@@ -93,67 +108,187 @@
       <h1 class="article-title">How to Write a Letter Worth Receiving</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#start">Start with where you are</a></li>
-<li><a href="#voice">Write like you talk</a></li>
-<li><a href="#questions">Ask real questions</a></li>
-<li><a href="#physical">Include something physical</a></li>
-<li><a href="#tools">The tools matter</a></li>
-<li><a href="#penpals">Where to find pen pals</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#why-letters">Why letters still matter</a></li>
+        <li><a href="#the-format">The format question</a></li>
+        <li><a href="#what-to-say">What to actually say</a></li>
+        <li><a href="#the-writing">The act of writing</a></li>
+        <li><a href="#to-whom">Who to write to</a></li>
+        <li><a href="#gear">Supplies worth having</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Letter writing isn't a lost art — it's a neglected habit. The infrastructure is intact. What's faded is confidence. Write like you talk, start with where you are, ask questions you actually want answered, and include something physical. The recipient will remember it longer than any text.</p></div>
-    <p>Letter writing is not a lost art. It is a neglected one. The paper, the envelopes, the stamps, the postal service — all still exist, still work, still move things across distances for the price of a postage stamp. What has faded is the habit and the confidence.</p>
-    <h2 id="start">Start With Where You Are</h2>
-    <p>Literally. Where are you as you write this? What is the light like? What can you hear? This grounds the letter in a specific moment in time and immediately distinguishes it from an email. A letter that begins with the writer noticing something about their immediate surroundings feels alive in a way that a letter beginning with a status update does not.</p>
-    <div class="pull-quote"><p>"A letter that begins with the writer noticing something about where they are right now feels alive in a way that email never does."</p></div>
-    <h2 id="voice">Write Like You Talk (Slightly Better)</h2>
-    <p>The reason people feel paralyzed by letter writing is that they try to write like a letter rather than like themselves. You don't need to be formal. You don't need to have Important Things to Say. Write the way you'd talk to this person if they were sitting across from you — with the small observations, the half-formed thoughts, the questions you genuinely want answered.</p>
-    <h2 id="questions">Ask Real Questions</h2>
-    <p>The best letters generate correspondence. Ask questions you actually want answered, not questions you're asking to be polite. What are you reading right now? What did the winter feel like where you are? Is there something you've been thinking about that you haven't told anyone yet?</p>
-    <h2 id="physical">Include Something Physical</h2>
-    <p>A pressed flower. A photo printed at a drugstore. A recipe cut from a magazine. A drawing your child made. Something physical tucked into the envelope transforms a letter into an artifact. The recipient keeps it. Years later, finding it in a box, they remember you.</p>
-    <h2 id="tools">The Tools Matter</h2>
-    <p>You don't need expensive stationery. But writing on paper you like, with a pen you enjoy, makes the process more pleasurable and the result more considered. A fountain pen slows you down in exactly the right way.</p>
-    <p><a href="https://www.amazon.com/s?k=pilot+metropolitan+fountain+pen&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Pilot Metropolitan Fountain Pen on Amazon</a></p>
-    <p><a href="https://www.amazon.com/s?k=leuchtturm1917+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Leuchtturm1917 Notebook on Amazon</a></p>
-    <h2 id="penpals">Where to Find Pen Pals</h2>
-    <p>IGGPPC (International Geek Girl Pen Pals Club), Slowly (a pen pal app), Reddit's r/penpals, and simply asking in your own community. The Writers Gone Wild community has letter writers in it — reach out if you want to connect with someone who will actually write back.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>A letter worth receiving has one characteristic that distinguishes it from every text message, email, and DM you've ever sent: it required you to sit still and think about another person for fifteen uninterrupted minutes. That's it. That's what makes it land differently. You don't need beautiful stationery or perfect penmanship. You need genuine thought about a specific human being and a pen that works.</p>
       </div>
-  </div>
+
+      <p>In the United States, the average person receives fewer than ten personal letters per year. Not business correspondence. Not bills. Letters from people who wanted to say something to them specifically, by hand, on paper.</p>
+
+      <p>This means that when someone receives a letter from you, it is an event. It sits on the kitchen counter before being opened. It gets read twice. In some cases it gets kept. No text message has ever been kept.</p>
+
+      <p>The letter's power is not in the form. It's in what the form requires: your undivided attention, focused on one person, for long enough to say something real.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>Research on <a href="https://journals.sagepub.com/doi/10.1177/0956797612436573" target="_blank" rel="noopener">expressing gratitude to others</a> (published in <em>Psychological Science</em>) found that people dramatically underestimate how much their kind words mean to the recipient — and consistently overestimate how awkward or excessive they'll seem. The study specifically found that handwritten gratitude letters had stronger effects on recipient wellbeing than equivalent digital messages. The medium matters.</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1579208570378-8c970854bc23?w=900&q=80&auto=format&fit=crop" alt="Person writing a handwritten letter at a wooden desk with a fountain pen">
+      <p class="img-caption">Fifteen minutes of undivided attention, focused on one person. That's what a letter is. That's why it lands differently.</p>
+
+      <h2 id="why-letters">Why Letters Still Matter (Especially Now)</h2>
+
+      <p>Everything about modern communication is optimized for speed and low friction. Texts, DMs, emails — the medium rewards brevity. "Thinking of you." "Happy birthday!" "Congrats!" These are fine. They say nothing. They leave no trace.</p>
+
+      <p>A letter says: I sat down. I thought about you. I had something I wanted to tell you that couldn't be condensed to a notification. I wrote it out by hand so you could hold it and read it slowly.</p>
+
+      <p>Nobody puts a text message in a drawer and finds it twenty years later. Letters outlast the people who write them. If that sounds morbid, it's actually the opposite — it's why letters have a gravity that no other form of communication has.</p>
+
+      <div class="pull-quote">
+        <p>"Letters say: I sat down. I thought about you. I had something worth putting on paper. Nobody puts a text in a drawer. People keep letters."</p>
+      </div>
+
+      <h2 id="the-format">The Format Question</h2>
+
+      <p>There is almost no wrong format. A letter can be two paragraphs. It can be four pages. It can be typed and printed if your handwriting is genuinely unreadable (though handwriting, however imperfect, adds something that type doesn't).</p>
+
+      <p>What it should have: a date, a greeting by name, your actual thoughts, and a sign-off that fits your relationship with the person. "Love," "Warmly," "Your friend," "Fondly" — whatever is honest.</p>
+
+      <p>What it doesn't need: perfect grammar, correct paragraph structure, formal opening and closing conventions. Letters are not business correspondence. They're conversations on paper.</p>
+
+      <h2 id="what-to-say">What to Actually Say (The Harder Part)</h2>
+
+      <p>Most people stall at "what do I write about." The answer is: what's actually happening in your life right now, and what do you actually think about the person you're writing to.</p>
+
+      <p><strong>The three-part structure that works:</strong></p>
+
+      <p><strong>1. Something specific about them.</strong> Not "thinking of you" — thinking of what specifically? Reference something concrete: a conversation you had, something they're going through, something you admire about them, something they said that you've been carrying around.</p>
+
+      <p><strong>2. Something from your life right now.</strong> Not a report — a moment. The specific light this morning. Something that surprised you. A small thing that happened that you find yourself wanting to tell someone. The constraint of paper helps here: you pick the moment worth sharing.</p>
+
+      <p><strong>3. A question or an invitation.</strong> Letters that generate replies ask something genuine. What's happening with the thing you mentioned last time? How does that feel? I've been thinking about this — do you?</p>
+
+      <p>That's a complete letter. Three genuine things.</p>
+
+      <h2 id="the-writing">The Act of Writing</h2>
+
+      <p>Write by hand if at all possible. The physical act of handwriting has two effects that matter: it slows you down (impossible to write as fast as you think, which means you have to choose your words), and it encodes your presence — the reader can tell something about the act of writing from the marks on the page. A word crossed out. Ink getting lighter as the pen runs low. A slight lean when you were tired.</p>
+
+      <p>Don't rewrite. First drafts are better letters because they're less performed. If you write something and then cross it out, leave the crossing-out visible. It's honest. It shows your mind working.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80&auto=format&fit=crop" alt="Handwritten letter on paper with envelope and postage stamp beside it">
+      <p class="img-caption">The envelope, the stamp, the postbox — the letter will arrive days later. The reader will know it's coming before it gets there. That anticipation is part of the gift.</p>
+
+      <h2 id="to-whom">Who to Write To</h2>
+
+      <p>Think of the people in your life who you appreciate most but communicate with least. The grandparent. The old friend who moved. The mentor who changed how you see something. The colleague who was kind during a hard stretch. The person you've been meaning to check in with for months.</p>
+
+      <p>Those people. Write to them.</p>
+
+      <p>The letter doesn't need a reason. "I was thinking about you and I wanted to say something" is enough of a reason. It might, in fact, be the best reason.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop" alt="Mira">
+        <div>
+          <p class="person-name">Mira, librarian — Massachusetts</p>
+          <p class="person-quote">"My grandmother died two years ago. I found a folder in her things with every letter I'd ever sent her. Every one. I'd forgotten I'd written most of them. She'd kept them for thirty years. I don't have a single text message from her but I have every card she ever sent me. That's not a coincidence."</p>
+        </div>
+      </div>
+
+      <h2 id="gear">Supplies Worth Having</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=200&q=80&auto=format&fit=crop" alt="Fountain pen writing on letter paper">
+        <div class="product-info">
+          <p class="product-name">Pilot Metropolitan Fountain Pen</p>
+          <p class="product-desc">A letter written with a fountain pen has a different quality than one written with a ballpoint. The Metropolitan at $20 makes the writing feel like something you chose to do rather than just got through.</p>
+          <a href="https://www.amazon.com/s?k=pilot+metropolitan+fountain+pen&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?w=200&q=80&auto=format&fit=crop" alt="Writing paper and envelopes on desk">
+        <div class="product-info">
+          <p class="product-name">G. Lalo Vergé de France Writing Paper</p>
+          <p class="product-desc">French writing paper, 100gsm, excellent feel under a fountain pen. The kind of paper that signals to the recipient that you thought about this. You don't need expensive paper — but if you want some, this is the one.</p>
+          <a href="https://www.amazon.com/s?k=G+Lalo+verge+de+france+writing+paper&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <p>"Writing to someone well is one of the rarest gifts you can give. It costs an hour and a stamp. It lasts for decades."</p>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&q=80&auto=format&fit=crop" alt="Owen">
+        <div>
+          <p class="person-name">Owen, retired teacher — Oregon</p>
+          <p class="person-quote">"I started writing a letter a week last January — one person a week, someone I hadn't been in real contact with in years. By September I'd written to forty people. About thirty wrote back. Two of those correspondences became friendships again. One letter led to a job offer. The experiment changed my life in ways I didn't expect."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/gear/best-fountain-pens-under-50/" class="related-card"><img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&q=80&auto=format&fit=crop" alt="Best Fountain Pens Under $50"><p class="related-cat">Gear</p><h3 class="related-title">Best Fountain Pens Under $50</h3></a><a href="/gear/best-notebooks-for-morning-pages/" class="related-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages"><p class="related-cat">Gear</p><h3 class="related-title">Best Notebooks for Morning Pages</h3></a><a href="/practices/analog-evening-routine/" class="related-card"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine"><p class="related-cat">Practices</p><h3 class="related-title">The Analog Evening Routine</h3></a></div>
+        <div class="related-grid">
+          <a href="/gear/best-fountain-pens-under-50/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=400&q=80&auto=format&fit=crop" alt="Best Fountain Pens Under $50">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Fountain Pens Under $50</h3>
+          </a>
+          <a href="/gear/best-notebooks-for-morning-pages/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Notebooks for Morning Pages</h3>
+          </a>
+          <a href="/practices/how-to-start-morning-pages/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80&auto=format&fit=crop" alt="How to Start Morning Pages">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">How to Start Morning Pages</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
