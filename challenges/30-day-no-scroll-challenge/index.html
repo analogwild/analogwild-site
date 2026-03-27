@@ -3,254 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The 30-Day No-Scroll Challenge: Rules, Tips, and What to Do Instead — Analog Wild</title>
-  <meta name="description" content="Stop scrolling for 30 days. Here are the rules, what actually counts, and — most importantly — what to do with all that time.">
+  <title>The 30-Day No-Scroll Challenge — Analog Wild</title>
+  <meta name="description" content="30 days without mindless scrolling. Here's exactly how to do it — the rules, the replacements, what to expect week by week, and what happens after.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --green: #4a5e3a; --green-light: #6b7f58; --terra: #b87d52;
-      --cream: #f7f3ec; --warm-white: #fdfaf6; --dark: #2a2620;
-      --mid: #6b6459; --border: #e4ddd3;
-    }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--dark); line-height: 1.6; }
-
-    /* PROGRESS BAR */
-    #progress-bar {
-      position: fixed; top: 64px; left: 0; width: 0%; height: 3px;
-      background: var(--terra); z-index: 200; transition: width 0.1s linear;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(253,250,246,0.96); backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border); padding: 0 2rem;
-      height: 64px; display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--dark); text-decoration: none; }
-    .nav-logo span { color: var(--green); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
-    .nav-links a:hover { color: var(--green); }
-    .nav-cta { background: var(--terra) !important; color: white !important; padding: 0.5rem 1.2rem; border-radius: 2px; }
-
-    /* ARTICLE HERO */
-    .article-hero {
-      margin-top: 64px; position: relative; height: 55vh; min-height: 380px;
-      display: flex; align-items: flex-end; overflow: hidden;
-    }
-    .article-hero-image {
-      position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-    }
-    .article-hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(42,38,32,0.1) 0%, rgba(42,38,32,0.75) 100%);
-    }
-    .article-hero-content { position: relative; z-index: 2; padding: 2.5rem 4rem; max-width: 860px; }
-    .article-category { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; display: block; }
-    .article-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: white; line-height: 1.15; letter-spacing: -0.02em; }
-
-    /* ARTICLE LAYOUT */
-    .article-layout {
-      max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;
-      display: grid; grid-template-columns: 220px 1fr; gap: 4rem;
-    }
-
-    /* TOC SIDEBAR */
-    .toc {
-      position: sticky; top: 90px; height: fit-content;
-      font-size: 0.82rem;
-    }
-    .toc-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 1rem; }
-    .toc ul { list-style: none; border-left: 2px solid var(--border); padding-left: 1rem; }
-    .toc li { margin-bottom: 0.6rem; }
-    .toc a { color: var(--mid); text-decoration: none; line-height: 1.4; font-weight: 400; }
-    .toc a:hover { color: var(--green); }
-    .toc-meta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--mid); line-height: 1.8; }
-
-    /* ARTICLE BODY */
-    .article-body h2 {
-      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600;
-      color: var(--dark); margin: 2.5rem 0 1rem; line-height: 1.2; letter-spacing: -0.01em;
-    }
-    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--dark); margin-bottom: 1.4rem; font-weight: 300; }
-    .article-body strong { font-weight: 600; color: var(--dark); }
-    .article-body a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-    .article-body a:hover { color: var(--green-light); }
-
-    /* BOTTOM LINE BOX */
-    .bottom-line {
-      background: var(--cream); border-left: 4px solid var(--terra);
-      padding: 1.5rem 1.8rem; margin-bottom: 2.5rem; border-radius: 0 4px 4px 0;
-    }
-    .bottom-line-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.5rem; }
-    .bottom-line p { font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 400; }
-
-    /* PULL QUOTE */
-    .pull-quote {
-      border-top: 2px solid var(--dark); border-bottom: 2px solid var(--dark);
-      padding: 1.5rem 0; margin: 2.5rem 0;
-    }
-    .pull-quote p {
-      font-family: 'Playfair Display', serif; font-size: 1.35rem; font-style: italic;
-      color: var(--dark); line-height: 1.5; margin: 0 !important; font-weight: 400;
-    }
-
-    /* AFFILIATE LINK STYLING */
-    .affiliate-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      background: var(--cream); border: 1px solid var(--border);
-      padding: 0.4rem 0.8rem; border-radius: 2px; font-size: 0.82rem;
-      font-weight: 600; color: var(--green) !important; text-decoration: none !important;
-      transition: background 0.2s; margin: 0.2rem 0; white-space: nowrap;
-    }
-    .affiliate-link:hover { background: var(--border); }
-    .affiliate-link::before { content: '→'; }
-
-    /* INLINE NEWSLETTER */
-    .newsletter-inline {
-      background: var(--dark); color: white; padding: 3rem; margin: 3rem 0; border-radius: 4px;
-    }
-    .newsletter-inline-inner { max-width: 520px; }
-    .nl-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem; }
-    .nl-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; margin-bottom: 0.8rem; line-height: 1.3; }
-    .nl-sub { font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; font-weight: 300; }
-    .email-form { display: flex; max-width: 400px; border: 1.5px solid rgba(255,255,255,0.3); }
-    .email-form input { flex: 1; border: none; padding: 0.8rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: rgba(255,255,255,0.08); color: white; outline: none; }
-    .email-form input::placeholder { color: rgba(255,255,255,0.35); }
-    .email-form button { background: var(--terra); color: white; border: none; padding: 0.8rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
-    .email-form button:hover { background: #a06c42; }
-    .form-note { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
-
-    /* RELATED ARTICLES */
-    .related-section { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 3rem; }
-    .related-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 1.5rem; }
-    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .related-card { text-decoration: none; color: inherit; }
-    .related-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: 0.8rem; }
-    .related-cat { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.3rem; }
-    .related-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--dark); line-height: 1.3; }
-    .related-card:hover .related-title { color: var(--green); }
-
-    /* FOOTER */
-    footer { background: var(--warm-white); border-top: 1px solid var(--border); padding: 3rem 2rem; margin-top: 4rem; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
-    .footer-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-links a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
-    .footer-copy { font-size: 0.75rem; color: #bbb; }
-</style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--green:#4a5e3a;--green-light:#6b7f58;--terra:#b87d52;--cream:#f7f3ec;--warm-white:#fdfaf6;--dark:#2a2620;--mid:#6b6459;--border:#e4ddd3}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--dark);line-height:1.6}
+    #progress-bar{position:fixed;top:64px;left:0;width:0%;height:3px;background:var(--terra);z-index:200;transition:width .1s linear}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--dark);text-decoration:none}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
+    .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
+    .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
+    .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
+    .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
+    .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
+    .article-layout{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:220px 1fr;gap:4rem}
+    .toc{position:sticky;top:90px;height:fit-content;font-size:.82rem}
+    .toc-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
+    .toc ul{list-style:none;border-left:2px solid var(--border);padding-left:1rem}
+    .toc li{margin-bottom:.6rem}
+    .toc a{color:var(--mid);text-decoration:none;line-height:1.4}
+    .toc a:hover{color:var(--green)}
+    .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
+    .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
+    .article-body strong{font-weight:600;color:var(--dark)}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
+    .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
+    .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
+    .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
+    .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
+    .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
+    .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
+    .newsletter-inline-inner{max-width:520px}
+    .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
+    .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
+    .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
+    .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .related-card{text-decoration:none;color:inherit}
+    .related-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:.8rem}
+    .related-cat{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .related-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--dark);line-height:1.3}
+    .related-card:hover .related-title{color:var(--green)}
+    footer{background:var(--warm-white);border-top:1px solid var(--border);padding:3rem 2rem;margin-top:4rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .footer-links{display:flex;gap:2rem;list-style:none}
+    .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
+    .footer-copy{font-size:.75rem;color:#bbb}
+  </style>
 </head>
 <body>
-
   <div id="progress-bar"></div>
-
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
 
   <div class="article-hero">
-    <div class="article-hero-image" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/challenges/" class="article-category">Challenges</a>
-      <h1 class="article-title">The 30-Day No-Scroll Challenge: Rules, Tips, and What to Do Instead</h1>
+      <h1 class="article-title">The 30-Day No-Scroll Challenge</h1>
     </div>
   </div>
 
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#rules">The rules</a></li>
-<li><a href="#what-counts">What counts as scrolling</a></li>
-<li><a href="#replacements">What to do instead</a></li>
-<li><a href="#week-by-week">Week by week</a></li>
-<li><a href="#after">What happens after</a></li></ul>
-      <div class="toc-meta">
-        <strong>Analog Wild</strong><br>
-        Come back to your senses.<br><br>
-        <a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a>
-      </div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#rules">The rules</a></li>
+        <li><a href="#what-counts">What counts as scrolling</a></li>
+        <li><a href="#replacements">What to do instead</a></li>
+        <li><a href="#week-by-week">Week by week</a></li>
+        <li><a href="#tools">Helpful tools</a></li>
+        <li><a href="#after">What happens after 30 days</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
 
     <article class="article-body">
+
       <div class="bottom-line" id="bottom-line">
-      <p class="bottom-line-label">The bottom line</p>
-      <p>The 30-Day No-Scroll Challenge: no social media feeds for 30 days. Not forever. Not even "reducing usage." Just a clean stop, long enough to actually notice what was happening when you were doing it — and what life feels like without it.</p>
-    </div>
+        <p class="bottom-line-label">The bottom line</p>
+        <p>The 30-Day No-Scroll Challenge is exactly what it sounds like: no mindless social media scrolling for 30 days. Not no phone, not no internet — just no aimless feed-checking. The goal isn't abstinence; it's to break the automatic reflex and choose what you give your attention to deliberately. Most people report: more time, less anxiety, and a surprising awareness of how often the reach-for-the-phone reflex fires. Start on a Monday. Tell one person. That's enough structure to make it work.</p>
+      </div>
 
-    <p>The first thing most people notice, usually around day three, is how often they reach for their phone. Not because they want to check anything specific. Just the gesture — hand to pocket, phone out, thumb poised. A reflex so practiced it happens before any conscious thought.</p>
-    <p>The challenge isn't to judge this. It's just to notice it, and then not do it.</p>
+      <p>The average American spends about 2.5 hours a day on social media. That's roughly 900 hours a year — the equivalent of more than 37 complete 24-hour days. Not 37 waking days. 37 days including sleep.</p>
 
-    <h2 id="rules">The Rules</h2>
-    <p><strong>No scrolling social media feeds for 30 days.</strong> That's the whole rule. One sentence. Everything else is interpretation.</p>
-    <p>You don't have to delete the apps. You don't have to announce it. You don't have to explain yourself to anyone. You just stop opening the feeds.</p>
+      <p>Most of that time wasn't chosen. It was fallen into. The phone was there. The thumb moved. Thirty minutes passed without a decision being made.</p>
 
-    <h2 id="what-counts">What Counts as Scrolling</h2>
-    <p>Scrolling: Instagram feed, TikTok For You page, Twitter/X timeline, Facebook newsfeed, Reddit front page or subs you browse passively, YouTube home page autoplay.</p>
-    <p>Not scrolling: Texting, calling, maps, email, intentionally searching for a specific thing, reading an article you deliberately chose to read, checking a specific person's page for a specific reason.</p>
-    <p>The distinction is passive consumption vs. intentional use. The scroll is designed to be endless; intentional use has a goal and an end.</p>
+      <p>The no-scroll challenge doesn't fight the existence of phones. It fights the automaticity. It's about deciding what gets your attention instead of just letting your thumb decide.</p>
 
-    <div class="pull-quote"><p>"The first thing most people notice is how often they reach for their phone. Not because they want anything. Just the gesture. The reflex."</p></div>
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>A 2018 study at the University of Pennsylvania found that <a href="https://guilfordjournals.com/doi/10.1521/jscp.2018.37.10.751" target="_blank" rel="noopener">limiting social media use to 30 minutes per day for three weeks significantly reduced loneliness and depression</a> among participants — even though participants had expected they'd feel more left out without social media. The effect was particularly strong for people who already showed depressive symptoms. Less scrolling, fewer symptoms. The dose-response relationship was clear.</p>
+      </div>
 
-    <h2 id="replacements">What to Do Instead</h2>
-    <p><strong>When you're bored:</strong> Keep a book within arm's reach at all times. Not an ebook. A physical book. The moment the scroll reflex fires, reach for the book instead. It sounds too simple. It works.</p>
-    <p><a href="https://www.amazon.com/s?k=the+artists+way+julia+cameron&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: The Artist's Way (a great 30-day companion) on Amazon</a></p>
-    <p><strong>When you're anxious:</strong> Write it down. Three minutes of journaling externalizes anxiety better than scrolling through other people's highlight reels, which tends to amplify it.</p>
-    <p><strong>When you have FOMO:</strong> Text the specific person you're thinking about. Direct connection is more satisfying than passive observation.</p>
-    <p><strong>When you're waiting:</strong> Notice where you are. Observe people. Think about something. Waiting used to be thinking time. It can be again.</p>
-    <p><a href="https://www.amazon.com/s?k=field+notes+notebooks&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Field Notes (keep one in your pocket) on Amazon</a></p>
+      <h2 id="rules">The Rules (Keep Them Simple)</h2>
 
-    <h2 id="week-by-week">Week by Week</h2>
-    <p><strong>Week 1:</strong> Survival mode. The reflex fires constantly. Every time it does, do something with your hands instead. Week 1 is hard. This is normal.</p>
-    <p><strong>Week 2:</strong> You start noticing how much time you have. This is disorienting. Fill it deliberately rather than letting boredom win.</p>
-    <p><strong>Week 3:</strong> The anxiety around missing things largely fades. You realize, empirically, that nothing important happened while you were gone.</p>
-    <p><strong>Week 4:</strong> Decide what relationship with social media, if any, you want going forward. Many people find they want intentional use — checking in once a day — rather than never using it again.</p>
+      <p>The rules are deliberately minimal. More rules create more failure points. Pick the ones that matter to your actual usage and ignore the rest:</p>
 
-    <h2 id="after">What Happens After</h2>
-    <p>The goal isn't to quit forever. It's to interrupt the automaticity — to make the behavior conscious rather than reflexive. After 30 days, you can choose. That's the whole point. Right now, for most people, there's no choice. The phone just appears in the hand.</p>
-    <p>Most people who complete the challenge report: more time (obviously), better sleep, slightly less ambient anxiety, and a strange sense of having more presence in their own lives. Not dramatically different. Just more there.</p>
+      <p><strong>Core rule:</strong> No opening Instagram, TikTok, Twitter/X, Facebook, Reddit, or any other social feed with the intention of browsing. Not in the morning. Not at lunch. Not before bed. Not in the bathroom (especially not in the bathroom).</p>
+
+      <p><strong>What's allowed:</strong> Intentional use — replying to direct messages, posting something you actually planned to post, using a specific feature for a specific purpose. Intentional is the key word. If you can describe what you're going there to do before you open the app, it counts. If you're just going to "check," that's scrolling.</p>
+
+      <p><strong>What's not included:</strong> Email, news, podcasts, maps, weather — anything that isn't a social feed. The goal is the infinite-scroll feed. That's the specific thing we're targeting.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=900&q=80&auto=format&fit=crop" alt="Notebook and pen on desk, no phone in sight">
+      <p class="img-caption">The phone exists. You just stopped letting it decide what your afternoon looks like.</p>
+
+      <h2 id="what-counts">What Actually Counts as Scrolling</h2>
+
+      <p>This is where people negotiate with themselves and lose. Let's be clear:</p>
+
+      <p><strong>Scrolling:</strong> Opening Instagram because you're bored. Checking Twitter "for a second." Watching one more TikTok after the one you went there to watch. Going on Reddit without a specific thread in mind.</p>
+
+      <p><strong>Not scrolling:</strong> Posting a photo you took. Responding to a DM from a friend. Looking at a specific account you deliberately chose to visit. Reading a specific news article someone linked you.</p>
+
+      <p>The test: did you decide to do this specific thing, or did you just open the app and start moving? The former is fine. The latter is what we're ending.</p>
+
+      <div class="pull-quote">
+        <p>"The challenge isn't about phone abstinence. It's about ending the reflex — the mindless reach that happens before you've made any decision at all."</p>
+      </div>
+
+      <h2 id="replacements">What to Do Instead (Have These Ready)</h2>
+
+      <p>The scroll reflex fires in micro-moments: waiting for coffee to brew, standing in a checkout line, the first ten seconds after waking up. You need analog replacements for those exact moments, ready to go.</p>
+
+      <p><strong>Keep a book within arm's reach at all times.</strong> One you actually want to read. Not an improving book, an absorbing one. The moment you'd normally reach for the phone, reach for this instead.</p>
+
+      <p><strong>The 5-minute notebook.</strong> When you feel the scroll urge, write whatever's in your head for 5 minutes instead. This is especially good for the morning phone-check reflex.</p>
+
+      <p><strong>Go outside for the in-between moments.</strong> The checkout-line scroll and the waiting-room scroll are the hardest. Train yourself to just look at what's around you instead. This sounds stupid. After a few days of doing it, it stops feeling stupid and starts feeling like something you want to do.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&q=80&auto=format&fit=crop" alt="Small notebook and pen">
+        <div class="product-info">
+          <p class="product-name">Field Notes Ruled Notebooks (3-Pack)</p>
+          <p class="product-desc">The pocket-sized notebook that replaces the phone in the pocket. Small enough to always have, sturdy enough to take a beating. Keep one in every bag.</p>
+          <a href="https://www.amazon.com/s?k=field+notes+ruled+notebooks+3+pack&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&auto=format&fit=crop" alt="Amanda">
+        <div>
+          <p class="person-name">Amanda, marketing manager — Texas</p>
+          <p class="person-quote">"Week one was uncomfortable. Not having the phone as an escape hatch made every waiting moment feel awkward. By week two I started noticing things I'd been walking past for years — a mural on a building I commute by every day. I genuinely hadn't seen it before."</p>
+        </div>
+      </div>
+
+      <h2 id="week-by-week">What to Expect Week by Week</h2>
+
+      <p><strong>Week 1 (Days 1–7): Uncomfortable.</strong> The reflex fires constantly. Your thumb moves before your brain catches up. You notice how many times a day you reach for the phone — probably far more than you guessed. Expect some restlessness. The FOMO is not real, but it feels real. Push through.</p>
+
+      <p><strong>Week 2 (Days 8–14): Noticing.</strong> The reflex still fires, but you're catching it faster. Pockets of actual boredom appear — and turn out to be interesting. Ideas start emerging in the in-between moments. You might notice you're sleeping better. You'll almost certainly notice more time.</p>
+
+      <p><strong>Week 3 (Days 15–21): Settling.</strong> The reflex diminishes. You stop wanting to scroll at meals and in the morning. The phone feels less urgent. Some people report feeling oddly sad about this — mourning the stimulation that's been removed. That's normal and temporary.</p>
+
+      <p><strong>Week 4 (Days 22–30): Clarity.</strong> Most people report this is when something shifts. The mental noise is quieter. Attention span is noticeably longer. Conversations feel different — more present, less like you're waiting to get away and check something.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1484627147104-f5197bcd6651?w=900&q=80&auto=format&fit=crop" alt="Person reading a book at a cafe, no phone visible">
+      <p class="img-caption">What the in-between moments can look like. It takes a few weeks to stop feeling weird.</p>
+
+      <h2 id="tools">Helpful Tools (Ironic, But Useful)</h2>
+
+      <p>You can use your phone's own tools against the scroll reflex:</p>
+
+      <p><strong>Screen Time (iPhone) / Digital Wellbeing (Android):</strong> Set daily limits on specific apps. When you hit the limit, the app requires an extra tap to override. That extra tap is where the conscious decision happens.</p>
+
+      <p><strong>Move the apps.</strong> Delete Instagram and TikTok from your home screen. Put them in a folder, buried. The friction of finding them is surprisingly effective — the reflex relies on the app being one tap away.</p>
+
+      <p><strong>Grayscale mode.</strong> Setting your phone to black-and-white (Settings > Accessibility > Display > Color Filters on iPhone) removes a huge amount of the visual reward of social media feeds. Surprisingly effective. Surprisingly ugly. That's the point.</p>
+
+      <h2 id="after">What Happens After 30 Days</h2>
+
+      <p>Almost everyone who completes the challenge reports they don't want to go back to their previous usage. Not because social media is inherently evil, but because the contrast is stark: 30 days of more time, more presence, and quieter attention versus 900 hours a year of something they mostly couldn't account for.</p>
+
+      <p>Most people establish a new deliberate relationship with social media after the challenge. Some specific time window — 20 minutes in the evening, not in the morning, not after 9pm. Intentional use, not automatic use.</p>
+
+      <div class="pull-quote">
+        <p>"The challenge ends. The reflex is weaker. What you do with the space is up to you."</p>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80&auto=format&fit=crop" alt="Ryan">
+        <div>
+          <p class="person-name">Ryan, freelance photographer — Oregon</p>
+          <p class="person-quote">"I expected to feel deprived. I felt the opposite — like I'd been given time back. At the end of 30 days I did the math and figured I'd gotten about 70 hours back. 70 hours. In a month. I used them to start shooting film again, which I'd told myself I didn't have time for."</p>
+        </div>
+      </div>
 
       <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
       </div>
-  </div>
 
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/practices/how-to-start-morning-pages/" class="related-card">
-        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80&auto=format&fit=crop" alt="How to Start Morning Pages">
-        <p class="related-cat">Practices</p>
-        <h3 class="related-title">How to Start Morning Pages</h3>
-      </a><a href="/practices/analog-evening-routine/" class="related-card">
-        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine">
-        <p class="related-cat">Practices</p>
-        <h3 class="related-title">The Analog Evening Routine</h3>
-      </a><a href="/free-spaces/free-third-spaces/" class="related-card">
-        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&q=80&auto=format&fit=crop" alt="Free Third Spaces: How to Find Your People Offline">
-        <p class="related-cat">Free Spaces</p>
-        <h3 class="related-title">Free Third Spaces: How to Find Your People Offline</h3>
-      </a></div>
+        <div class="related-grid">
+          <a href="/practices/how-to-start-morning-pages/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80&auto=format&fit=crop" alt="How to Start Morning Pages">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">How to Start Morning Pages</h3>
+          </a>
+          <a href="/practices/analog-evening-routine/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">The Analog Evening Routine That Actually Helps You Sleep</h3>
+          </a>
+          <a href="/free-spaces/free-third-spaces/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&q=80&auto=format&fit=crop" alt="Free Third Spaces">
+            <p class="related-cat">Free Spaces</p>
+            <h3 class="related-title">Free Third Spaces: How to Find Your People Offline</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
 
@@ -259,9 +278,9 @@
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
@@ -270,13 +289,7 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => {
-      const doc = document.documentElement;
-      const scrollTop = doc.scrollTop || document.body.scrollTop;
-      const scrollHeight = doc.scrollHeight - doc.clientHeight;
-      const pct = (scrollTop / scrollHeight) * 100;
-      document.getElementById('progress-bar').style.width = pct + '%';
-    }, {passive: true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
