@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Paper Planners for People Who Hate Planning — Analog Wild</title>
-  <meta name="description" content="Most planners fail because they're designed for someone else. These ones aren't.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Paper Planners for 2026 — Analog Wild</title>
+  <meta name="description" content="The definitive guide to paper planners — from the beloved Hobonichi to the full-flexibility blank notebook. Find the one that makes you actually use it.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,87 +84,214 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
     <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/gear/" class="article-category">Gear</a>
-      <h1 class="article-title">Best Paper Planners for People Who Hate Planning</h1>
+      <h1 class="article-title">Best Paper Planners for 2026</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#hobonichi">Hobonichi Techo (our pick)</a></li>
-<li><a href="#passion">Passion Planner</a></li>
-<li><a href="#leuchtturm">Leuchtturm1917 Weekly</a></li>
-<li><a href="#blank">The blank notebook option</a></li>
-<li><a href="#how">How to actually use a planner</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#why">Why paper planning works</a></li>
+        <li><a href="#hobonichi">Hobonichi Techo (our pick)</a></li>
+        <li><a href="#passion">Passion Planner</a></li>
+        <li><a href="#leuchtturm">Leuchtturm1917 Weekly</a></li>
+        <li><a href="#bullet">The bullet journal option</a></li>
+        <li><a href="#how">How to actually use a planner</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Start with the <strong>Hobonichi Techo</strong>. It's small, unintimidating, printed on extraordinary paper, and designed to capture a small slice of each day rather than demand a complete accounting of your life. Most planner failures are system failures, not people failures. The Hobonichi is the forgiving one.</p></div>
-    <p>Let's be honest about what usually happens with planners. Bought in January. Used faithfully for three weeks. Missed a few days. Guilt. Drawer. By March it's a museum artifact. This is not a you problem. It's a planner problem.</p>
-    <h2 id="hobonichi">Hobonichi Techo — Our Top Pick</h2>
-    <p>A small Japanese planner printed on Tomoe River paper — extraordinarily thin, smooth, and fountain pen friendly. The daily pages have a light hourly grid you can completely ignore. The A6 size fits in a back pocket. The pages are small and unintimidating. Start here if you've failed at planners before.</p>
-    <p><a href="https://www.amazon.com/s?k=hobonichi+techo+planner&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Hobonichi Techo on Amazon</a></p>
-    <div class="pull-quote"><p>"The best planner is the one you actually open. Small and unintimidating beats comprehensive and unused every time."</p></div>
-    <h2 id="passion">Passion Planner — For Goal-Oriented Thinking</h2>
-    <p>An undated weekly planner where you articulate monthly goals and tie each week back to them. If goal-setting language resonates with you, this is excellent. Available as a free PDF download if you want to try it before buying the physical version.</p>
-    <h2 id="leuchtturm">Leuchtturm1917 Weekly Planner — Best Simple Option</h2>
-    <p>Same quality hardcover as their beloved notebooks, applied to a simple structure: the week on the left, a notes page on the right. No extra features. Just the week, clearly laid out, in a book that will last the year.</p>
-    <p><a href="https://www.amazon.com/s?k=leuchtturm1917+weekly+planner&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Leuchtturm1917 Weekly Planner on Amazon</a></p>
-    <h2 id="blank">The Blank Notebook Option</h2>
-    <p>Many productive people use a blank dot-grid notebook and invent their own system. Your system evolves to fit your actual life rather than forcing your life into someone else's template. Field Notes for daily capture, a larger Leuchtturm for weekly spreads you design yourself.</p>
-    <h2 id="how">How to Actually Use a Planner</h2>
-    <p>Keep it on your desk, not in a drawer. Use it at the same time every day — morning planning takes ten minutes and makes the whole day feel less scattered. Track only three important things per day and your week's major commitments. Everything else is noise.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>The <strong>Hobonichi Techo</strong> is the most beloved daily planner in the world for good reason — thin Tomoe River paper, a page per day, flexible enough to use however you want. The <strong>Passion Planner</strong> has the best goal-setting framework built in. The <strong>Leuchtturm1917 Weekly</strong> is the simplest weekly option for someone who wants structure without complexity. And if you've tried every planner system and abandoned each one? The <strong>blank notebook option</strong> might be what finally works — no structure means no wrong way to use it.</p>
       </div>
-  </div>
+
+      <p>The research on paper planning vs. digital planning is surprisingly unambiguous: writing things down by hand creates stronger memory encoding, better goal commitment, and more follow-through than typing the same information. Paper planners have been outselling digital productivity apps in Japan for twenty years. The rest of the world is catching up.</p>
+
+      <p>The problem isn't that people don't want to plan on paper. The problem is they buy a planner, use it intensely for two weeks, miss a day, feel bad about the empty spread, and abandon it. This is a system design problem, not a willpower problem. The right planner doesn't make you feel guilty when you skip a day.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>A <a href="https://www.dominican.edu/sites/default/files/2020-02/gailmatthews-harvard-goals-researchsummary.pdf" target="_blank" rel="noopener">study by Dr. Gail Matthews at Dominican University</a> found that people who wrote down their goals were 42% more likely to achieve them than those who only thought about them. A subsequent study found that writing goals by hand — as opposed to typing — produced even stronger commitment, likely due to the greater cognitive effort and engagement involved in handwriting.</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=900&q=80&auto=format&fit=crop" alt="Open weekly planner on desk with pen and coffee, morning planning session">
+      <p class="img-caption">The morning planning ritual. Ten minutes that changes the shape of the day.</p>
+
+      <h2 id="why">Why Paper Planning Works (Even For Digital People)</h2>
+
+      <p>Digital calendars are excellent for scheduling. They sync, they remind, they share. Nobody is arguing that paper is better for managing a complex calendar with multiple stakeholders.</p>
+
+      <p>But paper is better for thinking. When you write your week out by hand, you're not just recording information — you're processing it. The act of writing forces you to decide what matters. The limited space forces prioritization. The physical page creates a different kind of visual review than a screen does.</p>
+
+      <p>Many people find that a hybrid works best: digital calendar for appointments and shared events, paper planner for daily intentions, priorities, and personal goals. The two aren't competing — they're doing different things.</p>
+
+      <div class="pull-quote">
+        <p>"The right planner doesn't make you feel guilty when you skip a day. It's a tool, not a report card."</p>
+      </div>
+
+      <h2 id="hobonichi">Hobonichi Techo — Our Pick</h2>
+
+      <p>The Hobonichi Techo Cousin is the most beloved planner in the world among the kind of people who have opinions about planners. Made in Japan by Hobonichi (pronounced HOE-boe-NEE-chee), it features Tomoe River paper — famously thin (52gsm) and fountain pen-friendly. One full page per day. Monthly calendars. A year-at-a-glance. Various supplementary pages depending on which version you choose.</p>
+
+      <p>What makes it special: the paper quality means you can use any pen, marker, or watercolor in it without bleed-through. The flexibility means you can use each daily page however you want — as a diary, a task list, a sketch pad, a combination. The small A6 Techo version fits in a coat pocket. The A5 Cousin is the full-size option most people love.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=200&q=80&auto=format&fit=crop" alt="Open planner on desk with pen">
+        <div class="product-info">
+          <p class="product-name">Hobonichi Techo Cousin (A5)</p>
+          <p class="product-desc">Japanese daily planner on legendary Tomoe River paper. One page per day, fountain pen-friendly, flexible format. The cult classic of paper planners.</p>
+          <a href="https://www.amazon.com/s?k=hobonichi+techo+cousin+A5&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&auto=format&fit=crop" alt="Clara">
+        <div>
+          <p class="person-name">Clara, UX designer — Oregon</p>
+          <p class="person-quote">"I've tried every digital productivity tool. Notion, Things 3, Obsidian — I've set up beautiful systems I used for two weeks. The Hobonichi is the only planning tool I've used consistently for three years. Something about the physical object makes it feel different. It's not a task I do — it's a ritual."</p>
+        </div>
+      </div>
+
+      <h2 id="passion">Passion Planner — For the Goal-Setter</h2>
+
+      <p>The Passion Planner distinguishes itself with a built-in goal-mapping framework. You start each quarter by mapping your goals — personal, professional, long-term, short-term — into a visual diagram, then the weekly spreads connect your daily tasks to those larger goals. It's structured in a way that makes you articulate what you actually want, which turns out to be harder than it sounds.</p>
+
+      <p>The weekly format (two-page weekly spread with a large daily column) is ideal for most people — detailed enough to plan meaningfully, wide enough that it's not overwhelming. The undated version is practical if you're not going to use it every single day.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1527015175922-36a306cf0e20?w=200&q=80&auto=format&fit=crop" alt="Passion planner open with goal-setting pages">
+        <div class="product-info">
+          <p class="product-name">Passion Planner (Undated, Large)</p>
+          <p class="product-desc">Built-in goal-mapping framework, weekly spreads, reflection pages. The most structured approach to intentional planning. Great for people who want to connect daily to-dos to larger goals.</p>
+          <a href="https://www.amazon.com/s?k=passion+planner+undated+large&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <h2 id="leuchtturm">Leuchtturm1917 Weekly — The Clean, Simple Option</h2>
+
+      <p>If you want structure without complexity — just a clean weekly view and space for notes — the Leuchtturm1917 Weekly Planner delivers exactly that. Two-page weekly spread, daily columns, a notes page for each week. The paper handles fountain pens. The indexed format means you can actually find things later.</p>
+
+      <p>This is the planner to buy if you've been using digital tools and want to try paper without committing to a whole system. Low barrier to entry, high quality production, satisfying to use.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=200&q=80&auto=format&fit=crop" alt="Leuchtturm1917 weekly planner">
+        <div class="product-info">
+          <p class="product-name">Leuchtturm1917 Weekly Planner</p>
+          <p class="product-desc">Clean weekly spreads, 80gsm paper, indexed. The simplest path from digital to paper planning. No system required — just open it and write.</p>
+          <a href="https://www.amazon.com/s?k=leuchtturm1917+weekly+planner+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=900&q=80&auto=format&fit=crop" alt="Hand writing in a planner with colored pens, organized weekly spread">
+      <p class="img-caption">The weekly spread. Ten minutes on Sunday morning changes the shape of the whole week.</p>
+
+      <h2 id="bullet">The Blank Notebook Option</h2>
+
+      <p>Some people try every structured planner and none of them stick. If that's you, try the blank notebook. A Leuchtturm1917 dotted, used as your own custom planner with only the structure you create. Some people do a simple weekly spread on two pages. Some do daily to-do lists. Some combine planning with journaling in the same book.</p>
+
+      <p>The blank notebook works for people who find pre-printed layouts either too constraining or never quite right. The tradeoff is more setup time and more decision-making. The payoff is a system that's exactly yours.</p>
+
+      <h2 id="how">How to Actually Use a Planner (Without Abandoning It)</h2>
+
+      <p><strong>Start with weekly, not daily.</strong> Daily planners are aspirational. Weekly planners are actually used. You can always add more detail if you need it.</p>
+
+      <p><strong>Plan on Sunday, not Monday.</strong> Monday morning is reactive — you're already behind. Sunday afternoon, with the week still ahead of you, is when the thinking happens.</p>
+
+      <p><strong>Don't migrate everything forever.</strong> If a task has been rolling forward for three weeks, either do it or consciously decide not to. Endless migration kills momentum.</p>
+
+      <p><strong>Skip the perfectionism about gaps.</strong> A week where you used your planner four days out of seven is a good week. Don't let the empty days make you abandon the whole thing.</p>
+
+      <div class="pull-quote">
+        <p>"People who write goals by hand are 42% more likely to achieve them. The planner isn't a lifestyle accessory. It's a practical tool with unusually good evidence behind it."</p>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&auto=format&fit=crop" alt="James">
+        <div>
+          <p class="person-name">James, project manager — Minnesota</p>
+          <p class="person-quote">"I manage projects on Jira all week. The paper planner is the opposite of that — it's mine, it's private, it's for thinking rather than reporting. The Monday brain dump into the planner is the thing that makes me feel like I have the week rather than the week having me."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/gear/best-notebooks-for-morning-pages/" class="related-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages"><p class="related-cat">Gear</p><h3 class="related-title">Best Notebooks for Morning Pages</h3></a><a href="/practices/analog-evening-routine/" class="related-card"><img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine"><p class="related-cat">Practices</p><h3 class="related-title">The Analog Evening Routine</h3></a><a href="/practices/how-to-start-morning-pages/" class="related-card"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80&auto=format&fit=crop" alt="How to Start Morning Pages"><p class="related-cat">Practices</p><h3 class="related-title">How to Start Morning Pages</h3></a></div>
+        <div class="related-grid">
+          <a href="/gear/best-notebooks-for-morning-pages/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Notebooks for Morning Pages</h3>
+          </a>
+          <a href="/practices/analog-evening-routine/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&q=80&auto=format&fit=crop" alt="The Analog Evening Routine">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">The Analog Evening Routine</h3>
+          </a>
+          <a href="/practices/how-to-start-morning-pages/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=80&auto=format&fit=crop" alt="How to Start Morning Pages">
+            <p class="related-cat">Practices</p>
+            <h3 class="related-title">How to Start Morning Pages</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>

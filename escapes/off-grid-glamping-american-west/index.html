@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Off-Grid Glamping Resorts Worth the Splurge in the American West — Analog Wild</title>
-  <meta name="description" content="Off-grid doesn't have to mean uncomfortable. The best luxury glamping in Oregon, California, Utah, Montana, and Colorado.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Off-Grid Glamping Worth the Splurge in the American West — Analog Wild</title>
+  <meta name="description" content="Five-star amenities, zero cell signal. The best off-grid glamping in Oregon, California, Utah, Montana, and Colorado — where roughing it means no wifi, not no bed.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,92 +84,211 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
-    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1537905569824-f89f14cceb68?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/escapes/" class="article-category">Escapes</a>
-      <h1 class="article-title">Off-Grid Glamping Resorts Worth the Splurge in the American West</h1>
+      <h1 class="article-title">Off-Grid Glamping Worth the Splurge in the American West</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#oregon">Oregon</a></li>
-<li><a href="#california">California</a></li>
-<li><a href="#utah">Utah</a></li>
-<li><a href="#montana">Montana</a></li>
-<li><a href="#colorado">Colorado</a></li>
-<li><a href="#pack">What to pack</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#what-is-glamping">What "off-grid glamping" actually means</a></li>
+        <li><a href="#oregon">Oregon</a></li>
+        <li><a href="#california">California</a></li>
+        <li><a href="#utah">Utah</a></li>
+        <li><a href="#montana">Montana</a></li>
+        <li><a href="#colorado">Colorado</a></li>
+        <li><a href="#pack">What to pack</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Absence of wifi is increasingly the luxury. Every place on this list offers genuine disconnection — no cell service, no televisions — plus accommodation that makes the experience worth the price. Budget picks start around $150/night; the aspirational ones go much higher.</p></div>
-    <p>Off-grid doesn't have to mean uncomfortable. Some of the best accommodation in the American West happens to have no cell service, no televisions, and no wifi — and they charge accordingly, because the absence of those things is increasingly what people are willing to pay for.</p>
-    <h2 id="oregon">Oregon</h2>
-    <p><strong>Lake of the Woods Resort, Southern Oregon</strong> — Rustic cabins on a mountain lake near Crater Lake. No cell service, paddleboards, stars that will rearrange your priorities. From ~$150/night.</p>
-    <p><strong>Suttle Lodge, Sisters OR</strong> — Lakeside cabins, no TVs by design, fireplace bar, mountains everywhere. Close enough to Bend to extend a weekend trip. From $200/night.</p>
-    <div class="pull-quote"><p>"The absence of wifi is increasingly the luxury. People are paying to not be reachable."</p></div>
-    <h2 id="california">California</h2>
-    <p><strong>Mendocino Grove, Mendocino CA</strong> — Luxury canvas tents in a redwood grove above the coast. Heated beds, private decks, the sound of the Pacific. From $250-350/night.</p>
-    <p><strong>AutoCamp Russian River, Guerneville CA</strong> — Airstream trailers in a redwood forest. Surprisingly private, Sonoma wine country nearby. From $200/night.</p>
-    <h2 id="utah">Utah</h2>
-    <p><strong>Under Canvas Zion, Springdale UT</strong> — Safari-style tents at the entrance to Zion. Stargazing, red rock sunrises. From $200/night.</p>
-    <p><strong>Amangiri, Canyon Point UT</strong> — The splurge of all splurges ($2000+/night). Extraordinary desert architecture, canyon silence, a pool that reflects the sky. Once in a lifetime.</p>
-    <h2 id="montana">Montana</h2>
-    <p><strong>The Resort at Paws Up, Greenough MT</strong> — Luxury tents on 37,000 acres. Fly fishing, horseback riding, guided wilderness. From $500/night, all-inclusive.</p>
-    <h2 id="colorado">Colorado</h2>
-    <p><strong>Dunton River Camp, Dolores CO</strong> — Remote canvas cabins along the Dolores River, accessible only by Jeep. Complete disconnection, exceptional food, the kind of quiet that resets something. From $400/night.</p>
-    <h2 id="pack">What to Pack</h2>
-    <p>Good layers — nights are cold even in summer at elevation. A headlamp. A physical book. A journal. Your phone on airplane mode if you must bring it at all.</p>
-    <p><a href="https://www.amazon.com/s?k=rite+in+the+rain+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Rite in the Rain Notebook on Amazon</a></p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>The best off-grid glamping spots in the American West combine genuine disconnection (no wifi, minimal cell signal) with enough comfort that you actually sleep, eat well, and have the cognitive space to slow down. These are not "roughing it" experiences. They're carefully designed escapes where the absence of connectivity is a feature, not an accidental side effect of remoteness. Book 2–3 months ahead for summer; fall has better weather and lower prices at most properties.</p>
       </div>
-  </div>
+
+      <p>There's a distinction between camping and glamping that matters here. Camping puts you in a sleeping bag on the ground in a tent you set up yourself. That's excellent and we endorse it fully. But it's not the only way to get off-grid.</p>
+
+      <p>Glamping — proper glamping, not "camping in an Instagram-filtered tent twenty feet from the parking lot" — gives you a real bed in a genuinely remote setting. A wood-burning stove. Stars visible from the bed through a skylight. No wifi by design, not by accident. The experience of waking up somewhere that requires zero cell signal for day-to-day function.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>A <a href="https://www.pnas.org/doi/10.1073/pnas.1510459112" target="_blank" rel="noopener">Stanford study</a> found that spending time in natural environments significantly reduced neural activity in the prefrontal cortex associated with rumination — the repetitive negative self-focused thinking that plagues modern life. A separate study by CU Boulder found that <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(19)30752-0" target="_blank" rel="noopener">camping in natural light for a week reset participants' circadian rhythms</a> to better match sunrise and sunset, improving sleep quality — effects that persisted after returning home.</p>
+      </div>
+
+      <h2 id="what-is-glamping">What "Off-Grid Glamping" Actually Means</h2>
+
+      <p>We have a specific definition: off-grid glamping means no wifi, minimal to no reliable cell service, and a sleeping situation that involves a real bed in a structure (tent, yurt, cabin, A-frame, dome) that's located somewhere genuinely remote.</p>
+
+      <p>Properties that call themselves "glamping" but are located within easy walking distance of a coffee shop with wifi don't qualify. The disconnection is the point. The comfort is what makes extended disconnection accessible to people who can't or don't want to backpack.</p>
+
+      <div class="pull-quote">
+        <p>"The best off-grid glamping isn't roughing it. It's designed disconnection — all the quiet, none of the sleeping-on-a-root."</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=900&q=80&auto=format&fit=crop" alt="Luxury canvas tent in wilderness setting, mountains in background, no electricity visible">
+      <p class="img-caption">A canvas tent with a real bed, a wood stove, and a view that earns its price tag.</p>
+
+      <h2 id="oregon">Oregon</h2>
+
+      <h3>KOA — Eastern Oregon High Desert</h3>
+      <p>Oregon's high desert east of the Cascades offers some of the most remote glamping in the state. The Crooked River area and the rimrock country around the John Day Fossil Beds provide extraordinary landscape — red rock formations, canyon country, the geological record of 44 million years written in the walls. Several outfitters run luxury tent camps in this region. The dark skies are exceptional.</p>
+
+      <h3>Treehouse Rentals, Cascade Foothills</h3>
+      <p>The foothills east of Portland and Eugene have a cluster of well-designed tree house and cabin rentals in old-growth settings. Look for listings with explicit "no wifi, limited cell service" notes — these are the genuinely off-grid ones. Fall foliage season (October) is the best time.</p>
+
+      <h2 id="california">California</h2>
+
+      <h3>Joshua Tree Area</h3>
+      <p>The Mojave and Colorado deserts around Joshua Tree have more high-quality glamping than almost anywhere else in the US. Domes, A-frames, and luxury tents positioned to face the sunrise, with nothing but desert and Joshua trees visible. The cell service is genuinely terrible in many spots, which is a feature not a bug. February through April, and September through November, for best weather.</p>
+
+      <h3>Lost Coast, Humboldt</h3>
+      <p>The Lost Coast of Northern California — named because the terrain was too steep for the Pacific Coast Highway — is genuinely remote. The most isolated stretch of California coast. A few glamping operators have staked out positions here with ocean views and the kind of quiet that requires explanation when you get back to the city.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=120&q=80&auto=format&fit=crop" alt="Michelle">
+        <div>
+          <p class="person-name">Michelle, product manager — California</p>
+          <p class="person-quote">"I took my first solo trip — a three-night yurt stay in the Mojave. No cell signal, no wifi, just the desert and a stack of books. By night two I was sleeping better than I had in years. I bring a journal now everywhere I travel. The desert gave that to me."</p>
+        </div>
+      </div>
+
+      <h2 id="utah">Utah</h2>
+
+      <h3>Canyon Country Camps</h3>
+      <p>The Colorado Plateau — Arches, Canyonlands, the Grand Staircase-Escalante — is some of the most spectacular terrain on earth, and the glamping options in this region have improved dramatically. Several operators run small-scale luxury camps within driving distance of the national parks but in areas with minimal cell service. The stars here are genuinely stunning — some of the darkest sky in the lower 48.</p>
+
+      <h3>Capitol Reef Adjacent</h3>
+      <p>Capitol Reef gets a fraction of the visitors that Zion and Arches do, despite being comparably beautiful. The farm history in the Fruita area, the Waterpocket Fold, and the canyon country to the south make for extraordinary exploring. Glamping options here are fewer and more rugged than in the more touristed parks — which is exactly why they're worth seeking out.</p>
+
+      <h2 id="montana">Montana</h2>
+
+      <h3>Glacier Country</h3>
+      <p>Glacier National Park's eastern slope, around St. Mary and the Two Medicine area, has a quieter character than the crowded Going-to-the-Sun Road side. Glamping operators in this region offer stays adjacent to genuine wilderness — grizzly bear country, glacial lakes, the kind of scale that recalibrates everything. Book the previous year. Seriously.</p>
+
+      <h3>Madison River Valley</h3>
+      <p>The Madison River Valley south of Ennis has some of the most beautiful ranch land in Montana. Several outfitters run luxury tent camps focused on fly fishing, hiking, and complete disconnection. The valley floor is relatively flat but the surrounding mountains provide the drama. Summer thunderstorms roll through in patterns that feel like weather events, which they are.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&auto=format&fit=crop" alt="Mountains and wilderness landscape in western United States, no people or structures visible">
+      <p class="img-caption">The scale of the American West does something to the nervous system that hotel rooms cannot replicate.</p>
+
+      <h2 id="colorado">Colorado</h2>
+
+      <h3>San Juan Mountains</h3>
+      <p>The San Juans in southwest Colorado may be the most spectacular mountain scenery in the country outside of Alaska. The 14ers, the fall aspen color, the mining ghost towns and hot springs — this is a genuinely extraordinary region. Glamping options near Ouray, Telluride, and Creede offer some of the best high-altitude disconnection in the West.</p>
+
+      <h2 id="pack">What to Pack for Off-Grid Glamping</h2>
+
+      <p>The glamping operators handle the big stuff (bedding, meals, often firewood). What they don't provide:</p>
+
+      <p><strong>Your own entertainment.</strong> Books, cards, journal. The point is the absence of screens. Fill the space with things that work without power.</p>
+
+      <p><strong>A headlamp.</strong> Off-grid means no outdoor lighting at night. A good headlamp is essential.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1529521006686-b10bf18ed0c3?w=200&q=80&auto=format&fit=crop" alt="Black Diamond headlamp">
+        <div class="product-info">
+          <p class="product-name">Black Diamond Spot 400 Headlamp</p>
+          <p class="product-desc">The standard-bearer for backcountry headlamps. 400 lumens, red night-vision mode, waterproof. Bright enough to read by, directional enough for trail finding.</p>
+          <a href="https://www.amazon.com/s?k=black+diamond+spot+400+headlamp&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1553531087-b25c76cbbbc3?w=200&q=80&auto=format&fit=crop" alt="Rite in the Rain weatherproof journal">
+        <div class="product-info">
+          <p class="product-name">Rite in the Rain All-Weather Notebook</p>
+          <p class="product-desc">For the outdoor journal. Writes in rain and humidity. The field notebook that handles whatever the weather does. If you're going somewhere with unpredictable conditions, take this instead of your nice journal.</p>
+          <a href="https://www.amazon.com/s?k=rite+in+the+rain+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&q=80&auto=format&fit=crop" alt="Daniel">
+        <div>
+          <p class="person-name">Daniel, attorney — Colorado</p>
+          <p class="person-quote">"We do one glamping trip a year as a couple — three or four nights, somewhere with zero cell service by design. It's the best thing we do for our relationship all year. No screens, no work, no news. We play cards. We cook on a fire. We remember who we actually are when nothing is demanding our attention."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/escapes/off-grid-retreats-pacific-northwest/" class="related-card"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80&auto=format&fit=crop" alt="10 Off-Grid Retreats in the PNW"><p class="related-cat">Escapes</p><h3 class="related-title">10 Off-Grid Retreats in the PNW</h3></a><a href="/escapes/best-stargazing-spots-oregon/" class="related-card"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80&auto=format&fit=crop" alt="Best Stargazing Spots in Oregon"><p class="related-cat">Escapes</p><h3 class="related-title">Best Stargazing Spots in Oregon</h3></a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a></div>
+        <div class="related-grid">
+          <a href="/escapes/off-grid-retreats-pacific-northwest/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80&auto=format&fit=crop" alt="Off-Grid Retreats in the PNW">
+            <p class="related-cat">Escapes</p>
+            <h3 class="related-title">10 Off-Grid Retreats in the PNW</h3>
+          </a>
+          <a href="/escapes/best-stargazing-spots-oregon/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80&auto=format&fit=crop" alt="Best Stargazing Spots in Oregon">
+            <p class="related-cat">Escapes</p>
+            <h3 class="related-title">Best Stargazing Spots in Oregon</h3>
+          </a>
+          <a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+            <p class="related-cat">Challenges</p>
+            <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
