@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Stargazing Spots in Oregon and What to Bring — Analog Wild</title>
-  <meta name="description" content="Oregon has some of the darkest skies in the continental US. Here's where to go and what to bring.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Stargazing Spots in Oregon — Analog Wild</title>
+  <meta name="description" content="Oregon has some of the darkest skies in the lower 48 — from the John Day desert to the Steens Mountain. Here's where to go and how to actually see the Milky Way.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,40 +23,53 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
     .article-layout{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:220px 1fr;gap:4rem}
     .toc{position:sticky;top:90px;height:fit-content;font-size:.82rem}
-    .toc-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
+    .toc-label{font-size:.65rem;font-wrap:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem}
     .toc ul{list-style:none;border-left:2px solid var(--border);padding-left:1rem}
     .toc li{margin-bottom:.6rem}
     .toc a{color:var(--mid);text-decoration:none;line-height:1.4}
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,90 +84,204 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
     <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/escapes/" class="article-category">Escapes</a>
-      <h1 class="article-title">Best Stargazing Spots in Oregon and What to Bring</h1>
+      <h1 class="article-title">Best Stargazing Spots in Oregon</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#crater-lake">Crater Lake</a></li>
-<li><a href="#steens">Steens Mountain</a></li>
-<li><a href="#ochocos">Ochoco National Forest</a></li>
-<li><a href="#painted-hills">Painted Hills</a></li>
-<li><a href="#jordan">Jordan Valley</a></li>
-<li><a href="#gear">What to bring</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#why-oregon">Why Oregon's skies are special</a></li>
+        <li><a href="#john-day">John Day Fossil Beds</a></li>
+        <li><a href="#steens">Steens Mountain</a></li>
+        <li><a href="#crater-lake">Crater Lake</a></li>
+        <li><a href="#hart-mountain">Hart Mountain</a></li>
+        <li><a href="#newberry">Newberry Volcanic Monument</a></li>
+        <li><a href="#tips">How to actually see the Milky Way</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>Oregon's best dark skies are at <strong>Steens Mountain</strong> (most remote, most dramatic) and <strong>Crater Lake</strong> (most accessible, most iconic). For a quick trip from Bend, the <strong>Ochocos</strong> are 45 minutes away and genuinely dark. Bring red light, warm layers, and something hot to drink.</p></div>
-    <p>There's a particular quality to seeing the Milky Way properly — when you're far enough from city lights that the sky has actual texture, that it looks three-dimensional, that you can understand why people built religions around it. Oregon has more of those skies than almost anywhere in the lower 48.</p>
-    <h2 id="crater-lake">Crater Lake National Park</h2>
-    <p>Sits at 6,000 feet elevation with no major cities for a hundred miles. The Milky Way reflects in the lake on clear nights in a way that photographs can't fully convey. The Rim Drive viewpoints are accessible and the park offers ranger-led stargazing programs in summer. Stay at Crater Lake Lodge to wake up with the lake right there.</p>
-    <h2 id="steens">Steens Mountain</h2>
-    <p>Southeastern Oregon. One of the least-visited and darkest places in the state. The summit road takes you to nearly 10,000 feet, above any light pollution. The Alvord Desert below is a dry lake bed that extends for miles — lie on it at night and the sky is overwhelming. Camping is primitive and free throughout the area.</p>
-    <div class="pull-quote"><p>"Lie on the Alvord Desert at night and the sky is overwhelming. You can understand why people built religions around this."</p></div>
-    <h2 id="ochocos">Ochoco National Forest</h2>
-    <p>45 minutes from Bend. Excellent dark skies without a major expedition. Ochoco Reservoir and surrounding forest roads have minimal light pollution. The juniper and ponderosa landscape is beautiful in its own right. The best option for a spontaneous night out from Central Oregon.</p>
-    <h2 id="painted-hills">Painted Hills, John Day Fossil Beds</h2>
-    <p>Already one of Oregon's most visually striking landscapes in daylight — the banded red and gold hills look painted. At night, under dark skies, the experience adds another dimension. The nearby town of Mitchell has a small dark sky park.</p>
-    <h2 id="jordan">Jordan Valley</h2>
-    <p>The high desert of eastern Oregon near Jordan Valley is among the darkest places in the state. Remote, requiring a real drive, basically unpopulated. If you want to feel genuinely far from everything, this is it.</p>
-    <h2 id="gear">What to Bring</h2>
-    <p><strong>Red headlamp</strong> — Red light preserves your night vision, which takes 20-30 minutes to develop and is ruined instantly by white light. Essential.</p>
-    <p><a href="https://www.amazon.com/s?k=red+headlamp+stargazing&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Red Headlamp on Amazon</a></p>
-    <p><strong>Warm layers</strong> — Oregon nights at elevation are cold even in July. More layers than you think. <strong>A blanket or sleeping pad</strong> — you'll want to lie on your back for extended periods. <strong>Something hot in a thermos.</strong> Leave your phone face-down once you've identified constellations. The point is to be there, not to document being there.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>Eastern Oregon has some of the darkest skies in the continental United States. The <strong>John Day Fossil Beds</strong> and <strong>Steens Mountain</strong> are the two regions worth building a trip around — both have minimal light pollution, dry summer weather, and landscapes that are extraordinary even in daylight. Go in July–September for the Milky Way core. Go on a new moon night. Don't bring your phone as a flashlight — use a red-light headlamp to preserve your night vision. The sky you'll see will be something you'll tell people about for years.</p>
       </div>
-  </div>
+
+      <p>Here's a fact that surprises most people: about one-third of humanity cannot see the Milky Way from where they live. Light pollution has washed it out entirely. If you grew up in or near a major city, you may have never seen a genuinely dark sky.</p>
+
+      <p>Oregon's eastern desert — the Great Basin country east of the Cascades — is one of the last places in the American West where the sky looks the way it's supposed to look. Dense with stars. The Milky Way visible as a band of actual light, not just a theoretical thing you've read about. Satellites crossing. Shooting stars most nights without trying.</p>
+
+      <p>This experience has no digital equivalent and no filter enhancement. You have to go there and look up.</p>
+
+      <div class="research-box">
+        <p class="research-label">📊 The Research</p>
+        <p>A <a href="https://advances.sciencemag.org/content/2/6/e1600377" target="_blank" rel="noopener">2016 study published in <em>Science Advances</em></a> found that 80% of North Americans and 99% of Europeans and Americans living in urban areas cannot see the Milky Way due to artificial light pollution. The study used satellite data to map the global light footprint and found it expanding by approximately 2% annually. Oregon's high desert is among the last remaining Class 1-2 dark sky regions in the lower 48 states.</p>
+      </div>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=900&q=80&auto=format&fit=crop" alt="Milky Way galaxy over dark landscape, stars visible, tent in foreground">
+      <p class="img-caption">The Milky Way. Visible to 20% of humanity at best. Extraordinary in eastern Oregon's desert sky.</p>
+
+      <h2 id="why-oregon">Why Oregon's Skies Are Special</h2>
+
+      <p>The Great Basin Desert that covers most of eastern Oregon is sparsely populated, far from major cities, and sits at elevation. These three factors combine to produce exceptional dark skies. The population of all of eastern Oregon east of the Cascades is roughly 450,000 people scattered across an area larger than several states. There's simply not enough artificial light to pollute the sky.</p>
+
+      <p>The Bortle scale measures sky darkness from 1 (darkest possible, very rare) to 9 (inner-city skyglow). The Steens Mountain region rates approximately Bortle 2. Bortle 2 skies show the Milky Way casting a faint shadow. Yes, a shadow. You won't see that from your driveway.</p>
+
+      <div class="pull-quote">
+        <p>"Eastern Oregon's desert sky rates Bortle 2 — dark enough that the Milky Way casts a faint shadow. You will not forget the first time you see this."</p>
+      </div>
+
+      <h2 id="john-day">John Day Fossil Beds National Monument</h2>
+
+      <p>The John Day region is extraordinary in multiple ways: the fossil beds contain one of the world's most complete records of Eocene-era life (44 million years), the painted hills rival the Southwest's best canyon country, and the skies are some of the darkest in Oregon. The region is a designated <a href="https://www.darksky.org/our-work/lighting/idsp/parks-reserves/" target="_blank" rel="noopener">IDA Dark Sky Sanctuary adjacent area</a>.</p>
+
+      <p>The Painted Hills unit is particularly good for stargazing — the hills glow slightly in starlight, creating an otherworldly landscape. Camping is allowed in several spots. The best viewing is in July and August when the Milky Way core is highest in the sky. Come on a new moon weekend — the difference between new moon and full moon stargazing is enormous.</p>
+
+      <h2 id="steens">Steens Mountain</h2>
+
+      <p>Steens Mountain is a fault-block mountain rising to 9,773 feet from the Alvord Desert below. The contrast is dramatic: you drive from desert floor through juniper and sage and aspen to alpine ridgeline in about thirty miles. The views are extraordinary. The skies are Bortle 1-2 in the Alvord Desert below.</p>
+
+      <p>The Alvord Hot Springs at the base of the Steens is a pilgrimage site among Oregon outdoors people — natural hot springs with the mountain rising behind you and an unobstructed sky above. Late September through October, before the road closes, is magic: cooler air, fewer people, better atmospheric stability for star viewing.</p>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=120&q=80&auto=format&fit=crop" alt="Anna">
+        <div>
+          <p class="person-name">Anna, high school science teacher — Oregon</p>
+          <p class="person-quote">"I took my students to the Alvord Desert for a class trip. Most of them had never seen the Milky Way. Watching their faces when it became visible — when they understood it was the actual galaxy and not a cloud — that was one of the best moments of my teaching career."</p>
+        </div>
+      </div>
+
+      <h2 id="crater-lake">Crater Lake National Park</h2>
+
+      <p>Crater Lake is Oregon's most famous dark sky destination — a designated International Dark Sky Park since 2020. The crater rim sits at nearly 8,000 feet, above most light pollution. On clear nights, the stars reflect in the lake, creating a disorienting mirror of the sky. The park runs ranger-led stargazing programs in summer at the rim.</p>
+
+      <p>The key: come on a clear night, not a famous night. The summer weekend crowds dilute the experience. Go on a Tuesday in early September. You'll have the rim nearly to yourself.</p>
+
+      <h2 id="hart-mountain">Hart Mountain National Antelope Refuge</h2>
+
+      <p>If you want remote, Hart Mountain is remote. The hot spring at the refuge is the destination — a primitive concrete pool fed by geothermal springs, open 24 hours, with no lighting and no fee. Lying in 100-degree water under a Bortle 2 sky, with pronghorn antelope grazing nearby, is an experience that's difficult to describe without sounding like you've invented it.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&q=80&auto=format&fit=crop" alt="Stars and Milky Way over desert landscape with a tent, no light pollution">
+      <p class="img-caption">A tent under dark Oregon desert sky. The light on the horizon is not a city — it's the glow of the Milky Way core.</p>
+
+      <h2 id="newberry">Newberry Volcanic National Monument</h2>
+
+      <p>Less known than Crater Lake but closer to Bend, Newberry Volcanic Monument has several dark sky viewing areas in the high desert country south of Bend. The Newberry caldera and Paulina Lake are the focal points. Camping is available at Paulina Lake Campground. The skies here aren't as dark as the Steens region but the combination of scenery and accessibility makes it a good option for a first Oregon dark sky experience.</p>
+
+      <h2 id="tips">How to Actually See the Milky Way</h2>
+
+      <p><strong>Time it right.</strong> The Milky Way core is best visible from April through October, with July–August being peak. It rises in the southeast around 10pm and reaches highest point around 1–2am.</p>
+
+      <p><strong>New moon is everything.</strong> The moon on a clear night drowns out faint stars almost as effectively as light pollution. Check the moon phase before you go. Plan around the new moon — three or four days on either side is still very good.</p>
+
+      <p><strong>Let your eyes adapt.</strong> Night vision takes 20–30 minutes to fully develop. Don't check your phone. Use a red-light headlamp only. The difference between 5-minute adapted vision and 30-minute adapted vision is remarkable.</p>
+
+      <p><strong>Bring layers.</strong> Desert nights get cold fast, even in summer. Temperatures drop 30°F after sunset at elevation. A blanket or sleeping bag you can lie on is the right idea.</p>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1529521006686-b10bf18ed0c3?w=200&q=80&auto=format&fit=crop" alt="Red-light headlamp for stargazing">
+        <div class="product-info">
+          <p class="product-name">Black Diamond Spot 400 Headlamp (with Red Mode)</p>
+          <p class="product-desc">The red light mode preserves your night vision while still letting you navigate. Essential for stargazing. Never use white light if you can help it after your eyes have adapted.</p>
+          <a href="https://www.amazon.com/s?k=black+diamond+spot+400+headlamp+red+mode&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=200&q=80&auto=format&fit=crop" alt="Star map or constellation guide book">
+        <div class="product-info">
+          <p class="product-name">National Audubon Society Field Guide to the Night Sky</p>
+          <p class="product-desc">The best physical star atlas for learning what you're looking at. Using a physical guide rather than an app keeps your night vision intact and your phone in your pocket.</p>
+          <a href="https://www.amazon.com/s?k=national+audubon+society+night+sky+field+guide&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&q=80&auto=format&fit=crop" alt="Carlos">
+        <div>
+          <p class="person-name">Carlos, software engineer — Oregon</p>
+          <p class="person-quote">"I drove to the John Day area for the first time on a clear new moon night in August. Standing in the painted hills at midnight, the Milky Way band was bright enough to read by — barely, but enough. It was the most completely off-screen I've felt in years. I didn't even bring my phone out of the car."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/escapes/off-grid-retreats-pacific-northwest/" class="related-card"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80&auto=format&fit=crop" alt="10 Off-Grid Retreats in the PNW"><p class="related-cat">Escapes</p><h3 class="related-title">10 Off-Grid Retreats in the PNW</h3></a><a href="/escapes/off-grid-glamping-american-west/" class="related-card"><img src="https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?w=400&q=80&auto=format&fit=crop" alt="Off-Grid Glamping Worth the Splurge"><p class="related-cat">Escapes</p><h3 class="related-title">Off-Grid Glamping Worth the Splurge</h3></a><a href="/challenges/30-day-no-scroll-challenge/" class="related-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge"><p class="related-cat">Challenges</p><h3 class="related-title">The 30-Day No-Scroll Challenge</h3></a></div>
+        <div class="related-grid">
+          <a href="/escapes/off-grid-retreats-pacific-northwest/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80&auto=format&fit=crop" alt="Off-Grid Retreats in the PNW">
+            <p class="related-cat">Escapes</p>
+            <h3 class="related-title">10 Off-Grid Retreats in the PNW</h3>
+          </a>
+          <a href="/escapes/off-grid-glamping-american-west/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?w=400&q=80&auto=format&fit=crop" alt="Off-Grid Glamping in the American West">
+            <p class="related-cat">Escapes</p>
+            <h3 class="related-title">Off-Grid Glamping Worth the Splurge</h3>
+          </a>
+          <a href="/challenges/30-day-no-scroll-challenge/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=80&auto=format&fit=crop" alt="The 30-Day No-Scroll Challenge">
+            <p class="related-cat">Challenges</p>
+            <h3 class="related-title">The 30-Day No-Scroll Challenge</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
