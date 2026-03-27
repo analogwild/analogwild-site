@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Analog Wild Gift Guide: 25 Gifts for People Who Have Everything — Analog Wild</title>
-  <meta name="description" content="The best gifts for people who have everything tend to be things they wouldn't buy themselves — tactile, beautiful, and analog.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Analog Wild Gift Guide — Analog Wild</title>
+  <meta name="description" content="Gifts for the person in your life who's done living through a screen — or for yourself. Every item here is something we'd actually give or want to receive.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     .nav-cta{background:var(--terra)!important;color:white!important;padding:.5rem 1.2rem;border-radius:2px}
     .article-hero{margin-top:64px;position:relative;height:55vh;min-height:380px;display:flex;align-items:flex-end;overflow:hidden}
     .article-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.75) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,38,32,.1) 0%,rgba(42,38,32,.78) 100%)}
     .article-hero-content{position:relative;z-index:2;padding:2.5rem 4rem;max-width:860px}
     .article-category{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;display:block;text-decoration:none}
     .article-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em}
@@ -35,27 +36,40 @@
     .toc a:hover{color:var(--green)}
     .toc-meta{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid);line-height:1.8}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--dark);margin:2.5rem 0 1rem;line-height:1.2}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin:1.8rem 0 .6rem}
     .article-body p{font-size:1.05rem;line-height:1.8;color:var(--dark);margin-bottom:1.4rem;font-weight:300}
     .article-body strong{font-weight:600;color:var(--dark)}
-    .article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+    .article-body a{color:var(--terra);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+    .article-body a:hover{color:#8a5a35}
     .bottom-line{background:var(--cream);border-left:4px solid var(--terra);padding:1.5rem 1.8rem;margin-bottom:2.5rem;border-radius:0 4px 4px 0}
     .bottom-line-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem}
     .bottom-line p{font-size:.95rem;line-height:1.7;margin:0;font-weight:400}
     .pull-quote{border-top:2px solid var(--dark);border-bottom:2px solid var(--dark);padding:1.5rem 0;margin:2.5rem 0}
     .pull-quote p{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--dark);line-height:1.5;margin:0!important;font-weight:400}
-    .affiliate-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream);border:1px solid var(--border);padding:.4rem .8rem;border-radius:2px;font-size:.82rem;font-weight:600;color:var(--green)!important;text-decoration:none!important;transition:background .2s;margin:.2rem 0}
-    .affiliate-link:hover{background:var(--border)}
-    .affiliate-link::before{content:'→'}
+    .person-callout{background:white;border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin:2rem 0;display:flex;gap:1.2rem;align-items:flex-start}
+    .person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .person-name{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem}
+    .person-quote{font-size:.95rem;font-style:italic;color:var(--dark);line-height:1.6;margin:0}
+    .research-box{background:var(--cream);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0;border-left:3px solid var(--green)}
+    .research-label{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+    .research-box p{font-size:.88rem;color:var(--dark);line-height:1.6;margin:0;font-weight:400}
+    .research-box a{color:var(--green);font-weight:500}
+    .product-card{background:white;border:1px solid var(--border);border-radius:4px;padding:1.2rem;margin:1rem 0;display:flex;gap:1rem;align-items:center}
+    .product-img{width:72px;height:72px;object-fit:cover;border-radius:3px;flex-shrink:0}
+    .product-info{flex:1}
+    .product-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
+    .product-desc{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;line-height:1.5}
+    .product-link{display:inline-block;background:var(--terra);color:white!important;text-decoration:none!important;padding:.35rem .9rem;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .product-link:hover{background:#8a5a35}
+    .inline-img{width:100%;border-radius:4px;margin:1.5rem 0;display:block}
+    .img-caption{font-size:.75rem;color:var(--mid);text-align:center;margin-top:-.8rem;margin-bottom:1.5rem;font-style:italic}
     .newsletter-inline{background:var(--dark);color:white;padding:3rem;margin:3rem 0;border-radius:4px}
+    .newsletter-inline p{color:rgba(255,255,255,.75)}
+    .newsletter-inline h3{color:white}
     .newsletter-inline-inner{max-width:520px}
     .nl-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
     .nl-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:white;margin-bottom:.8rem;line-height:1.3}
-    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:1.5rem;font-weight:300}
-    .email-form{display:flex;max-width:400px;border:1.5px solid rgba(255,255,255,.3)}
-    .email-form input{flex:1;border:none;padding:.8rem 1rem;font-family:'Inter',sans-serif;font-size:.9rem;background:rgba(255,255,255,.08);color:white;outline:none}
-    .email-form input::placeholder{color:rgba(255,255,255,.35)}
-    .email-form button{background:var(--terra);color:white;border:none;padding:.8rem 1.2rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .form-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.6rem}
+    .nl-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-weight:300}
     .related-section{border-top:1px solid var(--border);padding-top:3rem;margin-top:3rem}
     .related-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem}
     .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -70,105 +84,260 @@
     .footer-links{display:flex;gap:2rem;list-style:none}
     .footer-links a{font-size:.78rem;color:var(--mid);text-decoration:none}
     .footer-copy{font-size:.75rem;color:#bbb}
-</style>
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
   <nav>
-    <a href="/" class="nav-logo"><img src="/logo2.png" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
+    <a href="/" class="nav-logo"><img src="/logo.jpg" alt="Analog Wild" style="height:44px;width:44px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:.5rem;">Analog <span>Wild</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/gear/">Gear</a></li>
       <li><a href="/escapes/">Escapes</a></li>
       <li><a href="/practices/">Practices</a></li>
       <li><a href="/for-kids/">For Kids</a></li>
-      <li><a href="#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
+      <li><a href="/#newsletter" class="nav-cta">✦ HUMANS ONLY ✦</a></li>
     </ul>
   </nav>
+
   <div class="article-hero">
-    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1400&q=85&auto=format&fit=crop')"></div>
+    <div class="article-hero-image" style="background-image:url('https://images.unsplash.com/photo-1512909006721-3d6018887383?w=1400&q=85&auto=format&fit=crop')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <a href="/gear/" class="article-category">Gear</a>
-      <h1 class="article-title">The Analog Wild Gift Guide: 25 Gifts for People Who Have Everything</h1>
+      <h1 class="article-title">The Analog Wild Gift Guide</h1>
     </div>
   </div>
+
   <div class="article-layout">
     <aside class="toc">
       <p class="toc-label">In this article</p>
-      <ul><li><a href="#writers">For writers ($10-$80)</a></li>
-<li><a href="#outdoor">For outdoor people ($15-$150)</a></li>
-<li><a href="#kids">For kids ($8-$40)</a></li>
-<li><a href="#skeptic">For the skeptic</a></li>
-<li><a href="#note">A note on gift-giving</a></li></ul>
-      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
+      <ul>
+        <li><a href="#bottom-line">The bottom line</a></li>
+        <li><a href="#writing">For the writer</a></li>
+        <li><a href="#photography">For the photographer</a></li>
+        <li><a href="#outdoors">For the outdoors person</a></li>
+        <li><a href="#games">For the game night host</a></li>
+        <li><a href="#kids">For kids</a></li>
+        <li><a href="#everyone">For everyone (under $30)</a></li>
+      </ul>
+      <div class="toc-meta"><strong>Analog Wild</strong><br>Come back to your senses.<br><br><a href="/#newsletter" style="color:var(--terra);font-weight:600;">✦ Get the newsletter</a></div>
     </aside>
+
     <article class="article-body">
-      <div class="bottom-line"><p class="bottom-line-label">The bottom line</p><p>The best analog gifts are things the recipient would enjoy but wouldn't buy themselves — a fountain pen they've never tried, a beautiful notebook, a sun print kit, a board game they'd love. Include a handwritten note. The note will be remembered longer than the gift.</p></div>
-    <p>The best gifts for people who have everything tend to be things they wouldn't buy themselves — beautiful, a little indulgent, tactile, and analog. This guide is organized by recipient so you can find the right thing quickly.</p>
-    <h2 id="writers">For Writers ($10–$80)</h2>
-    <p><strong>Pilot Metropolitan Fountain Pen ($20)</strong> — The perfect introduction to fountain pens. Smooth, reliable, real metal construction.</p>
-    <p><a href="https://www.amazon.com/s?k=pilot+metropolitan+fountain+pen&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Pilot Metropolitan on Amazon</a></p>
-    <p><strong>Leuchtturm1917 Notebook ($22)</strong> — The notebook serious writers reach for. Numbered pages, index, quality paper.</p>
-    <p><a href="https://www.amazon.com/s?k=leuchtturm1917+notebook+a5&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Leuchtturm1917 on Amazon</a></p>
-    <p><strong>Hobonichi Techo Planner ($25)</strong> — The small Japanese daily planner on extraordinary Tomoe River paper.</p>
-    <p><strong>The Artist's Way by Julia Cameron ($16)</strong> — The book that has unlocked more writers than perhaps any other.</p>
-    <p><a href="https://www.amazon.com/s?k=the+artists+way+julia+cameron&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: The Artist's Way on Amazon</a></p>
-    <h2 id="outdoor">For Outdoor People ($15–$150)</h2>
-    <p><strong>Field Notes 3-pack ($12)</strong> — Small, durable, fits in a back pocket. For the person who wants to write things down outside.</p>
-    <p><a href="https://www.amazon.com/s?k=field+notes+notebooks&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Field Notes on Amazon</a></p>
-    <p><strong>Rite in the Rain Notebook ($10-15)</strong> — Waterproof paper for people who spend time in genuinely wet conditions.</p>
-    <p><a href="https://www.amazon.com/s?k=rite+in+the+rain+notebook&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Rite in the Rain on Amazon</a></p>
-    <p><strong>Red headlamp for stargazing ($25-40)</strong> — Preserves night vision. A practical gift that enables one of the best free activities on earth.</p>
-    <p><a href="https://www.amazon.com/s?k=red+headlamp+stargazing&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Red Headlamp on Amazon</a></p>
-    <p><strong>Disposable camera ($15)</strong> — For the outdoor person who documents everything on their phone.</p>
-    <p><a href="https://www.amazon.com/s?k=kodak+disposable+camera&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Kodak Disposable Camera on Amazon</a></p>
-    <h2 id="kids">For Kids ($8–$40)</h2>
-    <p><strong>Sun print paper kit ($12-20)</strong> — The most magical craft material that exists. Works for ages 4+.</p>
-    <p><a href="https://www.amazon.com/s?k=sun+print+paper+cyanotype+kit&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Sun Print Paper Kit on Amazon</a></p>
-    <p><strong>Origami paper and beginner book ($10-15)</strong> — Hours of tactile engagement. The skill compounds.</p>
-    <p><strong>Nature journal kit ($20-30)</strong> — A small notebook, colored pencils, and a guide to nature journaling.</p>
-    <h2 id="skeptic">For the Skeptic ($10–$50)</h2>
-    <p>For the people in your life who are glued to their phones and respond best to a gift that doesn't lecture them about it.</p>
-    <p><strong>A beautiful novel ($15-20)</strong> — Physical book. Something you actually read and loved. Include a handwritten note about why.</p>
-    <p><strong>Codenames board game ($25)</strong> — Gets phones off the table. Funny, fast, works for almost any group.</p>
-    <p><a href="https://www.amazon.com/s?k=codenames+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Codenames on Amazon</a></p>
-    <p><strong>Wingspan board game ($55)</strong> — Converts non-gamers reliably. Beautiful components, gentle gameplay.</p>
-    <p><a href="https://www.amazon.com/s?k=wingspan+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="affiliate-link">Shop: Wingspan on Amazon</a></p>
-    <h2 id="note">A Note on Gift-Giving</h2>
-    <p>The most analog gift is your attention. A handwritten letter included with any of these will be remembered longer than the gift itself.</p>
-      <div class="newsletter-inline" id="newsletter">
-    <div class="newsletter-inline-inner">
-      <p class="nl-label">✦ The Analog Wild Letter</p>
-      <h3 class="nl-title">For people who are done living through a screen.</h3>
-      <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
-      <div style="max-width:460px;margin:0 auto;text-align:center;">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/a09331b4-d6ba-4e90-bfab-8d4ba41a436d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+
+      <div class="bottom-line" id="bottom-line">
+        <p class="bottom-line-label">The bottom line</p>
+        <p>Every gift here has been curated on one principle: it creates time away from screens, doing something real. These are not "tech alternatives" or nostalgic novelties — they're genuinely excellent objects that enrich daily life. We'd give every item on this list. We'd be delighted to receive every item on this list. There are no filler picks.</p>
       </div>
-  </div>
+
+      <p>The easiest gifts to give are experiences and objects that open a door to something. Not just a product — a practice. A good fountain pen isn't just a writing instrument; it's an invitation to write more, differently, with more attention. A film camera isn't a nostalgia piece; it's a new relationship with photography. The gifts below are doors.</p>
+
+      <img class="inline-img" src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w=900&q=80&auto=format&fit=crop" alt="Beautifully wrapped gifts and analog objects on a wooden surface">
+      <p class="img-caption">The best gifts open a door. These all do.</p>
+
+      <h2 id="writing">For the Writer</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=200&q=80&auto=format&fit=crop" alt="Leuchtturm1917 notebook">
+        <div class="product-info">
+          <p class="product-name">Leuchtturm1917 A5 Dotted Notebook — $25</p>
+          <p class="product-desc">The notebook that makes morning pages feel intentional rather than obligatory. Numbered pages, indexed, 80gsm paper. Give it with a Pilot Metropolitan and you've given someone a writing practice.</p>
+          <a href="https://www.amazon.com/s?k=leuchtturm1917+a5+dotted+hardcover&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=200&q=80&auto=format&fit=crop" alt="Pilot Metropolitan fountain pen">
+        <div class="product-info">
+          <p class="product-name">Pilot Metropolitan Fountain Pen — $20</p>
+          <p class="product-desc">The best under-$25 fountain pen in existence. Brass body, smooth nib, available in fine/medium/italic. Pairs perfectly with the Leuchtturm. Makes handwriting feel like something chosen.</p>
+          <a href="https://www.amazon.com/s?k=pilot+metropolitan+fountain+pen&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=200&q=80&auto=format&fit=crop" alt="Hobonichi Techo planner">
+        <div class="product-info">
+          <p class="product-name">Hobonichi Techo Cousin (A5 Planner) — $40</p>
+          <p class="product-desc">The cult Japanese planner on legendary Tomoe River paper. One page per day, fountain pen-friendly, used by creatives worldwide. The kind of object that becomes a daily ritual.</p>
+          <a href="https://www.amazon.com/s?k=hobonichi+techo+cousin+A5&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop" alt="Nina">
+        <div>
+          <p class="person-name">Nina, novelist — New York</p>
+          <p class="person-quote">"Someone gave me a Leuchtturm and a Pilot Metropolitan for my birthday three years ago. I've filled nine Leuchtturms since. I wrote my first novel in them — longhand first drafts, all of it. A $45 gift changed how I work."</p>
+        </div>
+      </div>
+
+      <h2 id="photography">For the Photographer (or the Would-Be Film Shooter)</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200&q=80&auto=format&fit=crop" alt="Kodak disposable film cameras">
+        <div class="product-info">
+          <p class="product-name">Kodak FunSaver Disposable Cameras (2-Pack) — $25</p>
+          <p class="product-desc">The no-commitment entry to film photography. Give two so they can shoot one now and one at something special. The wait for development is part of the gift.</p>
+          <a href="https://www.amazon.com/s?k=kodak+funsaver+disposable+camera+2+pack&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1569701813229-33284b643e3c?w=200&q=80&auto=format&fit=crop" alt="Kodak film rolls">
+        <div class="product-info">
+          <p class="product-name">Kodak Portra 400 (3-Pack) — $55</p>
+          <p class="product-desc">Professional portrait film in the colors that made Kodak famous. Give to someone who already shoots film as a genuine upgrade from everyday film stocks. Worth every penny for what it does to skin tones and color.</p>
+          <a href="https://www.amazon.com/s?k=kodak+portra+400+film+3+pack&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <h2 id="outdoors">For the Outdoors Person</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1553531087-b25c76cbbbc3?w=200&q=80&auto=format&fit=crop" alt="Rite in the Rain notebook">
+        <div class="product-info">
+          <p class="product-name">Rite in the Rain Field Book — $15</p>
+          <p class="product-desc">The weatherproof notebook that field biologists, trail crews, and wilderness guides use. Writes in rain, mud, humidity. If they spend time outdoors, they need this.</p>
+          <a href="https://www.amazon.com/s?k=rite+in+the+rain+all+weather+field+book&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1529521006686-b10bf18ed0c3?w=200&q=80&auto=format&fit=crop" alt="Black Diamond headlamp">
+        <div class="product-info">
+          <p class="product-name">Black Diamond Spot 400 Headlamp — $40</p>
+          <p class="product-desc">The standard headlamp for outdoor use. 400 lumens, red night-vision mode, waterproof. Essential for camping, stargazing, and any backcountry use. The one headlamp that makes other headlamps feel inadequate.</p>
+          <a href="https://www.amazon.com/s?k=black+diamond+spot+400+headlamp&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <h2 id="games">For the Game Night Host</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1606168094336-48f205e2f9e7?w=200&q=80&auto=format&fit=crop" alt="Azul board game tiles">
+        <div class="product-info">
+          <p class="product-name">Azul Board Game — $40</p>
+          <p class="product-desc">The most beautiful board game currently in print. Heavy resin tiles in jewel colors, elegant mechanics, plays in 45 minutes. The game that looks like art sitting on the shelf. Makes an extraordinary gift.</p>
+          <a href="https://www.amazon.com/s?k=azul+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=200&q=80&auto=format&fit=crop" alt="Codenames board game">
+        <div class="product-info">
+          <p class="product-name">Codenames — $22</p>
+          <p class="product-desc">The best party game for groups of 4–8. Five-minute learning curve, 20-minute games, generates arguments and laughter equally. The game that works for every gathering.</p>
+          <a href="https://www.amazon.com/s?k=codenames+board+game&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <p>"The best gifts open a door to a practice. Not just a product — an invitation to do something real with your time."</p>
+      </div>
+
+      <h2 id="kids">For Kids</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1589632733271-04e1d5763c3b?w=200&q=80&auto=format&fit=crop" alt="Sun print cyanotype kit for kids">
+        <div class="product-info">
+          <p class="product-name">Sunprint Kit (Cyanotype Paper) — $15</p>
+          <p class="product-desc">The activity that makes kids say "Wait, it worked?" Lay objects on UV-treated paper, expose to sunlight, rinse in water, beautiful blue prints appear. Ages 5 and up. Science, art, and magic in one afternoon.</p>
+          <a href="https://www.amazon.com/s?k=sunprint+kit+cyanotype+paper+kids&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80&auto=format&fit=crop" alt="LEGO Classic Creative Brick Box">
+        <div class="product-info">
+          <p class="product-name">LEGO Classic Large Creative Brick Box — $60</p>
+          <p class="product-desc">The open-ended LEGO set that works across ages 4–14. More valuable than any theme set. The creativity ceiling is what you can imagine, not what the instructions allow.</p>
+          <a href="https://www.amazon.com/s?k=lego+classic+large+creative+brick+box&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <h2 id="everyone">For Everyone: Gifts Under $30</h2>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=200&q=80&auto=format&fit=crop" alt="Field Notes notebooks">
+        <div class="product-info">
+          <p class="product-name">Field Notes (3-Pack) — $12</p>
+          <p class="product-desc">The pocket notebook that replaces the phone in the pocket. Small, durable, designed for everyday carry. The perfect stocking stuffer for someone who should be writing more things down.</p>
+          <a href="https://www.amazon.com/s?k=field+notes+memo+books+ruled+3+pack&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200&q=80&auto=format&fit=crop" alt="Physical book on nightstand">
+        <div class="product-info">
+          <p class="product-name">A Physical Book (Braiding Sweetgrass) — $18</p>
+          <p class="product-desc">Robin Wall Kimmerer's masterwork — a botanist writing about plants as if they're persons, and you find yourself reconsidering everything. The book that changes how you walk outside. One of the best gifts you can give to someone who's ready for it.</p>
+          <a href="https://www.amazon.com/s?k=braiding+sweetgrass+robin+wall+kimmerer&tag=analogwild-20" target="_blank" rel="nofollow sponsored" class="product-link">→ Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="person-callout">
+        <img class="person-avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&q=80&auto=format&fit=crop" alt="Jordan">
+        <div>
+          <p class="person-name">Jordan, environmental consultant — Colorado</p>
+          <p class="person-quote">"I've given Braiding Sweetgrass to eight people in the last two years. Three of them have since told me it's one of the most meaningful books they've ever read. Eight gifts, eight copies, three real conversations that changed relationships. That's a good gift-to-impact ratio."</p>
+        </div>
+      </div>
+
+      <div class="newsletter-inline" id="newsletter">
+        <div class="newsletter-inline-inner">
+          <p class="nl-label">✦ The Analog Wild Letter</p>
+          <h3 class="nl-title">For people who are done living through a screen.</h3>
+          <p class="nl-sub">Every week: one analog find, one escape, one practice to feel alive again. Join 4,000+ people remembering how to human.</p>
+          <div style="max-width:460px;margin:0 auto;text-align:center;">
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <iframe src="https://subscribe-forms.beehiiv.com/cf114569-dfb4-44a4-b452-c538a92c2d19" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:52px;margin:0;border-radius:0;background-color:transparent;box-shadow:none;max-width:100%;display:block;"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="related-section">
         <p class="related-label">Keep reading</p>
-        <div class="related-grid"><a href="/gear/best-notebooks-for-morning-pages/" class="related-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80&auto=format&fit=crop" alt="Best Notebooks for Morning Pages"><p class="related-cat">Gear</p><h3 class="related-title">Best Notebooks for Morning Pages</h3></a><a href="/for-kids/sun-prints-cyanotype/" class="related-card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&auto=format&fit=crop" alt="Sun Prints and Cyanotype"><p class="related-cat">For Kids</p><h3 class="related-title">Sun Prints and Cyanotype</h3></a><a href="/gear/best-board-games-for-adults/" class="related-card"><img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?w=400&q=80&auto=format&fit=crop" alt="Board Games for Adults"><p class="related-cat">Gear</p><h3 class="related-title">Board Games for Adults</h3></a></div>
+        <div class="related-grid">
+          <a href="/gear/best-fountain-pens-under-50/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=400&q=80&auto=format&fit=crop" alt="Best Fountain Pens Under $50">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Fountain Pens Under $50</h3>
+          </a>
+          <a href="/gear/best-board-games-for-adults/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1511882150382-421056c89033?w=400&q=80&auto=format&fit=crop" alt="Best Board Games for Adults">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Board Games for Adults</h3>
+          </a>
+          <a href="/gear/best-film-cameras-for-beginners/" class="related-card">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80&auto=format&fit=crop" alt="Best Film Cameras for Beginners">
+            <p class="related-cat">Gear</p>
+            <h3 class="related-title">Best Film Cameras for Beginners</h3>
+          </a>
+        </div>
       </div>
+
     </article>
   </div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Analog Wild</div>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
         <li><a href="/">Home</a></li>
-      <li><a href="/gear/">Gear</a></li>
+        <li><a href="/gear/">Gear</a></li>
         <li><a href="/escapes/">Escapes</a></li>
         <li><a href="mailto:hello@analogwild.com">Contact</a></li>
       </ul>
       <p class="footer-copy">© 2026 Analog Wild. Come back to your senses.</p>
     </div>
   </footer>
+
   <script>
-    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;document.getElementById('progress-bar').style.width=(s/h*100)+'%';},{passive:true});
+    window.addEventListener('scroll',()=>{const d=document.documentElement;const s=d.scrollTop||document.body.scrollTop;const h=d.scrollHeight-d.clientHeight;const b=document.getElementById('progress-bar');if(b)b.style.width=(s/h*100)+'%';},{passive:true});
   </script>
 </body>
 </html>
